@@ -10,6 +10,7 @@ short moveMe (short movingPos1, short oldPos2, short zarValue, short mapSize)
 	int newPos ;
 	newPos = ((movingPos1 + zarValue > mapSize ) ? movingPos1 : movingPos1 + zarValue ) ;
 	if (newPos > 1) // no documented rule
+	// mapSize=6, zarValue=6, p1=p2=1
 		newPos += (oldPos2 == newPos) ? -1 : 0 ;
 	return newPos ;
 }

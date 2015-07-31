@@ -30,5 +30,5 @@ main()
 		//if (posTodi == mapSize || posLoni == mapSize)
 		//	break ; // Wins, no more moves.	
 	} ;
-	cout <<posTodi <<DELIMITER <<posLoni <<endl <<((posLoni > posTodi) ? 'E' : 'G')	;
+	cout <<posTodi <<DELIMITER <<posLoni <<endl <<((posLoni > posTodi) ? 'L' : 'T')	;
 }

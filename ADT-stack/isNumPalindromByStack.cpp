@@ -1,5 +1,5 @@
 /*	STL Stack example. Palindrome problem:
-	Да се провери дали дадено цяло число е палиндром.
+	Да се провери дали дадено цяло число е палиндром..
 
 	Ако палиндрома се презапише с преподреждане за
 	цифрите му в обратен ред, то резултатът е същия.
@@ -14,6 +14,8 @@
 			 8668	Yes			2333 No
 			 1234 	No			 321 No
 		123456789	No	   123494321 Yes 
+		
+Урок: https://www.youtube.com/watch?v=VzedCaG3jY8
 */
 #include <iostream>
 #include <stack> // STL stack library

@@ -1,10 +1,13 @@
 /* Въвежда се естествено число.
 Отпечатайте ДВОИЧНИЯ запис на числото. 
 Решението да е със СТЕК.
+
 ВХОД	ИЗХОД
 26		11010
 2		10
-5		101	 
+5		101
+
+Обяснено е на  https://www.youtube.com/watch?v=hSe3u-Dm8Y8
 */
 #include <iostream>
 #include <stack> // STL STACK functionality

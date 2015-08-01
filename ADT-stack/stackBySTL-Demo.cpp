@@ -1,5 +1,6 @@
 // HOW TO USE A STACK? 
 // Main live STACK EXAMPLE.
+// Video lesson: https://www.youtube.com/watch?v=5UjENioK8tw
 #include <iostream>
 #include <stack> // STL STACK functionality
 using namespace std;

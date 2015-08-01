@@ -2,8 +2,8 @@
 #include <iostream>
 #include <deque>
 using namespace std;
-
-deque<int> boxes ; // vector components CAN be a short type.
+// deque version has same syntax as vector solution.
+deque<int> boxes ; 
 int		n, p, q,	// input
 		k,  currentBox, tmp,
 		profit ;	// output

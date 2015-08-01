@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-main()	// Bubble Sort
+main()	// Bubble Sort Video Lesson at https://www.youtube.com/watch?v=lgrqgNgYGkg
 {	const int arraySize = 5;
 	double nums [arraySize], cup3;
 	bool isSwap;

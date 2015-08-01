@@ -1,4 +1,4 @@
-// 5.1.PE4ALBA-DynArray.cpp
+// 5.1.PE4ALBA-Vector.cpp
 #include <iostream>
 #include <vector>
 using namespace std;

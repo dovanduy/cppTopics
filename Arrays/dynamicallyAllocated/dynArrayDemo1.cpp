@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// look at https://www.youtube.com/watch?v=sLdO5D8f3s4
 main ()
 { // Dynamically Allocated Array, no STL.
 	double* dynamicArray = NULL ; // empty array

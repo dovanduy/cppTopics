@@ -1,11 +1,12 @@
-// BUKVA.cpp
+// 4.3.BUKVA.cpp
 #include <iostream>
 using namespace std;
+const char NOLETTER = '*' ;
 main()
 {
 	int seqNum ;
 	char smallBig, res ;
-	const char err = '*' ;
+
 	bool isBig, isLetter ;
 	cin >>seqNum >>smallBig ;
 	isBig = smallBig == 'b' ;
@@ -18,5 +19,5 @@ main()
 	if (isLetter)
 		cout <<res ;
 	else
-		cout <<err ;
+		cout <<NOLETTER ;
 }

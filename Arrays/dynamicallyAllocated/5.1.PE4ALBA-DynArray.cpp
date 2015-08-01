@@ -1,7 +1,8 @@
+// 5.1.PE4ALBA-DynArray.cpp
 #include <iostream>
 using namespace std;
 
-int* boxes = NULL ; // They are read only in connection with e test set.
+int* boxes = NULL ; // dynArray can NOT be short type, however a vector CAN be short.
 int n, p, q,
 	k,  currentBox, tmp,
 	profit ;
@@ -13,6 +14,7 @@ void finish ()
 		boxes = NULL ;	 // to reuse an array name 
 	} ;
 	cout <<profit ;
+	return ;
 }
 
 int main ()
@@ -20,11 +22,10 @@ int main ()
 	cin >>n ; // number of array components, boxes
 	boxes = new int [n] ; // to allocate memory now.
 
-	for (k=0; k<n; k++)
-	{ // to init an array
+	for (k=0; k<n; k++)	// to init an array
 		cin >>boxes[k] ;
-	} ;
-	cin >>p >>q;
+
+	cin >>p >>q; // 3rd line
 
 	for (profit=0, currentBox=p-1, k=0 ; k<q; k++)
 		if (0==boxes[currentBox])
@@ -33,16 +34,16 @@ int main ()
 			finish() ;
 			return 0;
 		}
-		else if (boxes[currentBox]>=1 && boxes[currentBox]<=n)
+		else if (boxes[currentBox] >= 1 && boxes[currentBox] <= n)
 		{ // box TYPE 2
 			tmp = boxes[currentBox];
-			//boxes[currentBox] = 0 ; // no key yet, i.e now it is boxTYPE 1.
+			//boxes[currentBox] = 0 ; // no key yet, i.e now it is box TYPE 1.
 			currentBox = tmp - 1;
 		}
 		else
 		{
 			profit+=boxes[currentBox] ;
-			currentBox = boxes[currentBox]%n ;
+			currentBox = boxes[currentBox] % n ;
 		}
 
 	finish () ;

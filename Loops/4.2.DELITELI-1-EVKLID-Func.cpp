@@ -1,4 +1,4 @@
-// DELITELI-EVKLID.cpp
+// 4Î2ÎDELITELI-EVKLID-Func.cpp
 #include <iostream>
 using namespace std;
 

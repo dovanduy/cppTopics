@@ -1,9 +1,9 @@
-// 4Î2ÎDELITELI-EVKLID-Func.cpp
+// 4.2.DELITELI-EVKLID-Func.cpp
 #include <iostream>
 using namespace std;
 
 int nod (int a, int b)
-{ // EUCLID Algorithm
+{ // EUCLID Algorithm https://en.wikipedia.org/wiki/Euclidean_algorithm
 	while (a != b)
 	if (a>b)
 		a = a - b;

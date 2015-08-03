@@ -1,7 +1,7 @@
 // SUBS-01.BUDGET.cpp
 #include <iostream>
 using namespace std;
-
+// https://judge.softuni.bg/Contests/37/CSharp-Basics-Exam-7-November-2014
 const int NORMALWEEKDAYLV = 10 ;
 const double GOESOUTPERCENT = 0.03 ;
 const int NORMALWEEKENDSLVDAYLY = 20 ;

@@ -6,7 +6,7 @@ using namespace std;
 
 int movesQty (int br)
 {
-	if (1 == br)
+	if (br <= 1)
 		return 0 ;
 	else if (0 == br%3)
 		return (1+movesQty(br/3)) ;

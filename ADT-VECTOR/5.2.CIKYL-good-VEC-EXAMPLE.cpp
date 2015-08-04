@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// http://bgcoder.com/Contests#!/List/ByCategory/37/Telerik-Kids-Academy-2013-2014
 vector<int> numSequence ;
 int				num, 		// input
 				nextNum;	// output

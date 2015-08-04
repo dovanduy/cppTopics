@@ -1,6 +1,16 @@
-// 4.2.OGYRLICA-1-NestedLoop-IF.cpp
+// 4.2.OGYRLICA-1-Func-OneLoop.cpp
 #include <iostream>
 using namespace std;
+
+bool isStuck (int num1, int num2)
+{
+	int num1Last, num2First ; // last, first digit
+	num1Last = num1%10 ;
+	num2First = num2;
+	while (num2First > 9)
+		num2First = num2First / 10 ;
+	return (num1Last == num2First) ;
+}
 
 int main()
 {
@@ -9,11 +19,7 @@ int main()
 		 m1Last, m2First ;
 	cin >>n >>m1 >>m2 ;
 	do {
-		m1Last = m1 % 10 ;
-		m2First = m2 ;
-		while (m2First > 9)
-			m2First = m2First / 10 ;
-		if (m1Last != m2First)
+		if ( ! isStuck (m1, m2))
 		{
 			cout <<m1 <<' ' <<m2;
 			return 0 ;

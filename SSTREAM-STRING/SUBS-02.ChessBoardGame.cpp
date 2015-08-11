@@ -46,9 +46,12 @@ int main()
 	for (k=0; k<n*n; k++)
 		board[k] = 0 ;
 	
-	for (k=0; k<s.length(); k++)
+	//for (k=0; k<s.length(); k++)
 	// to fill a game field
-		board[k%(n*n)]=eval(s[k]) ;
+	//	board[k%(n*n)]=eval(s[k]) ;
+	for (k=0; k<s.length() && k<(n*n); k++)
+	// It is an unclear condition (variant) of task
+	board[k]=eval(s[k]) ;
 
 	for (k=0 ; k<n*n; k++)
 		switch (k%2)

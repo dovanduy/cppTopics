@@ -1,4 +1,5 @@
 // 6.3.IGRA_3.cpp
+// http://bgcoder.com/Contests/150/Telerik-Kids-February-2014-6th-grade-Sunday
 #include <iostream>
 using namespace std;
 

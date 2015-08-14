@@ -52,9 +52,5 @@ int main()
 			res+=p ;
 		}
 	} ;
-	cout <<res ;
-//	for (m=0; m<mQty; m++, cout<<endl)
-//	  for(n=0; n<nQty ; n++, cout<<'\t')
-//	  	cout <<c[m][n] ;
-	 	  	
+	cout <<res ;	 	  	
 }

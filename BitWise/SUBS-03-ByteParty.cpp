@@ -1,7 +1,7 @@
 // SUBS-03.ByteParty.cpp
 #include <iostream>
 #include <vector>
-#include <string>
+
 using namespace std;
 // https://judge.softuni.bg/Contests/77/Programming-Basics-March-Lab
 unsigned int flipBit (unsigned int number, unsigned int bitPosition)
@@ -66,9 +66,11 @@ int main()
 			return 0 ;
 		}
 	}
-	for (i=num.begin() ; i!=num.end(); ++i)
+	i=num.begin() ;
+	cout <<*i ;
+	for (++i ; i!=num.end(); ++i)
 	{
-		cout <<*i <<endl ;
+		cout	<<endl <<*i ;
 	}
 //*/	
 }

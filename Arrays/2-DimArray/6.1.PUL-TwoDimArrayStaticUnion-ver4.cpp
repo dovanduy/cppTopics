@@ -1,6 +1,5 @@
-// 6.1.PUL-TwoDimArrayStatic-ver3.cpp
+// 6.1.PUL-TwoDimArrayStatic-ver4.cpp
 #include <iostream>
-#include <vector>
 using namespace std;
 // http://bgcoder.com/Contests/186/Telerik-Kids-May-2014-6th-grade-Sunday
 const unsigned long SIZE = 202 ;
@@ -25,7 +24,6 @@ void checkCell (int x, int y)
 	gameField.board[x][y] = prazno ;
   } ;
   for (k=0; k<4; k++)
-  	{	
   		if (prazno != gameField.board[x+frameCells[k][0]][y+frameCells[k][1]]) 
   		{
 			res+=10;
@@ -34,7 +32,6 @@ void checkCell (int x, int y)
 			else // obratno
 			    gameField.board[x+frameCells[k][0]][y+frameCells[k][1]]= prazno ;
   		}
-  	}	
 }
 
 int main()

@@ -1,4 +1,4 @@
-// 5.2.IGRA_v1.cpp
+// 5.2.IGRA-2_v1.cpp
 #include <iostream>
 using namespace std;
 

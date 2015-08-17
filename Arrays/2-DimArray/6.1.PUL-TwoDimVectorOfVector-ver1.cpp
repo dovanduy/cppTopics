@@ -1,4 +1,4 @@
-// 6.1.PUL-TwoDim-Example2.cpp
+// 6.1.PUL-TwoDimVectorOfVector-ver1.cpp
 #include <iostream>
 #include <vector>
 using namespace std;

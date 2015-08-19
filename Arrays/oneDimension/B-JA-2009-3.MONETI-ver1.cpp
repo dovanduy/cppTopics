@@ -6,8 +6,8 @@ using namespace std;
 short k, i, resCounter, r1 ;
 const short fake [2] = {-1, 1} ;
 short gr11[4], gr12[4],
-	gr21[4], gr22[4],
-	gr31[4], gr32[4] ;
+	  gr21[4], gr22[4],
+	  gr31[4], gr32[4] ;
 char r2, op[3] ;
 bool r[3] ;
 short	sum11,	sum12, 

@@ -153,7 +153,7 @@ int main ()
 			if (0==resCounter)
 			{
 				r1=k ;
-				if (fake[i]&1)
+				if (fake[i]==1)
 					r2='+' ;
 				else
 					r2='-' ;

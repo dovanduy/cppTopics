@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int t[3][8];
-string f[13][2];
+int t[3][8]; // 3pcs. teglenia == row
+// int => short and Memory LIMIT during some tests through
+// https://arena.maycamp.com/practice/get_problem_description?contest_id=28&problem_id=54
+string f[13][2]; // fakeCoins 1..12
 
 int main()
-{ string res = "xxx";
+{ string res = "xxx"; // 3pcs of OPs
   for(int w=0; w<3; w++)
   { for(int j=0; j<4; j++)
       cin >> t[w][j];
@@ -44,4 +46,4 @@ int main()
  
   return 0;
 }
-    
+

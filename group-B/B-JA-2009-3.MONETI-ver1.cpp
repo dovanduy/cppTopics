@@ -1,6 +1,6 @@
 // B-JA-2009-3.MONETI_ver1.cpp
 // https://arena.maycamp.com/practice/get_problem_description?contest_id=28&problem_id=54
-#include <iostream>
+#include <cstdio>
 using namespace std;
 
 short k, i, resCounter, r1 ;
@@ -18,13 +18,13 @@ int main ()
 {
 
 // input
-	for (k=0; k<4; k++) cin >>gr11[k];
+	for (k=0; k<4; k++) scanf(" %d ", &gr11[k]);
 	cin >>op[0] ;
-	for (k=0; k<4; k++) cin >>gr12[k];
+	for (k=0; k<4; k++) scanf(" %d ", &gr12[k]);;
 	
-	for (k=0; k<4; k++) cin >>gr21[k];
+	for (k=0; k<4; k++) scanf(" %d ", &gr21[k]);
 	cin >>op[1] ;
-	for (k=0; k<4; k++) cin >>gr22[k];
+	for (k=0; k<4; k++) scanf(" %d ", &gr1[k]);
 
 	for (k=0; k<4; k++) cin >>gr31[k];
 	cin >>op[2] ;

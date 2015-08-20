@@ -3,7 +3,6 @@
 #include <cstdio>  // smaller exe
 using namespace std;
 
-short k, i, resCounter, r1 ;
 const short fake [2] = {-1, 1} ;
 short gr11[4], gr12[4],
 	  gr21[4], gr22[4],
@@ -16,24 +15,24 @@ short	sum11,	sum12,
 
 int main ()
 {
-
+	short i, resCounter, r1 ;
 // input
-	for (k=0; k<4; k++) scanf(" %hd ", &gr11[k]);
+	for (short k=0; k<4; k++) scanf(" %hd ", &gr11[k]);
 	scanf(" %c", &op[0]);
-	for (k=0; k<4; k++) scanf(" %hd ", &gr12[k]);
+	for (short k=0; k<4; k++) scanf(" %hd ", &gr12[k]);
 	
-	for (k=0; k<4; k++) scanf(" %hd ", &gr21[k]);
+	for (short k=0; k<4; k++) scanf(" %hd ", &gr21[k]);
 	scanf(" %c", &op[1]);
-	for (k=0; k<4; k++) scanf(" %hd ", &gr22[k]);
+	for (short k=0; k<4; k++) scanf(" %hd ", &gr22[k]);
 
-	for (k=0; k<4; k++) scanf(" %hd ", &gr31[k]);
+	for (short k=0; k<4; k++) scanf(" %hd ", &gr31[k]);
 	scanf(" %c", &op[2]);
-	for (k=0; k<4; k++) scanf(" %hd", &gr32[k]);
+	for (short k=0; k<4; k++) scanf(" %hd", &gr32[k]);
   for (resCounter=i=0; i<2; i++)	
-	for (k=1; resCounter<2 && k<13; k++)
+	for (short k=1; resCounter<2 && k<13; k++)
 	{
 		sum11=sum12=sum21=sum22=sum31=sum32 = 0;
-		for (int t= 0; t<4; t++)
+		for (short t= 0; t<4; t++)
 		{
 			if (gr11[t] == k)
 			{
@@ -83,14 +82,14 @@ int main ()
 //		cout <<"\nk="<<k<<"\ti="<<i<<"===\t"<<r[0]<<'\t'<<r[1]<<'\t'<<r[2]<<endl ;
 		if (r[0]&&r[1]&&r[2])
 		{
-			if (0==resCounter)
-			{
+//			if (0==resCounter)
+//			{
 				r1=k ;
 				if (fake[i]==1)
 					r2='+' ;
 				else
 					r2='-' ;
-			} ;
+//			} ;
 			resCounter++ ;
 		}
 	}
@@ -100,5 +99,6 @@ int main ()
 		printf("%s","indefinite");
 	else
 		printf("%d%c",r1, r2);
+	printf ("\n") ;  // arena is OK ?s po 1 MemLimit no na razli4ni testove
 	return 0 ;
 }

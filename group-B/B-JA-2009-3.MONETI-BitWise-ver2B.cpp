@@ -162,10 +162,10 @@ int main ()
 		}
 	}
 	if (0 == resCounter)
-		cout <<"impossible";
+		cout <<"impossible"<<endl;
 	else if (resCounter>1)
-		cout <<"indefinite";
+		cout <<"indefinite"<<endl;
 	else
-		cout <<r1<<r2;
+		cout <<r1<<r2<<endl;
 	return 0 ;
 }

@@ -1,4 +1,4 @@
-// D-JA-2009-2.MaxBinNumber-BubbleSort.cpp
+// D-JA-2009-2.MaxBinNumber.cpp
 #include <iostream>
 // #include <string>
 

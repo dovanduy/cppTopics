@@ -1,7 +1,11 @@
 // D-JA-2009-2.MaxBinNumber-BubbleSort.cpp
 #include <iostream>
 // #include <string>
-
+/*
+	Note:
+	  input as a sequence of octal digits
+	  and output as a sequence of hex digits
+*/
 using namespace std;
 main ()
 { 

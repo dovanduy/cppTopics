@@ -8,7 +8,7 @@ main()
 		p, ind, halfP ;
 	long long cnt; // broi trees
 	double s ; // razstoianie
-	bool t[1000*1000] ; // trees
+	bool t[400] ; // trees
 	cin >>a >>b >>q ;
 	halfP = a+b ;
 	p = 2*halfP ;

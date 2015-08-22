@@ -2,7 +2,7 @@
 #include <iostream>
 // http://en.cppreference.com/w/cpp/utility/bitset/bitset
 // http://www.cplusplus.com/reference/bitset/bitset/operator[]/
-#include <bitset>
+#include <bitset>  // to SAVE Memory
 using namespace std;
 // https://arena.maycamp.com/practice/get_problem_description?contest_id=28&problem_id=59
 main()
@@ -11,7 +11,7 @@ main()
 		p, ind, halfP ;
 	long long cnt; // broi trees
 	double s ; // razstoianie
-	bitset<1000*1000> t ; // trees [0,0,0,0,0,0,0,0,0,..,0,0,0]
+	bitset<400> t ; // trees [0,0,0,0,0,0,0,0,0,..,0,0,0]
 	cin >>a >>b >>q ;
 	halfP = a+b ;
 	p = 2*halfP ;

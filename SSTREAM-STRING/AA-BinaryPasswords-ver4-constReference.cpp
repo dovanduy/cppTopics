@@ -3,7 +3,7 @@
 #include <string>
 using namespace std ;
 
-int countChar (string s, char c='*')
+int countChar (const string &s, const char c='*')
 {
 	int i, counter ;
 	for (counter=i=0; i<s.size(); i++)
@@ -13,7 +13,8 @@ int countChar (string s, char c='*')
 }
 
 int main ()
-{ // ver 2 uses BitWise operations
+{ // ver 4 FINAL: fastest, reliable and smallest code, 
+  // const + & by reference for large parameter.
   string s ;
   cin >>s;
   cout <<(1LL<<countChar(s));

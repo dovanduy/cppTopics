@@ -13,7 +13,7 @@ int countChar (const string &s, const char c='*')
 }
 
 int main ()
-{ // ver 4 FINAL: fastest, reliable and smallest code, 
+{ // ver 4-RELEASE: fastest, reliable and smallest code, 
   // const + & by reference for large parameter.
   string s ;
   cin >>s;

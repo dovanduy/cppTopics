@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="bg" lang="bg">
+
+<head>
+<title>BASE DATE TYPES</title>
+<meta name="description" content="Lesson 'C/C++ base types'. The lessons are for Bulgarian students."/>
+<meta name="keywords" content="programming, lessons, bulgarian, bulgarian students, C/C++ types, types, base types" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- metadata -->
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="90 days" />
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20120722" />
+<meta name="author" content="Кирил Иларионов" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- meta name="controlVis" content="hidden" /-->
+<!-- style sheet links -->
+<link rel="stylesheet" href="../../../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../../../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../../../ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../../../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../../../ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Bulgaria, July 2012, k.ilarionov at gmail.com</h1>
+<h2>Увод в програмирането - C/C++</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Базови Типове Данни</h1>
+<h3>Кирил Иларионов</h3>
+<h4>k.ilarionov at gmail.com</h4>
+</div>
+
+<div class="slide">
+<h1>Тип на данните (I)</h1>
+<ul>
+<li><i>Информацията</i> (данните) се съхраняват <i>в компютъра като поредица от 0 и 1</i>. <i>За хората <b>не</b> е обичайно</i> да работят с <i>0 и 1 само</i>. Хората <i>ползват</i> информацията във вид на <i>числа, букви, символи, ...</i> <i>Езикът за програмиране</i> осигурява представяне на данните <i>в обичаен за повечето хора вид.</i></li>
+<li>Такова <i><b>обичаино</b> представяне</i> се осигурява чрез <i>вградените в езика <b>базови (примитивни)</b> типове данни</i>.
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Тип на данните (II)</h1>
+<ul>
+<li><i><b>Типът на данните</b> определя:</i> 
+<ul>
+<li><i><b>правилата</b></i> по които да се пребразува поредицата от 0 и 1 ;</li>
+<li>Типът задава стандартна дължина на поредицата от 0 и 1 <i><b>(размерът в БАЙТОВЕ)</b></i>, а от там и <i><b>точността</b></i> с която се работи;</li>
+<li><i><b>Размерът</b> на ОП</i> отделена за избран тип данни <i>в C/C++ зависи от <b>типа</b> на процесора</i> на които ще се <i>изпълнява програмата;</i></li>
+<li>
+<i>операциите</i> които е <b>&quot;естествено&quot;</b> да се извършват с <i>данни от <b>този</b> тип</i>.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Примитивни типове данни (I)</h1>
+<ul>
+<li>са <i>предварително дефинирани (вградени)</i> в езика за програмиране;</li>
+<li><i><b>не</b> се дефинират от програмиста;</i></li>
+<li><i><b>стандартни</b> са,</i> в смисъл че са <i>предварително предоставени</i> и практически <i>винаги се използват</i>.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Примитивни типове данни (II)</h1>
+<ul>
+<li><i><b>Примитивните</b> типове</i> данни</li>
+<li><i><b>Примитивни (базови)</b> типове</i> в C/C++
+<ul>
+<li>символен тип <code>char</code> ;</li>
+<li>логически (булев) тип <code>bool</code> ;</li>
+<li>числови типове за:
+<ul>
+<li>цели числа, <code>int</code> ;</li>
+<li>числа с десетична точка (с плаваща запетая, мантиса и порядък), <code>double</code> или <code>float</code> .</li>
+</ul>
+</li></ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Data Type Size</h1>
+<br/>Функцията <code>sizeof</code> дава възможност
+да се провери размера <br/>примерно за типа <code>int</code> за Вашия конкретен процесор.<br/><br/>
+За целта въведете, компилирайте и изпълнете следната програма:
+</div>
+
+<div class="slide">
+<h1>Data Type Size (II)</h1>
+<pre><code>/* sizeofBaseTypes.cpp
+   Name: ILARIONOV,	Fac. Num. 55331,      16-Aug-2010      
+--------
+   The programm checks and prints the sizes of C/C++ base types 
+related to current PC architecture. */
+
+#include &lt;iostream&gt;
+
+using namespace std ;
+
+main ()
+{
+   cout &lt;&lt;"The size of type char\t is\t"  &lt;&lt;sizeof(char)   &lt;&lt;" Byte/s\n" ;
+   cout &lt;&lt;"The size of type bool\t is\t"  &lt;&lt;sizeof(bool)   &lt;&lt;" Byte/s\n" ;
+   cout &lt;&lt;"The size of type int\t is\t"   &lt;&lt;sizeof(int)    &lt;&lt;" Byte/s\n" ;
+   cout &lt;&lt;"The size of type float\t is\t" &lt;&lt;sizeof(float)  &lt;&lt;" Byte/s\n" ;
+   cout &lt;&lt;"The size of type double\t is\t"&lt;&lt;sizeof(double) &lt;&lt;" Byte/s\n" ;
+ }	// main () ends here.</code></pre>
+ <a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Data Properties</h1>
+<br/>
+<ul>
+<li>Данните в програмата отразяват свойства на обектите от реалния свят, който са съществени за задачата решавана от програмата.</li>
+<li>Тези свойства могат да се променят или не, т.е. данните биват:
+<ul>
+<li><i><b>ПРОМЕНЛИВИ</b></i> - информацията <i>може да се изменя;</i></li>
+<li><i><b>КОНСТАНТИ</b></i> - информацията е с <i>постоянен характер.</i></li>
+</ul>
+</li>
+<li><i>И в двата случая даните ни си <b>имат тип.</b></i></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Деклариране на променливи (I)</h1>
+<ul>
+<li><b><i>Всяка променлива</i></b> трябва задължително да <i><b>се декларира.</b></i> При декларирането се указва:
+<ul>
+<li><i><b>ТИП</b> на променлива</i> ;</li>
+<li><i><b>ИМЕ</b> на променлива:</i>
+<ul><li><i>Името</i> на променлива е <i>от латински букви, цифри и/или знак за подчертаване</i>, като <i><b>не започва с цифра</b></i> ; 
+<ul><li><i>Има</i> значение дали <i>буквата е <b>главна или малка буква</b></i> ;</li></ul></li>
+</ul></li> 
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Деклариране на променливи (II)</h1>
+<i>ПРЕПОРЪЧИТЕЛНО Е:</i>
+<ul>
+<li><i>името</i> на променливата да е <i>свързано <b>с използването</b> й</i>;</li>
+<li><i><b>името</b></i> да <i>започва с <b>малка</b> буква</i>;</li>
+<li>ако името е <i>от <b>няколко</b> думи</i>, то думите без първата да <i>започват с <b>главна</b> буква;</i></li>
+<li><i>при декларирането на променливите</i>
+<i>да се зададе началната й стойност</i>. В този случай казваме че <i>променливата се <b>инициализира</b></i>.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Деклариране на променливи (III)</h1>
+<ul>
+<li><code>const</code> записана в началото на декларацията, указва че:
+<ul>
+<li><i><b>не можем да променяме</b> стойностите на декларираните променливи;</i></li>
+<li><i>можем <b>само да прочетем</b> стойностите им;</i></li>
+<li><i><b>Такава декларация е препоръчителна</b>, ако алгоритъмът позволява това.</i></li>
+</ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Примерни декларации (I)</h1>
+<ul>
+<li><code>bool passExam ;</code>
+<ul><li>Декларирана е променлива от логически тип с име <code>passExam</code> ;</li></ul></li>
+<li><code>int a, b = 5 ;</code>
+<ul><li>Декларирани са две целочислени променливи с имена <code>a</code> и <code>b</code>,
+ като за променливата <code>b</code> е зададена начална стойност <code>5</code> ;</li></ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Примерни декларации (II)</h1>
+<ul>
+ <li><code>const float minHourly = 15.63,<br/> minMonthly = 450 ;</code>
+ <ul><li>
+Декларирани са <i>две променливи от тип</i> <code>float</code> <i>с имена</i> <code>minHourly</code> и <code>minMonthly</code>,
+ като като и <i>двете променливи са инициализирани</i>, съответно с 15.63 и 450. <i>Стойностите на тези променливи <b>не</b> могат да се променят</i> при изпълнението на програмата ;</li></ul></li>  
+</ul>
+</div>
+
+<div class="slide">
+<h1><i>НЕПРАВИЛНИ</i> декларации (I)</h1>
+<ul>
+<li><code><del>int sreden uspeh ;</del></code>
+<ul><li><i>Името на променливата <b>не може</b> да включва <b>интервал</b></i>;</li>
+<li><i>ПРЕПОРЪЧИТЕЛНО Е:</i><br/><code>int sredenUspeh ;</code></li>
+<li>Може да декларираме:<br/><code>int sredenUspeh, sredenuspeh ;</code>
+<ul><li><code>sredenUspeh</code> и <code>sredenuspeh</code> <i>са две <b>различни</b> имена на две <b>различни</b> променливи.</i></li></ul></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1><i>НЕПРАВИЛНИ</i> декларирации (II)</h1>
+<ul>
+<li><code><del>bool 1stfriend ;</del></code>
+<ul><li><i><b>СГРЕШЕН</b> запис. Името на променливата <b>не може да започва с цифра</b>;</i></li>
+<li><i>ПРЕПОРЪЧИТЕЛНО Е:</i><br/><code>bool frstFriend ;</code>
+<ul><li><i>Често при съкращенията <b>се изпускат гласните</b> букви.</i></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1><i>НЕПРАВИЛНИ</i> декларации (III)</h1>
+<ul>
+<li><code><del>float min-cena ;</del></code>
+<ul>
+<li><i><b>СГРЕШЕН</b> запис. В името на променливата <b>не може</b> да има <b>тире</b>;</i></li>
+</ul>
+</li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Променливи (I)</h1>
+<ul>
+<li><code>int listOfSomeMyVars ;</code>
+<ul>
+<li>С горната ключова дума <code>int</code> се декларират една или няколко целочислени променливи, като имената на променливите в списъка се отделят чрез запетая;</li>
+<li><code>int a, b, c ;</code><br/>
+Декларирали сме три променливи с имена <code>a</code>, <code>b</code> и <code>c</code>;<br/>
+И трите променливи са от тип <code>int</code>, т.е. стойностите на тези променливи са цели числа;<br/>
+Началната стойност на променливите може да е произволно цяло число.<br/></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Променливи (II)</h1>
+С ключовата дума <code>int</code> се декларират променливи, чиито стойности са цели числа.<br/>
+Пред <code>int</code> може да се изпише <code>short</code>, <code>long</code> или <code>unsigned</code>.
+<ul>
+<li><code>short</code> за <i><b>къса</b> целочислена променлива</i>;</li>
+<li><code>long</code> за целочислена променлива <i>с <b>повишена</b> точност</i> ;</li>
+<li><code>unsigned</code> целочислена променлива <i>с повишена точност <b>без знак</b></i>. Битът не се използва за знак, а за изчисляване стойността на променливата. Стойността на такива променлива е не-отрицателна винаги.
+</li>
+</ul>
+<br/>Това е начин да използваме цели числа с толкова значещи цифри, колкото са ни необходими за решаването на конкретната задача.
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Променливи (III)</h1>
+<p>Ключовата дума <code>int</code> <i>често се <b>изпуска</b></i>, можем да пишем само:</p>
+<ul>
+<li><code>short listOfSomeMyVars ;</code>
+<ul><li><i><b>къси</b> целочислени променливи,</i> т.е. по-малко памет се отделя и от там <i><b>точността</b> е по-малка;</i></li></ul>
+</li>
+<li><code>long listOfSomeMyVars ;</code>
+<ul><li><b>дълги</b> целочислени променливи <i>с <b>повишена</b> точност</i>, т.е. <i>с повече <b>значещи</b> цифри</i>;</li></ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Променливи (IV)</h1>
+<ul>
+<li><code>unsigned int listOfSomeMyVars ;</code>
+<ul><li>целочислена променлива <i><b>без знак</b></i>, т.е. <i>само неотрицателни стойностти</i>
+, тъй като знаковия бит не указва знак, а се използва към стойността на променливата;</li></ul>
+</li>
+<li><code>unsigned short int listOfSomeMyVars ;</code>
+<ul><li><i>къса</i> целочислена променлива <i>без знак</i>;</li></ul>
+</li>
+<li><code>unsigned long int listOfSomeMyVars ;</code>
+<ul><li>целочислена променлива <i>с повишена точност без знак</i>.</li></ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Променливи - ПРИМЕР</h1>
+<code><pre>/*   intVarsEx1.cpp
+   Name: ILARIONOV,	Fac. Num. 55331,      22-Aug-2010      
+---   That is an example 1 about type int.
+The example shows how to declare, to initialize and 
+how to do some base calculations. */
+
+#include &lt;iostream&gt;
+
+using namespace std ;
+
+main ()
+{ int a=7, b=2 ;  // Declares two int variables and initializes them.
+  cout &lt;&lt;"\n\ta=" &lt;&lt;a &lt;&lt;"\tb=" &lt;&lt;b ; // Отпечатва a и b
+  cout &lt;&lt;"\n\na+b="  &lt;&lt;(a+b) ;  // СЪБИРАНЕ
+  cout &lt;&lt;"\n\na-b="  &lt;&lt;(a-b) ;  // ИЗВАЖДАНЕ
+  cout &lt;&lt;"\n\na*b="  &lt;&lt;(a*b) ;  // УМНОЖЕНИЕ
+  cout &lt;&lt;"\n\na%b="  &lt;&lt;(a%b) ;  // ОСТАТЪК при Деление на ЦЕЛИ числа
+  cout &lt;&lt;"\n\na/b="  &lt;&lt;(a/b) ;  // ЦЕЛОЧИСЛЕНО Деление - ЧАСТНО
+  cout &lt;&lt;"\n\n\t-b=" &lt;&lt;(-b) &lt;&lt;"\t- -b="&lt;&lt;(- -b);  // Промяна на знак
+  cout &lt;&lt;"\n\n\t+b=" &lt;&lt;(+b) &lt;&lt;"\t+ -b="&lt;&lt;(+ -b);  // Просто ЗНАКА +
+ }	// ends main()</pre></code>
+ <a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Константи</h1>
+<p>Целите числа могат да се използват от програмата чрез целочислени променливи, както се убедихме от предишния пример.
+</p><p><i> Когато числата не се променят можем можем просто да изпишем стойностите им.
+</i> В този случай казваме че <i>работим с <b>литерално</b> зададени <b>константи</b>.</i>
+ </p><p>В примера вече използвахме константите <code>7</code> и <code>2</code> при инициализирането на променливите
+ <code>a</code> и <code>b</code> съответно.</p>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Константи (II)</h1>
+<ul>
+<li>Целите числа могат да се записват в <i>десетична, осмична или шестнадесетична бройна система:</i></li>
+<li><i><b>десетичен</b> запис</i>
+<ul><li><i>поредица от <b>десетични</b> цифри.</i> Примери: <code>10 -6 4</code></li>
+</ul></li>
+<li><i><b>осмичен</b> запис</i>
+<ul><li><i>поредица от <b>осмични</b> цифри <b>започваща с 0</b>.</i> Примери: <code>012 -06 04</code></li>
+</ul></li>
+<li><i><b>шестнадесетичен</b> запис</i>
+<ul><li><i>поредица от <b>шестнадесетични</b> цифри <b>започваща</b> с <b>0x</b> или с <b>0X</b>.</i> Примери: <code>0xA -0x6 0x4</code></li>
+</ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Константи (III)</h1>
+<i>Целочислените <b>константи</b> се представят като тип <code>int</code></i>. Представянето им може да се прецизира като:
+<ul>
+<li><code>long</code> поредицата от цифри завършва с <code>L</code> или с <code>l</code> ;</li>
+<li><code>unsigned</code> поредицата от цифри завършва с <code>U</code> или с <code>u</code> ;</li>
+<li><i><b>няма</b> целочислени константи представени като</i> <code>short</code> .</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>ЦЕЛОЧИСЛЕНИ Константи - Примери</h1>
+<ul>
+<li><code>10L</code>
+<ul><li>числото 10 записано като <code>long int</code></li>
+</ul></li>
+<li><code>012LU</code>
+<ul><li>осмичен запис на числото 10 записано като <code>unsigned long int</code></li>
+</ul></li>
+<li><code>0x10L</code>
+<ul><li>шестнадесетичен запис на числото 16 от тип <code>long int</code></li>
+</ul></li>
+<li><code><del>0286</del></code>
+<ul><li><i><b>СГРЕШЕН</b> запис. <b>Защо?</b></i></li>
+</ul></li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Аритметични операции с цели числа</h1>
+Видове:
+<ul>
+<li>УНАРНИ Операции</li>
+<li>МУТИПЛИКАТИВНИ Операции</li>
+<li>АДИТИВНИ Операции</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични операции с цели числа</h1>
+УНАРНИ Операции:
+<ul>
+<li>&nbsp;&nbsp;<code>+</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>положителен</b> знак</i></li>
+<li>&nbsp;&nbsp;<code>-</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>отрицателен</b> знак</i></li>
+<li>&nbsp;&nbsp;<code>++</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>увеличаване</b> с 1, <b>инкрементиране</b> на променлива</i></li>
+<li>&nbsp;&nbsp;<code>--</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>намаляване</b> с 1, <b>декрементиране</b> на променлива</i></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични операции с цели числа (II)</h1>
+МУТИПЛИКАТИВНИ Операции:
+<ul>
+<li>&nbsp;&nbsp;<code>*</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;УМНОЖЕНИЕ</i></li>
+<li>&nbsp;&nbsp;<code>/</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ЦЕЛОЧИСЛЕНО</b> Деление</i> - <b>цяло</b> ЧАСТНО</li>
+<li>&nbsp;&nbsp;<code>%</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ОСТАТЪК</b> от делението</i> на две цели числа</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични операции с цели числа (III)</h1>
+АДИТИВНИ Операции:
+<ul>
+<li>&nbsp;&nbsp;<code>+</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;действие СЪБИРАНЕ</i></li>
+<li>&nbsp;&nbsp;<code>-</code> <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;действие ИЗВАЖДАНЕ</i></li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>АРИТМЕТИЧНИ Изрази</h1>
+<ul>
+<li><i>С помощта на аритметичните операции променливите и константите образуват <b>аритметични изрази</b>.</i></li>
+<li><i>Стойността</i> на аритметичния израз <i>e число</i> което <i>има <b>тип</b></i> чрез който се представя в компютъра.
+<ul>
+<li><i><b>Типът</b></i> на резултата от аритметичния израз
+<ul><li>
+е такъв че <i>да <b>няма</b> загуба на точност</i> при смятането с <i>различни по тип</i> (точност) числа.</li>
+<li>се определя <i>автоматично</i> от компилатора, като <i>аргументът с по-малка точност
+ <b>неявно</b> се преобразуват към типа на аргумента с по-голяма точност.</i></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>АРИТМЕТИЧНИ Изрази - ПРЕСМЯТАНЕ</h1>
+<ol>
+<li>пресмята се стойността на <i>изразите заградени <b>в скоби.</b> Скобите могат да се влагат;</i></li>
+<li>извършват се <i><b>знаковите</b> операции;</i></li>
+<li>променливите се инкрементират/декрементират ако <i>операцията е записана <b>преди</b> името на променливата, <b>префиксна</b> операция;</i></li>
+<li><i>от ляво на дясно</i> в реда в които са записани се извършват:
+<i>първо</i> всички <i><b>мултипликативни</b> операции а след това </i>всички <i><b>адитивни</b> операции</i>.</li>
+<li>променливите се инкрементират/декрементират ако <i>операцията е записана <b>след</b> името на променливата, <b>постфиксна</b> операция;</i></li>
+</ol>
+</div>
+
+<div class="slide">
+<h1>Аритметични изрази - Примери (I)</h1>
+В програмата е декларирано:<br/><code>int a=6, c=4, d=5 ;</code>
+<br/> <i>Пресметнете изразите:</i>
+<ul>
+<li><code>a+c*d</code>
+<ul>
+<li>c*d = 4*5 = 20</li>
+<li>a+c*d = a+20 = 6+20 = 26</li>
+<li><i>Изразът има стоиност <b>26</b></i></li>
+</ul>
+</li>
+<li><code>(a+c)*d</code>
+<ul>
+<li>a+c = 6+4 = 10</li>
+<li>(a+c)*d = 10*d = 10*5 = 50</li>
+<li><i>Изразът има стоиност <b>50</b></i></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични изрази - Примери (II)</h1>
+В програмата е декларирано: <code>int a=6, b=9, c=4, d=5 ;</code>
+<br/> <i>Пресметнете изразите:</i>
+<ul>
+<li><code>b-c*d/a</code>
+<ul>
+<li>c*d = 4*5 = 20</li>
+<li>c*d/a = 20/a = 20/6 = 3</li>
+<li>b-c*d/a = b-3 = 9-3 = 6</li>
+<li><i>Изразът има стоиност <b>6</b></i></li>
+</ul>
+</li>
+<li><code>b-c*(d/a)</code></li>
+<li><code>(b-c)*d/a</code></li>
+<li><code>(b-c)*(d/a)</code></li>
+<li><code>(b-c*d)/a</code></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични изрази, Упражнение (I)</h1>
+<ul>
+<li><code>int a=7, b=-2, c=3, d=5 ;</code>
+<ul>
+<li>Пресметнете изразите, като запишете последователността на изчисленията.
+<ul>
+<li><code>a*b+c%d</code></li>
+<li><code>a*(b+c)%d</code></li>
+<li><code>(a*b+c)%d</code></li>
+<li><code>a*(b+c%d)</code></li>
+<li><code>a*b+ - -c%d</code></li>
+<li><code>++a*b+++ - -c%d--</code></li>
+<li><code>a*(b+c*(d/a)*(a-b))</code></li>
+</ul>
+</li>
+<li>Проверете отговорите си като изпълните програмата <code>intVarsEx2.cpp</code>. <i>Различия?</i></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Аритметични изрази, Упражнение (II)</h1>
+<pre><code>/* intVarsEx2.cpp
+   Name: ILARIONOV,	Fac. Num. 55331,      24-Aug-2010      
+--------
+   That is an example 2 about int type.
+The example shows how to evaluate expressions. */
+
+#include &lt;iostream&gt;
+
+using namespace std ;
+
+main ()
+{ int a=7, b=-2, c=3, d=5 ;
+  cout &lt;&lt;"\na=" &lt;&lt;a &lt;&lt;"\tb=" b &lt;&lt;"\tc=" &lt;&lt;c &lt;&lt;"\td=" &lt;&lt;d &lt;&lt;"\n\n";  
+  cout &lt;&lt;(a*b+c%d) &lt;&lt;"\t" &lt;&lt;"a*b+c%d\n\n" ;
+  cout &lt;&lt;(a*(b+c)%d) &lt;&lt;"\t" &lt;&lt;"a*(b+c)%d\n\n" ;
+  cout &lt;&lt;((a*b+c)%d) &lt;&lt;"\t" &lt;&lt;"(a*b+c)%d\n\n";
+  cout &lt;&lt;(a*(b+c%d)) &lt;&lt;"\t" &lt;&lt;"\ta*(b+c%d)\n\n" ;
+  cout &lt;&lt;(a*b+ - -c%d) &lt;&lt;"\t" &lt;&lt;"a*b+ - -c%d\n\n" ;
+  cout &lt;&lt;(++a*b+++ - -c%d--) &lt;&lt;"\t" &lt;&lt;"++a*b+++ - -c%d--\n\n" ;
+  cout &lt;&lt;"a=" &lt;&lt;a &lt;&lt;"\tb=" &lt;&lt;b &lt;&lt;"\tc=" &lt;&lt;c &lt;&lt;"\td=" &lt;&lt;d &lt;&lt;"\n\n" ;
+ }</code></pre>
+</div>
+
+
+<div class="slide">
+<h1>Съставяне на аритметични изрази</h1>
+<i>Зад. <b>1</b>: </i>Намерете <i>последната цифра</i> от целочислената променлива <code>k</code>
+<ul><li>съставете аритметичен израз решаващ горната задача;</li>
+<li>напишете програма за проверка на така съставения аритметичен израз.</li>
+</ul>
+<div class="handout">
+k%10 и k/10%10 става за въпроси от тест
+</div>
+</div>
+
+<div class="slide">
+<h1>Съставяне на аритметични изрази</h1>
+<i>Зад. <b>2</b>: </i>Намерете <i>пред</i>последната цифра от целочислената променлива <code>k</code>
+<ul><li><i>съставете</i> аритметичен <i>израз</i> решаващ горната задача;</li>
+<li>напишете <i>програма за проверка</i> на така съставения аритметичен израз.</li>
+</ul>
+
+<div class="handout">
+k%10 и k/10%10 става за въпроси от тест
+</div>
+</div>
+
+<div class="slide">
+<h1>Сгрешени изрази</h1>
+<i>Зад. <b>3</b></i>:
+<br/>
+<img src="../../../images/SUM_AVERAGE.gif" alt="SUM AVERAGE ERROR"/>
+<br/>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Линеен запис за аритметичен израз</h1>
+<i>Зад. <b>4</b>: </i>Пресметнете дробите
+<table>
+<tr><td><img src="../../../images/f1.gif" alt="formula 1"/></td><td valign="middle">&nbsp;&nbsp;&nbsp;и</td></tr>
+<tr><td><img src="../../../images/f2.gif" alt="formula 2"/></td><td valign="middle">&nbsp;&nbsp;&nbsp;, като:</td></tr>
+</table>
+<ul>
+<li><i>съставете</i> аритметичен <i>израз</i> за пресмятане на дробта;</li>
+<li>напишете <i>програма за проверка</i> на така съставения израз;</li>
+<li><i>Правилно ли е изчислен резултата?</i></li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>РЕАЛНИ Променливи (I)</h1>
+<i>РЕАЛНИ</i> променливи, известни още като <i>числа с десетична точка</i>, <i>с плаваща запетая</i>
+<ul><li>са с по-голяма точност от <code>long int</code></li>
+<li>представят се чрез мантиса и порядък</li>
+<li>В C++ се работи с <i>три</i> разновидности:
+<ul>
+<li>тип <code>float</code> <i>с <b>обикновенна</b> точност</i><br/>Литералните константи завършват с <code>f</code> или с <code>F</code></li>
+<li>тип <code>double</code> <i>с <b>двойна</b> точност</i><br/>Този тип е подразбиращ се за литералните константи с плаваща точка.</li>
+<li>тип <code>long double</code> <i>с <b>повишена</b> точност</i><br/>Литералните константи завършват с <code>l</code> или с <code>L</code></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>РЕАЛНИ Променливи (II)</h1>
+<ul>
+<li><code>float overTimeHours = .5 ;</code>
+</li>
+<li><code>double overTimePay = 11.5 ;</code>
+</li>
+<li><code>long double totalPay, salary = 650. ;</code>
+</li>
+<li><code>.75F</code>
+<ul>
+<li>Стойност <b>0.75</b></li>
+<li>тип <code>float</code></li>
+</ul>
+</li>
+<li><code>32.4E2</code>
+<ul>
+<li>Стойност <b>3240</b>, 32.4 по 10 на втора степен</li>
+<li>тип <code>double</code></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>РЕАЛНИ Променливи (III)</h1>
+<ul>
+<li><code>-165.L</code>
+<ul>
+<li>Стойност <b>-165.0</b></li>
+<li>от тип <code>long double</code></li>
+</ul>
+</li>
+<li><code>-165L</code>
+<ul>
+<li>Стойност <b>-165</b></li>
+<li>от тип <code>long int</code></li>
+</ul>
+</li>
+<li><code>2.5+165</code>
+<ul>
+<li>Стойност <b>167.5</b></li>
+<li>от тип <code>double</code></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>РЕАЛНИ Променливи (IV)</h1>
+<ul>
+<li><code>2.5F+165.L</code>
+<ul>
+<li>Стойност <b>167.5</b></li>
+<li>от тип <code>long double</code></li>
+</ul>
+</li>
+<li><code>2.5F+165L</code>
+<ul>
+<li>Стойност <b>167.5</b></li>
+<li>от тип <code>float</code></li>
+</ul>
+</li>
+<li><code><del>2.5+165S</del></code>
+<ul>
+<li><i><b>СГРЕШЕН</b> запис. <b>Защо?</b></i></li>
+</ul>
+</li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Символен тип (I)</h1>
+<ul>
+<li><i>С ключовата дума </i><code>char</code><i> се декларират променливи от символен тип.</i>
+<br/>Възможни са <i>два варианта</i> на използване
+<ul><li><code>char</code></li>
+<li><code>unsigned char</code></li>
+</ul>
+</li>
+<li><i>Типът </i><code>char</code><i> е представен като <b>цяло число</b>, известно като <b>код на символа</b>
+. Кодът на символа е <b>поредния номер на символа в кодовата таблица</b>.</i>
+<br/>Могат да се извършват аритметични операции като с типа <code>int</code>, т.е.<br/>използва се <i>и за работа с <b>малки</b> цели числа</i>.</li>
+<li><i>Размерът е <b>1 байт</b></i></li>
+<li><i>Литералната константа е символ заграден с <b>единични</b> кавички</i></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Символен тип (II)</h1>
+<ul>
+<li><i>Символът</i> може да:
+<ul>
+<li>се въведе <i>от клавиатурата</i>;</li>
+<li>се зададе чрез <i>поредния си номер в кодовата таблица. Този номер се записва <b>осмично</b>.</i>
+<br/><code>'\120'</code> е символа <code>'P'</code> с пореден номер <i><b>80</b></i>, а <i>не 120</i>.</li>
+</ul></li>
+<li>Текстът е поредица от символи. Прието е да се огражда със символа <code>&quot;</code></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Символен тип - Упражнение</h1>
+Декларирали сме <code>char a = 'f' ;</code>
+<ul>
+<li>За израза <code>(a--)</code> 
+<ul><li>определете както типа му, така и стойността му;</li>
+<li>Проверете отговора си с помощта на програмата <code>charVarEx1.cpp</code> .</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Символни Променливи - Пример</h1>
+<pre><code>/*	charVarEx1.cpp
+	Name: ILARIONOV,	Fac. Num. 55331,  27-Aug-2010
+--------
+   That is an example 1 about char type.
+The example shows char basics. */
+
+#include &lt;iostream&gt;
+
+using	namespace std ;
+
+main ()
+{
+    char    ch = 'c', nextChar = ch+1, prevChar = ch-1;
+    cout    &lt;&lt;"\nprevChar is " &lt;&lt;prevChar ;
+    cout    &lt;&lt;"\t\t ch is " &lt;&lt;ch ;
+    cout    &lt;&lt;"\t\t nextChar is " &lt;&lt;nextChar ;
+    cout    &lt;&lt;'\n'  ; // New Line
+    cout    &lt;&lt;'\a'  ; // Bell
+    cout    &lt;&lt;"\t++ch is "   &lt;&lt;(++ch) &lt;&lt;'\n' ;
+    cout    &lt;&lt;"\\120 is " &lt;&lt;'\120' &lt;&lt;'\n' ;
+}</code></pre>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Escape Sequences (I)</h1>
+<i>Символите</i> ползвани от програмата ни са подредени <i>в кодова таблица</i>. В тази таблица са както
+ символите с които <i>пишем/четем</i>, така и символи за управление работата на компютърната система, т.е. <i>управляващи символи</i>.
+ <ul>
+ <li><i><b>Escape последователностите</b> са поредици от символи, специализирани за <b>форматиране на извежданата информация</b>.</i></li>
+ <li><i><b>Чeсто</b> използвани</i> escape последователности са:</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Escape Sequences (II)</h1>
+ <ul>
+<li>
+<code>\n</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>LF</b>, нов ред</li>
+<li><code>\t</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>HT</b>, хоризонтална табулация</li>
+<li><code>\v</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>VT</b>, вертикална табулация</li>
+<li><code>\a</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>BELL</b>, звуков сигнал</li>
+<li><code>\\</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вмъква символа <code>\</code> в извеждания текст</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Escape Sequences (III)</h1>
+ <ul>
+<li><code>\"</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вмъква символа <code>"</code> в извеждания текст</li>
+<li><code>\'</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вмъква символа <code>'</code> в извеждания текст</li>
+<li><code>\b</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>BS</b>, връща курсора с една позиция</li>
+<li><code>\r</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>CR</b>, в началото на текущия ред</li>
+<li><code>\f</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>FF</b>, нова страница</li>
+<li><code>\0</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>NUL</b>, празно (няма данни)</li>
+</ul>
+<a href="../index.html">Изход</a>
+</div>
+
+<div class="slide">
+<h1>Операции за сравнение (I)</h1>
+ <ul>
+ <li><i><b>Аритметичните операции</b> ни позволяват <b>да пресметнем</b> стойностите на интересуващите ни <b>аритметични изрази</b>.</i></li>
+ <li><i><b>Операциите за сравнение</b> ни позволяват да <b>сравним</b> стойностите на интересуващите ни <b>аритметични изрази</b>.</i></li>
+<li><i><b>Операциите за сравнение се изпълняват</b> след като стойността на аритметичния израз е пресметната, т.е. <b>след аритметичните операции</b>.</i></li>
+<li><i>Резултатът</i> от сравнението <i>е:</i>
+<ul>
+<li><code>0</code> сравнението <i><b>не е</b> изпълнено;</i></li>
+<li><code>1</code> сравнението <i><b>е</b> изпълнено.</i></li>
+</ul></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Операции за сравнение (II)</h1>
+ <ul>
+<li>
+<code>==</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>проверка за <b>равенство</b> на сравняваните стойности</i></li>
+<li>
+<code>!=</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>НЕравенство</b></i></li>
+<li>
+<code>&lt;</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>по малко</b></i></li>
+<li>
+<code>&gt;</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>по голямо</b></i></li>
+<li>
+<code>&lt;=</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>по малко или равно, не по голямо</b></i></li>
+<li>
+<code>&gt;=</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><b>по голямо или равно, не по малко</b></i></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Операции за сравнение, Пример</h1>
+<pre><code>/*	compOpEx1.cpp
+	Name: ILARIONOV,	Fac. Num. 55331,  29-Aug-2010
+--------
+   That is an example 1 about 
+HOW TO COMPARE ARITHMETIC EXPRESSIONS. */
+
+#include &lt;iostream&gt;
+
+using	namespace std ;
+
+main ()
+{   int a=5, b=11 ;
+    cout    &lt;&lt;"\na=" &lt;&lt;a &lt;&lt;"\tb=" &lt;&lt;b &lt;&lt;'\n' ;
+    cout    &lt;&lt;"\na-b&gt;b-a is\t" &lt;&lt;(a-b>b-a) ;
+    cout    &lt;&lt;"\na-b&lt;b-a is\t" &lt;&lt;(a-b&lt;b-a) &lt;&lt;'\n' ;
+    cout    &lt;&lt;"\na!=b is\t\t" &lt;&lt;(a!=b) ;
+    cout    &lt;&lt;"\na==b is\t\t" &lt;&lt;(a==b) &lt;&lt;'\n' ;
+}</code></pre>
+<a href="../index.html">Изход</a>
+</div>
+
+
+<div class="slide">
+<h1>Логически тип</h1>
+<ul>
+<li><code>bool</code>
+<ul>
+<li><i>С ключовата дума </i><code>bool</code><i> се декларират променливи от логически тип. Две стойности:</i>
+<ul><li><code>false</code> льжа, стойност 0</li>
+<li><code>true</code> истина, стойност 1, аритметичен израз със стойност различна от 0 се счита че е <code>true</code></li>
+</ul>
+</li>
+<li><code>false &lt; true</code> и <i>при така избраните стойностти, <b>основните логическите операции са проста аритметика</b></i></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Логически Тип - Операции</h1>
+
+<table width="100%" border="3">
+<tr><td align="center" colspan="3"  valign="bottom"><i>ЛОГИЧЕСКИ ОПЕРАЦИИ</i></td></tr>
+<tr>
+<td width="20%" valign="top"><code>!</code> <i><b>НЕ</b> (Отрицание, NOT)</i></td>
+<td width="52%"><code>||</code> <i><b>ИЛИ</b> (Дизюнкция, Лог. събиране, OR)</i></td>
+<td width="28%" valign="top"><code>&amp;&amp;</code> <i><b>И</b> (Конюнкция, Лог. умножение, AND)</i></td>
+</tr>
+<tr>
+<td width="20%" valign="top"><table>
+<tr><td><code>!A</code></td></tr>
+<tr><td><code>false</code></td></tr>
+<tr><td><code>false</code></td></tr>
+<tr><td><code>true</code></td></tr>
+<tr><td><code>true</code></td></tr>
+</table></td>
+<td width="52%" valign="top"><table>
+<tr><td width="28%"><code>A</code></td><td width="28%"><code>B</code></td><td width="44%" align="right"><code>A || B</code></td></tr>
+<tr><td width="28%"><code>true</code></td><td width="28%"><code>true</code></td><td width="44%" align="right"><code>true</code></td></tr>
+<tr><td width="28%"><code>true</code></td><td width="28%"><code>false</code></td><td width="44%" align="right"><code>true</code></td></tr>
+<tr><td width="28%"><code>false</code></td><td width="28%"><code>true</code></td><td width="44%" align="right"><code>true</code></td></tr>
+<tr><td width="28%"><code>false</code></td><td width="28%"><code>false</code></td><td width="44%" align="right"><code>false</code></td></tr>
+</table></td>
+<td width="28%" valign="top"><table>
+<tr><td><code>A &amp;&amp; B</code></td></tr>
+<tr><td><code>true</code></td></tr>
+<tr><td><code>false</code></td></tr>
+<tr><td><code>false</code></td></tr>
+<tr><td><code>false</code></td></tr>
+</table></td>
+</tr>
+</table>
+<a href="../index.html">Изход</a>
+</div>
+</div>
+</body>
+</html>

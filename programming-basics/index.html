@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bg" lang="bg">
+
+<head>
+<title>Основни понятия и дейностти в програмирането</title>
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="21 days" />
+<meta http-equiv="Content-Language" content="bg"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta name="description" content="Резюме на основни понятия и дейностти в програмирането."/>
+<meta name="keywords" content="алгоритъм, транслатор, изходен код, компилиране, IDE, интерпретатор, програмиране" />
+<meta http-equiv="Content-Type" content="text/html; utf-8"/>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20140120" />
+<meta name="author" content="Иларионов" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- meta name="controlVis" content="hidden" /-->
+<!-- style sheet links -->
+<link rel="stylesheet" href="../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Bulgaria / January 2014 / k.ilarionov at gmail.com</h1>
+<h2>Програмиране, основни понятия</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>ОСНОВИ НА ПРОГРАМИРАНЕТО</h1>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3>Кирил Иларионов</h3>
+<h4>k.ilarionov at gmail.com</h4>
+</div>
+
+
+<div class="slide">
+<h2>ПРОГРАМИРАНЕ (I)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<ul>
+<li>Програмирането е набор от методи,
+<br/>чрез които компютъра разбира
+<br/>какво трябва да направи.
+</li>
+<li class="incremental">Чрез тези методи се съставя програма, която се изпълнява от компютъра.
+</li>
+<li class="incremental">Програмата:
+	<ul>
+	<li class="incremental">
+	получава входни данни / сигнали;
+	</li>
+	<li class="incremental">
+	извежда резултат/и (изходни данни / сигнали).
+	</li>
+	</ul>
+</li>
+</ul>
+<div class="handout">
+<!--any material that should appear in print but not on the slide-->
+</div>
+</div>
+
+
+<div class="slide">
+<h2>ПРОГРАМИРАНЕ (II)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<ul>
+<li>Изходните данни са <em>резултат</em>,
+<br/>получен след обработка на входните данни,
+<br/>съгласно предварително зададен <em>набор от правила</em>.</li>
+<li class="incremental">Наборът от <em>правила</em> чрез които получаваме <em>резултат</em> след <em>краен брой</em> стъпки (базови обработки) се нарича <strong><em>АЛГОРИТЪМ</em></strong>.
+</li>
+<li class="incremental">Данните се:
+<ul>
+<li class="incremental">съхраняват в паметта на компютъра;</li>
+<li class="incremental">подреждат (групират, <strong><em>структурират</em></strong>),<br/>
+с цел по-ефективната им обработка, в т.ч. и от човека.</li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+<!--any material that should appear in print but not on the slide-->
+</div>
+</div>
+
+<div class="slide">
+<h2>ПРОГРАМИ (I)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3>"ПРОГРАМИ = АЛГОРИТМИ + СТРУКТУРИ ОТ ДАННИ" <a href="http://en.wikipedia.org">Niklaus Wirth</a></h3>
+<ul>
+<li class="incremental">В програмата се
+<ul>
+<li class="incremental"><em>въвежда</em> информация (данни, сигнали),</li>
+<li class="incremental">която се <em>обработва</em> и/или <em>съхранява</em> в компютъра,</li>
+<li class="incremental">след което се <em>извежда</em> рeзултатът получен след краен брой базови обработки (стъпки).</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>ПРОГРАМИ (II)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3>ОСНОВНИ ИНФОРМАЦИОННИ ДЕЙНОСТИ</h3>
+<ul>
+<li class="incremental">Така всяка програма реализира четирите <em>основни информационни дейности</em>:
+<ul>
+<li><em><strong>въвеждане</strong></em>,</li>
+<li><em><strong>съхранение</strong></em>,</li>
+<li><em><strong>обработка</strong></em> и</li>
+<li><em><strong>разпространение</strong></em> на информация.</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>ПРОГРАМИ (III)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3><i>АЛГОРИТМИ:</i></h3>
+<ul>
+<li>Алгоритъмът се задава чрез поредица от инструкции;</li>
+<li class="incremental">На ниво език за програмиране тези инструкции се наричат <em><strong>оператори</strong></em>;</li>
+<li class="incremental">Операторите се разделят с ; в изходни кодове на Java, C, C++, Perl, ...;</li>
+<li class="incremental"><em>Всеки алгоритъм</em> може да се зададе като поредица от <em><strong>базови алгоритмични конструкции</strong></em>.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>ПРОГРАМИ (IV)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3><em>СТРУКТУРИ ОТ ДАННИ</em>:</h3>
+<ul>
+<li class="incremental"><em><strong>примитивни типове</strong></em> данни - по подразбиране езикът структурира данните във вид удобен за ползване от хората;</li>
+<li class="incremental">типове данни <em><strong>дефинирани от потребителя</strong></em> - програмистът може да структурира данните по начин подходящ за конкретното приложение.</li>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h2>ПРОГРАМИ (V)</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3><em>УВОД В ПРОГРАМИРАНЕТО</em></h3>
+<p>При един <em>увод в програмирането</em> нормално е <em><strong>акцентът</strong></em> да е върху:</p>
+<ul>
+<li class="incremental"><strong><em>операторите</em></strong> чрез които се <em>реализират</em> тези <strong><em>базови алгоритмични конструкции</em></strong>;</li>
+<li class="incremental">използването на <strong><em>примитивните типове данни</em></strong>.</li>
+</ul>
+
+</div>
+
+
+<div class="slide">
+<h2>Езикът за програмиране:</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3><em>ОСНОВЕН ИНСТРУМЕНТ (I)</em></h3>
+<ul>
+<li class="incremental">Eзикът за програмиране не е естествен език <br/>нито за компютъра, нито за програмиста.</li>
+<li class="incremental"><i>Програмистът</i> изучава езика за програмиране, в т.ч. като <br/><em>пише програми на</em> изучавания <em>език за програмиране</em>.</li>
+<li class="incremental">Така създадения от програмиста код е известен като <em><strong>изходен (първичен) код, source code.</strong></em></li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Езикът за програмиране като</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3><em>ОСНОВЕН ИНСТРУМЕНТ (II)</em></h3>
+<ul>
+<li class="incremental"><em>Изходният код (source)</em> е <em>поредица от оператори</em> и се съхранява <em>в текстов файл</em> с <em>подходящо разширение</em>.</li>
+<li class="incremental"><em><strong>Транслаторът</strong> преобразува</em> подготвения от програмиста <br/><em>изходен код в</em> код на друг език, най-често <i>машинен език.</i></li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>ТРАНСЛАЦИЯ</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+При <strong><em>транслацията</em></strong> изходния код на програмата се превежда до вид понятен за изпълнение от компютъра.
+ Този превод се извършва от специализирана програма, наречена <strong><em>транслатор</em></strong>.
+<p  class="incremental">В зависимост от начина по които се извършва горния превод <br/>ТРАНСЛАТОРИТЕ биват:
+<em>ИНТЕРПРЕТАТОРИ</em> или <em>КОМПИЛАТОРИ</em>.
+</p>
+</div>
+
+<div class="slide">
+<h2>ИНТЕРПРЕТАТОР - Механизъм</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<ol  class="incremental">
+<li>прочита се един оператор;</li>
+<li>операторът се превежда в машинен код;</li>
+<li>изпълнява се;</li>
+<li>прочита се следващия оператор от изходния код на програмата ...</li>
+</ol>
+</div>
+
+<div class="slide">
+<h2>ИНТЕРПРЕТАТОР - Особености</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<p><em><strong>Интерпретаторът</strong> извършват <strong>СИМУЛТАНТЕН превод</strong></em>.</p>
+<p  class="incremental">За да се изпълни програмата, необходимо е тя да се транслира всеки път.
+<br/>При интерпретаторите транслацията е МНОГОКРАТНА.</p>
+</div>
+
+<div class="slide">
+<h2>КОМПИЛАТОР - Механизъм</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<ol  class="incremental">
+<li>прочитат се всички оператори от файловете съдържащи изходния код на програмата Ви;</li>
+<li>извършва се транслация в друг код: <i>машинен код и/или изходен код на друг език</i>;</li>
+<li>компилираната програма се изпълнява, ако в изходния код не са открити сериозни грешки.</li>
+</ol>
+</div>
+
+<div class="slide">
+<h2>КОМПИЛАТОР - Особености</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<p><em>Компилаторът транслира <strong>целия</strong> изходен код</em> в машинен такъв най-често.
+<br/>След успешна транслация файлът с машиния код се запомня и може да се стартира.</p>
+<p  class="incremental">За да се изпълни програмата, необходимо е тя да се <em>компилира само един път</em>.
+<br/>При <em>еднократна компилация</em> е възможно <em>многократно изпълнение</em>.
+<br/><i>Компилираните програми се изпълняват по-бързо</i>.</p>
+</div>
+
+<div class="slide">
+<h2>КОМПИЛАЦИЯ</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<h3>Последователни Стъпки - ЕТАПИ:</h3>
+<ol>
+<li><em>Еdit</em> - редактиране <strong><em>изходния код</em></strong>;</li>
+<li><em>Preprocess and Compile</em> - предпроцесорна обработка и компилация;</li>
+<li><em>Link</em> - свързване;</li>
+<li><em>Load and Execution</em> - зареждане и изпълнение.</li>
+</ol>
+</div>
+
+
+<div class="slide">
+<h2 class="center">
+<b>1.</b> <em>Еdit</em> - редактиране <strong><em>изходния код</em></strong> на програмата.</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+Изходният код на програмата се въвежда, променя и се съхранява в текстов файл със съответен тип:
+<ul>
+<li>myProg.c e изходен код на езика C;</li>
+<li>myProg.cpp e изходен код на езика C++;</li>
+<li>myProg<del>.txt</del> <i>не е нормално</i> да сe обработва от транслаторите;</li>
+<li>myProg.java е изходен код на езика Java;</li>
+<li>myProg.pl е изходен код на езика Perl;</li>
+<li>myProg.pas е изходен код на езика Pascal ...</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2 class="center"><b>2.</b> <em>Preprocess and Compile</em> - предпроцесорна обработка и компилация.</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+Изходният код на програмата се преобразува в поредица от машинни инструкции,
+<br/>наречена <em><strong>обектен код</strong></em> на две последователни стъпки, 
+<br/><em>предпроцесорна обработка и компилация:</em>
+<ul class="incremental">
+<li>в резултат от изпълението на предпроцесорните директиви изходният код се допълва с нови текстове;</li>
+<li>така модифицирация изходен код се преобразува в поредица от 0 и 1,
+<br/>т.e. в поредица от машинни инструкции.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2 class="center"><b>3.</b> <i>Link</i> - свързване.</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<ul>
+<li>Изходният код може да бъде разделен в относително самостоятелни програмни единици(функции, класове, ...), 
+ като всяка от тези единици е запомнена в отделен файл;</li>
+<li>Всеки от тези файлове може да се транслира самостоятелно до ниво обектен код;</li>
+<li>Е сега всички обектни кодове се обединяват в единствена поредица от машини инструкции,
+ като се създава изпълним файл, годен за стартиране на програмата ни.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2 class="center"><b>4.</b> <em>Load and Execution</em> - зареждане и изпълнение на файла, в резултат на стъпката <i>Link</i>.</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+</div>
+
+<div class="slide">
+<h2>ИНТЕГРИРАНА СРЕДА ЗА РАЗРАБОТКА - IDE</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<p><i>
+Integrated Development Environment, <strong>IDE</strong>, e приложна програма, чийто потребителски интерфейс обединява изпълнението на всички етапи на транслация.
+</i>
+</p>
+<br/>
+Тези етапи, без редактирането на изходния код, се изпълняват автоматично от използваното IDE.
+</div>
+
+<div class="slide">
+<h2>Да започнем да програмираме</h2>
+<p class="verify">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+<br/>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Валиден CSS!" />
+</a>
+</p>
+<p>
+За да се научим да програмираме с <em>базовите</em> алгоритмични конструкции
+ приложени над примитивните типове данни трябва да изберем и <em>подходящ език за програмиране:</em>
+</p>
+
+<div class="menuHorizontal"><a href="./cpp-classes-for-students/index.html">ОСНОВИ  ПРОГРАМИРАНЕТО С C++</a></div>
+<!--
+<div class="menuHorizontal">ОСНОВИ НА ПРОГРАМИРАНЕТО С Java</div>
+<div class="menuHorizontal">ОСНОВИ НА ПРОГРАМИРАНЕТО С Pascal</div>
+-->
+<div class="menuHorizontal"><a href="../index.html">Изход</a></div>
+</div>
+
+</body>
+</html>

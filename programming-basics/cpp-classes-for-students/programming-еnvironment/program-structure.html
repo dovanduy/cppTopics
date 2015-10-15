@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bg" lang="bg">
+
+<head>
+<title>Source Structure</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+<meta name="description" content="Lesson Basic C/C++ structure. The lessons are for Bulgarian students."/>
+<meta name="keywords" content="programming, lessons, bulgarian, bulgarian students, source structure, programming structure, C/C++ structure" />
+<!-- metadata -->
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="7 days" />
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20130525" />
+<meta name="author" content="Кирил Иларионов" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- meta name="controlVis" content="hidden" /-->
+<!-- style sheet links -->
+<link rel="stylesheet" href="../../../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../../../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../../../ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../../../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../../../ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2>Bulgaria / May 2013 / k.ilarionov at gmail.com</h2>
+<h3>Увод в програмирането с C++</h3>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>СТРУКТУРА НА ПРОГРАМАТА</h1>
+<h3>Кирил Иларионов</h3>
+<h4>k.ilarionov at gmail.com</h4>
+</div>
+
+<div class="slide">
+<h2>ПЪРВА ПРОГРАМА</h2>
+<br/><br/>
+<p>
+Време е <i>да проверим работоспособността</i> на средата за програмиране.
+</p>
+<p class="center">
+Внимавайте с <i>малките</i> и <i>главните</i> букви.<br/>C/C++ ги възприема като <i>различни</i> букви.
+</p>
+<br/>
+За да проверим работоспособността ще следваме примерната програма показана на следващите два екрана:
+</div>
+
+<div class="slide">
+<h2>ИЗХОДЕН КОД - SOURCE</h2>
+<br/><pre><code>
+/*
+	sumAverage2nums.cpp
+	Name: ILARIONOV,	Fac. Num.: 55331,	11-Aug-2010
+--------
+   The programm reads two numbers and prints their sum and average.
+*/
+
+#include &lt;iostream&gt;
+
+using	namespace std ;
+
+double	average (double num1, double num2) ;
+</code></pre>
+</div>
+
+<div class="slide">
+<h2>ИЗХОДЕН КОД - SOURCE (Cont.)</h2>
+<pre><code>
+main ()
+{	
+	double	a, b ;
+	cout	&lt;&lt;"\nЕnter two numbers please &quot; ;
+	cin	&gt;&gt;a &gt;&gt;b ;
+	cout	&lt;&lt;a &lt;&lt;&quot; + &quot; &lt;&lt;b &lt;&lt;" = " &lt;&lt;(a+b) &lt;&lt;'\t' ;
+	cout	&lt;&lt;&quot;The average equals to &quot; &lt;&lt;average(a, b) &lt;&lt;'\n' ;
+}
+
+//	Returns the average of two numbers. 
+double	average (double num1, double num2)
+{
+	return (num1+num2)*0.5 ;
+}
+</code></pre>
+</div>
+
+<div class="slide">
+<h2>КАК РАБОТИ ПРИМЕРНИЯ ИЗХОДЕН КОД?</h2>
+<ul>
+<li><i><b>Изходният код (source)</b></i> е <i>поредица от инструкции</i>, наречени <i><b>оператори</b></i>.</li>
+<li>Операторите <i>завършват</i> с ;</li>
+<li><i>Изходният код <b>започва с</b> коментар</i>. <b>ПРЕПОРЪЧВА СЕ!!!</b>
+<ul>
+<li><i>Коментарът е</i> предназначен <i>за хората и се игнорира от транслатора</i>.</li>
+<li>Коментарът започващ с <code>/*</code> и завършващ с <code>*/</code> може да е на <i>повече от един ред.</i></li>
+<li>Коментарът започващ с <code>//</code> продължава само <i>до края на текущия ред.</i></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><i>Началният</i> коментар:</li>
+<li>
+<ul>
+<li>съдържа <i>името на файла</i> с изходния код;</li>
+<li>идентифицира <i>програмиста</i> написал програмата;</li>
+<li><i>описва</i> решаваната задача;</li>
+<li>ориентира <i>кога</i> е създавана програмата.</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>КАК РАБОТИ ПРИМЕРНИЯ ИЗХОДЕН КОД? (Cont.)</h2>
+<pre><code>
+#include &lt;iostream&gt;
+</code></pre>
+<ul>
+<li>Редът осигурява <i>Входно-Изходните операции</i> в C++
+</li>
+<li>
+Това е директива на предпроцесора
+<ul>
+<li><i>започва</i> с <code>#</code>
+</li>
+<li> <i>НЕ завършва</i> с <code>;</code>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<pre><code>
+using	namespace std ;
+</code></pre>
+<ul>
+<li>Редът осигурява <i>достъп до имената от</i> пространството <code>std</code></li>
+<li>Пространството <code>std</code> се използва от библиотеката <code>iostream</code></li>
+<li>Пробвайте да транслирате програмата без този ред?</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Source, прототип на функция</h2>
+<pre><code>
+double	average (double num1, double num2) ;
+</code></pre>
+<ul>
+<li>Редът задава <i><b>прототип на функция</b></i>.
+</li>
+<li>
+<i>Прототипът</i> на функция:
+<ul>
+<li><i>започва с</i> задаване на вида <i>(типа) на резултата</i>, но може и да се пропусне;
+</li>
+<li>
+задава се <i>името</i> с което се извиква функцията;
+</li>
+<li>
+списък от <i>параметри</i> на функцията:
+<ul>
+<li>списъкът е заграден в скоби;</li>
+<li>параметрите се разделят с запетайка;</li>
+<li>функцията може да има само един параметър;</li>
+<li>функцията може да няма параметри;</li>
+<li>за всеки параметър се указва:
+<ul>
+<li>тип на параметъра;</li>
+<li>име на параметъра;</li>
+<li>евентуално и подразбираща се стойност, ако параметъра е пропуснат.</li>
+</ul></li>
+</ul>
+</li>
+<li> <i>завършва</i> с <code>;</code> 
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Source, Entry Point</h2>
+<pre><code>
+main ()
+{	
+</code></pre>
+<p class="center">
+&lt;Списък от оператори завършващи с <code>;</code> &gt;
+</p>
+<pre><code>
+}	
+</code></pre>
+<ul>
+<li>Първият ред <i>декларира функция</i> с име <code>main</code>
+</li>
+<li>
+<ul>
+<li>Функцията <code>main</code> <i>се изпълнява веднага след стартирането</i> на програмата, т.е. този функция задава <i><b>входната точка</b></i> в изпълнимия ни код.</li>
+<li>Функцията <code>main</code> <i>може да има параметри.</i></li>
+<li>Типът на резултата е <i>пропуснат</i> в реда деклариращ функцията, т.e. <br/><i>подразбира се</i> че сме написали <code>int main ()</code></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Source, Entry Point (Cont.)</h2>
+<pre><code>
+main ()
+{	
+</code></pre>
+<p class="center">
+&lt;Списък от оператори завършващи с <code>;</code> &gt;
+</p>
+<pre><code>
+}	
+</code></pre>
+<ul>
+<li>
+С двете скоби <code>{</code> и <code>}</code> се задава <i><b>тялото на функцията</b></i>, т.е. от къде започва и къде завършва изпълнимия код на дефинираната от програмиста функция.
+</li>
+<li>
+<ul>
+<li>
+Тялото на функцията е списък от оператори.</li>
+<li>Операторите се изпълняват последователно, като се започва с първия оператор от списъка.</li>
+<li><code>return</code> е оператор за завършване изпълнението на функцията.</li>
+<li>Функцията може да прекрати работата си и преди последния оператор от списъка, ако се изпълни оператора <code>return</code></li>
+<li>В примера ни транслаторът автоматично е добавил <br/>оператора <code>return 0;</code> след последния оператор от списъка.</li>
+</ul>
+</li>
+<li>
+<i>След</i> <code>}</code> завършваща тялото на функцията <i><b>няма</b></i> <code>;</code>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Source, ДЕКЛАРИРАНЕ НА ПРОМЕНЛИВИ</h2>
+<pre><code>
+double	a, b ;
+</code></pre>
+<ul>
+<li>Декларира че променливите <code>a</code> и <code>b</code> са от тип <code>double</code>.</li>
+<li>
+<ul>
+<li><i><b>Променливата</b></i> е <i>участък от оперативната памет</i> (ОП, RAM) в които се съхранява определен вид информация (данни).</li>
+<li><i>Всяка променлива</i> има:
+<ul>
+<li><b><i>ИМЕ</i></b>;</li>
+<li><b><i>ТИП</i></b>;</li>
+<li><b><i>СТОЙНОСТ</i></b>;</li>
+<li><b><i>АДРЕС</i></b>;</li>
+<li><b><i>РАЗМЕР</i></b> за съответния тип променлива.</li>
+</ul>
+</li>
+<li><i><b>Името на променливата</b></i> ни позволява:
+</li>
+<li>
+<ul>
+<li>да <i>прочетем</i> стойността й, при което <i>стойността не се променя</i>;</li>
+<li>да й <i>зададем нова стойност</i>, при което <i>губим старата стойност</i>, тъй като участъка от паметта е един и същ;</li>
+<li>да узнаем <i>адреса на променливата</i>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h2>Source, ДЕКЛАРИРАНЕ НА ПРОМЕНЛИВИ (Contd.)</h2>
+<ul>
+
+<li><i><b>Типът на променливата</b></i> определя какъв вид информация се съхранява. Тип <code>double</code> означава че се работи с десетични числа.</li>
+<li>Съхраняваната информация се нарича <i><b>стойност на променливата</b></i>. Правилата за пресмятане на <i>стойността</i> са различни за променливите от различен <i>тип</i>.</li>
+<li>Стойността на променливата се съхранява на определен <i><b>адрес от ОП</b></i>.</li>
+<li><i><b>Размерът на променливата</b></i> е <i>дължината на участъка от ОП</i> където се съхранява стойността й. <i>Размерът на променливата
+</i> се определя <i>от типа й</i>.</li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h2>Source, ВХОДНО-ИЗХОДНИ ОПЕРАТОРИ</h2>
+<br/>
+<code>cin</code> - <i>въвеждане</i> на информация от устройството за <i>стандартен вход</i>, <i>клавиатура</i> обикновенно. Това <i>променя стойностите</i> на променливите.
+<pre><code>
+
+
+   cin	&gt;&gt;a &gt;&gt;b ;
+</code></pre>
+Въвеждане на данни в променливите <code>a</code> и <code>b</code>. 
+
+<div class="slide">
+<h2>Source, ВХОДНО-ИЗХОДНИ ОПЕРАТОРИ (Cont.)</h2>
+<ul>
+<li>
+<code>cоut</code> - <i>разпечатване (извеждане)</i> на информация на устройството за <i>стандартен изход</i>, <i>монитор</i> обикновенно.
+ <i>Стойностите</i> на променливите само се прочитат от ОП, т.е. <i>запазват се</i>.
+<ul>
+<li>
+<pre><code>
+
+cout	&lt;&lt;"\nЕnter two numbers please &quot; ;
+</code></pre>
+Преминава на нов ред и разпечатва текст.<br/>
+<pre><code>
+
+cout	&lt;&lt;a &lt;&lt;&quot; + &quot; &lt;&lt;b &lt;&lt;" = " &lt;&lt;(a+b) &lt;&lt;'\t' ;
+</code></pre>
+Извежда стоиностите на променливите <code>a</code> и <code>b</code>, сборът им, поясняващи текстове и символ за табулация.<br/>
+<pre><code>
+
+cout	&lt;&lt;&quot;The average equals to &quot; &lt;&lt;average(a, b) &lt;&lt;'\n' ;
+</code></pre>
+Извеждат се: текст, резултатът от изпълнението на функцията <code>average</code> и се преминава на нов ред.<br/>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>Source, ИЗХОДЕН КОД НА ФУНКЦИЯ</h2>
+<pre><code>
+//	Returns the average of two numbers. 
+double	average (double num1, double num2)
+{
+	return (num1+num2)*0.5 ;
+}
+</code></pre>
+<ul>
+<li>Това е изходния код на функцията <code>average</code></li>
+<li>
+<ul>
+<li><i>Започва се с <b>коментар описващ функцията</b></i>. <b>ПРЕПОРЪЧВА СЕ!!!</b></li>
+<li>Вторият ред задава типа на резултата, името на функцията и списък от параметри.
+ Този ред <i><b>не</b> завършва</i> с <code>;</code>
+<i> за разлика от прототипа</i> на функцията.</li>
+<li>
+С двете скоби <code>{</code> и <code>}</code> се задава <i><b>тялото на функцията</b></i></li>
+<li>с <code>return</code> се изчислява и връща резултат към мястото от което е извикана функцията и функцията ни приключва с работата си.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h2>Source, ИЗХОДЕН КОД НА ФУНКЦИЯ (Cont.)</h2>
+<ul>
+<li>Изходните кодове на функциите е прието да са <i>след кода на</i> функцията <code>main</code></li>
+<li><i>Изходните кодове</i> на функциите <i><b>не</b> завършват </i>с <code>;</code></li>
+<li><i>Функцията</i> <code>main</code> също <i><b>не</b> завършва с</i> <code>;</code></li>
+</ul>
+</div>
+
+<div class="slide">
+<h2>СТРУКТУРА НА ПРОГРАМА НА C/C++</h2>
+<ul>
+<li>В нашата примерна програма <i>операторите са групирани и подредени съобразно типичната <b>структура на програма</b> написана на C/C++</i>.</li>
+<li>
+<ul><li><b>СТРУКТУРА НА ПРОГРАМА</b></li>
+<li>
+<ul>
+<li><i>начален</i> коментар;</li>
+<li><i>предпроцесорни</i> директиви;</li>
+<li><i>деклариране на променливи,</i> глобални за програмата;</li>
+<li><i>прототипи</i> на функции;</li>
+<li>функция <i><code>main</code></i> ;</li>
+<li>изходни <i>кодове на използваните функции</i></li>
+<li>
+<ul>
+<li><i>започва се с коментар</i> описващ:</li>
+<li>
+<ul>
+<li>предназначението на функцията;</li>
+<li>евентуално начина за използването й.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i>Препоръчва се <b>спазването на</b></i>, така описаната <i><b>структура на програма</b>!!!</i></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h2>УПРАЖНЕНИЕ № 1</h2>
+<br/>
+<pre><code>
+	cout &lt;&lt;(5+2*6) ;
+</code></pre>
+<br/>
+Горният оператор изчислява и отпечатва стойността на аритметичния израз.
+<br/>
+<ol>
+<li>Какъв резултат ще се отпечата, 42 или 17?</li>
+<li>Напишете програма с която да проверите какво се отпечатва?</li>
+<li>Защо резултатът е такъв?</li>
+</ol>
+</div>
+
+
+
+<div class="slide">
+<h2>УПРАЖНЕНИЕ № 2</h2>
+<br/>
+<pre><code>
+	cout &lt;&lt;(b-a) ;
+</code></pre>
+<br/>
+Горният оператор изчислява и отпечатва разликата <code>b-a</code>.
+<br/>
+<ul>
+<li>Напишете програма която за въвеждане на данни в променливите <code>a</code> и <code>b</code>, след което да отпечатва разликите:</li>
+<li>
+<ul>
+<li><code>a-b</code></li>
+<li><code>b-a</code></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h2>УПРАЖНЕНИЕ № 3</h2>
+<br/>
+Напишете програма която да въвежда стойности в променливите <code>a</code>, <code>b</code> и <code>c</code>, след което да отпечатва сумата им.
+<br/>
+<a href="./index.html">Изход</a>
+</div>
+</div>
+</div>
+</body>
+</html>

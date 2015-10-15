@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="bg" lang="bg">
+
+<head>
+<title>DO-WHILE EXAMPLE # 5</title>
+<meta name="keywords" content="example, do-while, do-while example, C/C++, пример, решение" />
+<meta name="description" content="The example # 5 about do-while statement."/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- metadata -->
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20130601" />
+<meta name="author" content="Кирил Иларионов" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- meta name="controlVis" content="hidden" /-->
+<!-- style sheet links -->
+<link rel="stylesheet" href="../../../../ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../../../../ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../../../../ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../../../../ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../../../../ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h2 class="left">Bulgaria / June 2013 / k.ilarionov at gmail.com</h2>
+<h3>DO-WHILE EXAMPLE #5</h3>
+</div>
+
+</div>
+
+<div class="slide">
+<h1>РЕШЕНИЕ на пример № 5 за <code>DO</code>-<code>WHILE</code></h1>
+<table>
+<tr>
+<td align="right">
+<img src="../../../../images/do-while.gif" alt="DO-WHILE"/>
+</td>
+<td>
+<pre><code>// Да се отпечата сумата от цифрите на n
+#include &lt;iostream&gt;
+using namespace std ;
+main ()
+{
+  int n, lastDigit, sum=0 ;
+  cout &lt;&lt;&quot;n=&quot; ; cin &gt;&gt;n ;
+  n = (n &lt; 0) ? -n : n ;
+  
+  do
+    sum += lastDigit = n % 10 ;
+  while (n = n/10) ;
+  
+  cout &lt;&lt;&quot;\tsum=&quot; &lt;&lt;sum &lt;&lt;endl ;
+}</code></pre>
+</td>
+</tr>
+</table>
+<a href="./index.html">Изход</a>
+</div>
+
+</body>
+</html>

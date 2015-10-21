@@ -1,7 +1,7 @@
 // http://bgcoder.com/Contests/268/Telerik-Algo-Academy-October-2015
 // https://github.com/TelerikAcademy/AlgoAcademy/tree/master/2015-10-Algorithms-on-String/Problems
 #include <iostream>
-#include <string> 
+#include <string>
 // The same speed as array based solution
 // + less memory
 const int D = (int)('a'-'A') ;	// distance
@@ -15,7 +15,7 @@ int main ()
 	int asciiCode, cnt[R-L+1] ;
 	char c ;
 	s="";
-	for (int k=0; k<(R-L+1); k++) { 
+	for (int k=0; k<(R-L+1); k++) {
 		cnt[k] = 0 ;
 	}
 	cin >>n ;
@@ -25,7 +25,7 @@ int main ()
 		if  (asciiCode>=L && asciiCode<=R)
 			cnt[asciiCode-L]++ ;
 	} ;
-	// To outup in required order
+	// To OUTPUT in required order
 	cnt['x'-L] = 0 ;
 	for (int ch=(int)'A'; ch <= (int)'Z'; ch++)
 	{

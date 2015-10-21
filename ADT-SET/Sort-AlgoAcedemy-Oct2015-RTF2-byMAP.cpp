@@ -15,6 +15,7 @@ int main ()
 	//pair<set<char>::iterator, bool> retCode ;
 	map<char, int> myGoodChars ;
 	map<char,int>::iterator it;
+	myGoodChars.clear();
 	cin >>n;
 	for (k=0; k<n; k++)
 	{

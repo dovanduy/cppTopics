@@ -8,12 +8,12 @@ using namespace std ;
 int main ()
 {
 	long n ;
-	int asciiCode, cnt[R-L+1] ;
+	int asciiCode, cnt[R-L+1] ; // array of counters
 	char c ;
 	for (int k=0; k<(R-L+1); k++) cnt[k]=0;
 	//for (int k=0; k<(R-L); k++) cout<<cnt[k];
 	cin >>n ;
-	for ( ; 0 < n--; )
+	for ( ; 0 < n--; ) // while (n-- > 0)
 	{ // count input valid data
 		cin >>asciiCode;
 		if  (asciiCode>=L && asciiCode<=R)

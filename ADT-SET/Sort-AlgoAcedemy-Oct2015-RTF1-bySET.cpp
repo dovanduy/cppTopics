@@ -29,9 +29,9 @@ int main ()
 	for (char ch='A'; ch<='Z'; ch++)
 	{
 		if (myGoodChars.find(ch) != myGoodChars.end())
-			cout <<ch;
+			cout <<ch;  // capital letter
 		if (myGoodChars.find((char)(ch+D)) != myGoodChars.end())
-			cout <<((char)(ch+D));
+			cout <<((char)(ch+D)); // lower letter
 	} ;
 	for (char ch='1'; ch<='9'; ch++)
 	{

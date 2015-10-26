@@ -46,7 +46,10 @@ struct cmp {
   }
 };
 
-// customSORT  ? 20/100
+// customSORT  ? 20/100 on bgcoder
+// It is OK as per author tests 
+// https://github.com/TelerikAcademy/AlgoAcademy/tree/master/2015-10-Algorithms-on-String/Problems/Problem%20-%20Sorting/Sorting%20-%20tests
+
 multiset<char, cmp> myGoodChars ; 
 
 bool isGoodChar (char c)

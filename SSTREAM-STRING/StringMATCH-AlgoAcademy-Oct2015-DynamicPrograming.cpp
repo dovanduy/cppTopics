@@ -1,9 +1,11 @@
 // http://bgcoder.com/Contests/Practice/Index/268#2
 // https://github.com/TelerikAcademy/AlgoAcademy/tree/master/2015-10-Algorithms-on-String/Problems/Problem%20-%20Match
-// http://www.geeksforgeeks.org/longest-common-substring/
 // https://en.wikipedia.org/wiki/Longest_common_substring_problem
+// http://www.geeksforgeeks.org/longest-common-substring/
+
 /* Dynamic Programming solution to find length of 
 the longest common substring */
+// https://www.youtube.com/watch?v=AoewJHW9Oqc&list=PLF4lVL1sPDSmCBmhMPLLaAQQSWjiF1q7A
 #include<iostream>
 #include<string.h>
 using namespace std;

@@ -15,7 +15,7 @@ deque<string> subStrs;
 int main()
 {
 	string t;
-	long maxLngth=0;
+	long maxLngth=-1;
  	cin >>x >>y;
     int xl = x.length() ;
     int yl = y.length() ;
@@ -25,16 +25,30 @@ int main()
  		x=y;
  		y=t;
  	} ; // The string x can be into a string y.
- 	subStrs.push_front(x) ;
- 	for ( ; !subStrs.empty() ; )
+ 	for ( subStrs.push_front(x) ; !subStrs.empty() ; subStrs.pop_back() )
     {
-    	t=subStrs.back() ;
-    	size_t found = y.find_first_of(t) ;
+    	size_t found = y.find(subStrs.back()) ;
+    	if (found != std::string::npos)
+    	{ // we have a non-trivial solution.
+    		if (t.length()>maxLngth)
+				maxLngth = t.length() ;
+    		continue;
+    	}
+    	found = y.find_first_of(subStrs.back()) ;
     	if (found == std::string::npos)
     	{
-    		// toDo del deque.back
     		continue ;
-    	}
-    }
+    	} ;
+    	auto k = (subStrs.back()).begin() ;
+    	for ( ; k != subStrs.back().end() ; k++)
+    	{
+    		//subStrs.push_front(subStrs.back().erase((subStrs.back()).begin()+k)) ;
+    		subStrs.push_front(subStrs.back().erase(k)) ;
+			//cout <<subStrs.front() <<endl;
+    	} ;
+    } ;
+    cout <<maxLngth <<endl ;
+    //t.~string() ; x.~string() ; y.~string() ;
+    //subStrs.~deque() ;
     return 0;
 }

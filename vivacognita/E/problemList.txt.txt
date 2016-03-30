@@ -1,0 +1,16 @@
+			Problems list, group E, vivacognita, feb-apr-2016
+1. absuma
+2. dig2
+3. dig3
+4. lucky
+5. ruler
+6. date
+7. muffins
+8. lilies
+9. sequence
+10. fib
+11. raz
+12. deliteli
+13. div235
+14. droot
+15. mult

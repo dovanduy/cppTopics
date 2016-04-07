@@ -1,80 +1,57 @@
-#include <cstdio>
+//#include <cstdio>
+#include <iostream>
 //#include <stdio.h>
-#include <vector>
+#include <map>
 #include <algorithm>
 using namespace std;
-/*
-void printA (int num)
+
+map <int, int> a; // (brMoneti, brKup4ini)
+map <int, int>::iterator it, next;
+
+main ()
 {
-	printf (" %d", num) ;
-}
-//*/
-
-vector<int> a;
-
-bool sortCond(int a, int b)
-{ // reverse sorting condition
-	return (a>b) ;
-}
-
-int main ()
-{
-	int num, smetka, lastA ;
-	vector<int>::iterator it, endA, startRange, startA ;
-	pair<vector<int>::iterator,vector<int>::iterator> indInterval;
+	int num, smetka, key ;
 	
-	for (scanf("%d", &num) ; !feof(stdin); scanf("%d", &num) )
+	for (; cin >>num; )
 	{
-		a.push_back(num) ;
+		if ((it=a.find(num)) == a.end())
+			a.insert ( pair<int, int>(num, 1)) ;
+		else
+			++a[num] ;
 	} ;
-	smetka=a.back() ;
-	a.pop_back() ;
-//	sort(a.begin(), a.end());
-	sort(a.begin(), a.end(), sortCond) ; // reverse sorting
-//	printf ("%d\n\n\n", smetka) ;
-//	for_each(a.begin(), a.end(), printA) ;
-
-	startA= a.begin() ;
-	endA = a.end() ;
-	it=startRange=find(startA, endA, a.back()) ;
-	
-	do
+	smetka=num ;
+	if (a[num]==1)
 	{
-//		lastA=a.back() ;
-		for (it=startRange; smetka>0 && it != endA; ++it)
+		a.erase(num) ;
+	}
+	else
+		--a[num] ;
+/*
+	cout <<smetka <<"\n\n\n" ;
+  	for (it=a.begin(); it!=a.end(); ++it)
+    	cout << it->first << " => " << it->second << '\n';
+//*/
+	for (; ; )
+	if(smetka <= (a.begin() -> first)*(a.begin()->second))
+	{
+		cout << ((it->first)+1) <<endl;
+		break ;
+	}
+	else if (a.size() > 1)
+	{ // smetka > (it -> first)*(it->second)
+		smetka = smetka - (a.begin() -> first)*(a.begin()->second) ;
+		a.begin()->second += 1 ;
+		it = a.begin();
+		next = ++it;
+		if (a.begin()->second == (next->first))
 		{
-			++(*it) ;
-			--smetka;
-//			printf ("\n==\t%d %d\n", (it-startA), *it) ;
-		} ;
-		if (smetka>0)
-		{
-			if (startRange != startA)
-			{
-				it=startRange;
-				--it;
-				for ( ; smetka>0 && (*it==a.back()); )
-				{
-					++(*it) ;
-					--smetka ;
-					if (it != startA)
-						--it;
-					else // it==startA
-					{
-						break ;
-					}
-				} ;
-				// after loop here I init startRange again
-				if (*it==a.back())
-					startRange=it;
-				else
-					startRange=++it;
-			}
-			else // startRange == startA
-				it=startRange;
+			next -> second += a.begin()->first ;
+			a.erase(a.begin()->first) ;
 		}
-	} while (smetka) ;
-	printf ("%d\n", a.back()) ;
-//	cout <<a.front() <<endl;
-	return 0;
+	}
+	else // 1==a.size()
+	{
+		cout <<(smetka+(a.begin() -> first)*(a.begin() -> second)) ;
+		break ;
+	}
 }

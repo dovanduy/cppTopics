@@ -21,7 +21,10 @@ int main ()
 	for (int i=0; i<red; ++i)
 	{
 	  for (int j=0; j<col; ++j)
-	    cout <<matrix[i][j]<<' ' ;
+// *(matrix+i) is pointer to an array.
+// The above array (ptr) is an [i] row. The row consists of cols.
+// We access a matrix element as a member of array for [i] row.
+	    cout <<*(*(matrix+i)+j)<<' ' ; // matrix[i][j]
 	  cout <<endl;
 	}
 // Here we can release memory (OP).

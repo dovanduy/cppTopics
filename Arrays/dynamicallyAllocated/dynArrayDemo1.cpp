@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
+
+double* dynamicArray = NULL ; // empty array
+long unsigned int arraySize = 0 ;
+
 // look at https://www.youtube.com/watch?v=sLdO5D8f3s4
 main ()
 { // Dynamically Allocated Array, no STL.
-	double* dynamicArray = NULL ; // empty array
-	long unsigned int arraySize = 0 ;
 	const char DELIMITER = ' ';
 
 	cin >>arraySize ; // number of array components
@@ -31,7 +33,8 @@ main ()
 
 	for (int i=0 ; i<arraySize; i++)
 	{ // to init an array and after that to print a ready made component
-		dynamicArray[i] = ((i & 1) ? 1 : -1) * 2*i ;
+//		dynamicArray[i] = ((i & 1) ? 1 : -1) * 2*i ;
+		dynamicArray[i] = 2*i ;
 		cout <<dynamicArray[i] <<DELIMITER; // to print an array component now.
 	} ;
 	

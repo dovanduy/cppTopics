@@ -4,19 +4,19 @@ using namespace std;
 
 int main ()
 {
-	int n, k;
+	int red, col;
 	int **matrix ;
-	cin >>n >>k;
-	matrix = new int*[n];
-	for (int i=0; i<n; ++i)
-		matrix[i] = new int[k] ;
-	for (int i=0; i<n; ++i)
-	  for (int j=0; j<k; ++j)
+	cin >>red >>col;
+	matrix = new int*[red];
+	for (int i=0; i<red; ++i)
+		matrix[i] = new int[col] ;
+	for (int i=0; i<red; ++i)
+	  for (int j=0; j<col; ++j)
 	    cin >>matrix[i][j] ;
 	cout <<"\n===\n";
-	for (int i=0; i<n; ++i)
+	for (int i=0; i<red; ++i)
 	{
-	  for (int j=0; j<k; ++j)
+	  for (int j=0; j<col; ++j)
 	    cout <<matrix[i][j]<<' ' ;
 	  cout <<endl;
 	}

@@ -1,5 +1,5 @@
 // Basic Example about 2-dimensional dynamic array (by pointers)
-// 2-Dim Matrix as a PARAMETER
+// 2-Dim Matrix as a parameter
 #include <iostream>
 using namespace std;
 

@@ -3,12 +3,12 @@
 #include <iostream>
 using namespace std;
 
-void printMatrix (int ** m, int r, int c)
+void printMatrix (int * m[], int r, int c)
 {
 	for (int i=0; i<r; ++i)
 	{
 	  for (int j=0; j<c; ++j)
-	    cout <<m[i][j]<<' ' ;
+	    cout <<*(m[i]+j)<<' ' ;
 	  cout <<endl;
 	}	
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -169,15 +170,20 @@ void update()
 
 void print()
 { // HW
+	double out;
 	cout <<"NAME\tAverage\tOCENKI" ;
 	for (int i=0; i<maxU4enici; ++i)
 	if (u4enici[i].name == "")
 //		break;
-		continue; // to skip that record
+	continue; // to skip that record
 	else if (false == u4enici[i].isDel)
 	{
+		out = trunc(u4enici[i].ave) ;
+		out += (((int)(trunc(100*u4enici[i].ave)))%100)/100.0 ;
 		cout <<"\n" <<u4enici[i].name 
-			<<"\t" <<u4enici[i].ave ;
+			<<"\t" //<<u4enici[i].ave // <<endl
+			<<out 
+			;
 		for (int k=0; k<maxOcenki; ++k)
 		  if (u4enici[i].ocenka[k]==0)
 		  	break;

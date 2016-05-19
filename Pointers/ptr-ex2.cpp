@@ -1,6 +1,7 @@
 // more pointers
 #include <iostream>
 using namespace std;
+// The two basic operations are:
 // & means to get an address
 // * means to get a value
 int main ()

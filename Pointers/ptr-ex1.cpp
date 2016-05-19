@@ -1,4 +1,4 @@
-// Example: my first pointer
+// Example 1: my first pointer
 #include <iostream>
 using namespace std;
 
@@ -17,13 +17,14 @@ int main ()
   *mypointer = 1 ; // firstvalue=1 ;
   mypointer = &secondvalue; // set-up again
 // And now mypointer points to secondvalue
-  *mypointer = 2 ; // secondvalue=22;
+  *mypointer = 22 ; // secondvalue=22;
   cout << "firstvalue is " << firstvalue << '\n';
   cout << "secondvalue is " << secondvalue <<' ' <<(*mypointer)
   	<< '\n';
   myPtr2 = mypointer ;
-  // address of mypointer
+  // myPtr2 is an address of mypointer
   // and mypointer points to somewhere
+  // i.e. myPtr2 is pointer to another pointer
   cout <<"3. "<<(*myPtr2) <<'\n';
   myPtr3 = &myPtr2 ; // address of an address
   cout <<"4. "<<(*myPtr3) <<'\n' <<*(*myPtr3); // prints an hexadecimal address

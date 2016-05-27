@@ -37,6 +37,7 @@ stringstream(mystr2) >> myDouble;
 cout <<"\n\tmyDouble=\t" 
 // iomanip is an option only about formating
 // http://arachnoid.com/cpptutor/student3.html
+// http://www.learncpp.com/cpp-tutorial/133-output-with-ostream-and-ios/
 << std::fixed << std::setw( 11 ) << std::setprecision( 2 )  << std::setfill( '0' )
 <<myDouble; // From myStr to int or to double conversion
 

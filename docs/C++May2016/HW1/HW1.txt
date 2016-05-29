@@ -1,0 +1,5 @@
+	Homework 1
+
+1. Make a program that reads line from the keyboard and checks how many upper and lower case letters and other characters are available in the string.
+
+2. Make a program that demonstrates all the functions learned in lecture 1.

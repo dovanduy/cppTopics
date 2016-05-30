@@ -31,6 +31,13 @@ struct Student
 	bool isDel ;
 } ;
 
+void goToNextLine()
+{
+	if (cin.peek() == '\n') {
+		cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
+	} 
+}
+
 void printMenu ()
 {
 	for (int i = 0; i<MENUSIZE; ++i)
@@ -57,17 +64,20 @@ char getMenu ()
 void dataEntry()
 {
 	int nStudents, i, k ;
+	string myStr;
 //	cout <<"=== dataEntry\n" ;
 	cout <<"\nHow many students?";
-	cin >>nStudents;               
+	cin >>nStudents;              
 		for (i=0 ; i<nStudents && i<MAXU4ENICI; ++i)
 		{
 			cout <<"\n\tName: ";
-			cin >>u4enici[i].name ;
+			goToNextLine() ;
+			getline (cin, u4enici[i].name, '\n') ;
+//			cin >>u4enici[i].name;
 			u4enici[i].ave=0;
 			for (k=0; k<MAXOCENKI; ++k)
 				{
-					cout <<"\n\tOcenka:";
+					cout <<"\n\tMark:";
 					cin >>u4enici[i].ocenka[k];
 					u4enici[i].ave += u4enici[i].ocenka[k] ;
 					if (u4enici[i].ocenka[k] == 0)
@@ -102,7 +112,8 @@ void addData()
 		for (i=freeInd ; i<freeInd+nStudents && i<MAXU4ENICI; ++i)
 		{
 			cout <<"\n\tName: ";
-			 getline (cin, u4enici[i].name) ;
+			goToNextLine() ;
+			getline (cin, u4enici[i].name) ;
 			// ERR
 			u4enici[i].ave=0;
 			for (k=0; k<MAXOCENKI; ++k)
@@ -129,7 +140,7 @@ void update()
 	string myName;
 	int indName, k ;
 	cout <<"UPDATE\n" ;
-	cout <<"Name? " ; getline (cin, myName) ;
+	cout <<"Name? " ; goToNextLine() ; getline (cin, myName) ;
 	for (indName=0; indName<MAXU4ENICI 
 					&& (u4enici[indName].name != myName
 						|| (u4enici[indName].name == myName
@@ -171,7 +182,7 @@ void update()
 void print()
 { // HW
 	double out;
-	cout <<"NAME\tAverage\tMARKs" ;
+	cout <<"NAME\t\t\tAverage\tMARKs" ;
 	for (int i=0; i<MAXU4ENICI; ++i)
 	if (u4enici[i].name == "")
 //		break;
@@ -181,7 +192,7 @@ void print()
 		out = trunc(u4enici[i].ave) ;
 		out += (((int)(trunc(100*u4enici[i].ave)))%100)/100.0 ;
 		cout <<"\n" <<u4enici[i].name 
-			<<"\t" //<<u4enici[i].ave // <<endl
+			<<"\t\t" //<<u4enici[i].ave // <<endl
 			<<out 
 			;
 		for (int k=0; k<MAXOCENKI; ++k)
@@ -197,7 +208,7 @@ void del()
 //	cout <<"=== del\n" ;
 	int i;
 	string myName;
-	cout <<"Name? " ; getline(cin, myName) ;
+	cout <<"Name? " ; goToNextLine() ; getline(cin, myName) ;
 	for (i=0; i<MAXU4ENICI && myName != u4enici[i].name; ++i) ;
 	if (i>=MAXU4ENICI)
 		cerr <<"There is not " <<myName <<"\n";
@@ -232,7 +243,7 @@ void searchByString()
 	int i;
 //	cout <<"=== searchByString\n" ;
 	string X; // X is a student name
-	cout <<"Name? " ; cin >>X;
+	cout <<"Name? " ; goToNextLine() ; getline (cin, X) ;
 	for (i=0; 	i<MAXU4ENICI
 				; ++i)
 	if ((u4enici[i].isDel) && (X == u4enici[i].name))

@@ -2,7 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <cmath>
-
+#include <locale>
 using namespace std;
 
 const int MENUSIZE=10 ;
@@ -17,9 +17,9 @@ string menu[MENUSIZE] =
 	"3. Update",
 	"4. Print",
 	"5. Delete",
-	"6. Search record by Num field to print Class Average",
-	"7. Search record by Name as a string field",
-	"8. Search by Min Student, Max Student, Class Average",
+	"6. To calculate group average grade",
+	"7. Search by Name",
+	"8. Show MIN, MAX and AVERAGE grades",
 	"9. Report sorted by Names"
 } ;
 
@@ -102,12 +102,12 @@ void addData()
 		for (i=freeInd ; i<freeInd+nStudents && i<MAXU4ENICI; ++i)
 		{
 			cout <<"\n\tName: ";
-			cin >>u4enici[i].name ;
+			 getline (cin, u4enici[i].name) ;
 			// ERR
 			u4enici[i].ave=0;
 			for (k=0; k<MAXOCENKI; ++k)
 				{
-					cout <<"\n\tOcenka:";
+					cout <<"\n\tMark:";
 					cin >>u4enici[i].ocenka[k];
 					u4enici[i].ave += u4enici[i].ocenka[k] ;
 					if (u4enici[i].ocenka[k] == 0)
@@ -128,8 +128,8 @@ void update()
 {
 	string myName;
 	int indName, k ;
-	cout <<"UPDATE functionality\n" ;
-	cout <<"Name? " ; cin >>myName;
+	cout <<"UPDATE\n" ;
+	cout <<"Name? " ; getline (cin, myName) ;
 	for (indName=0; indName<MAXU4ENICI 
 					&& (u4enici[indName].name != myName
 						|| (u4enici[indName].name == myName
@@ -154,7 +154,7 @@ void update()
 	u4enici[indName].ave=0;
 	for (k=0; k<MAXOCENKI; ++k)
 		{
-			cout <<"\n\tOcenka:";
+			cout <<"\n\tMark:";
 			cin >>u4enici[indName].ocenka[k];
 			u4enici[indName].ave += u4enici[indName].ocenka[k] ;
 			if (u4enici[indName].ocenka[k] == 0)
@@ -171,7 +171,7 @@ void update()
 void print()
 { // HW
 	double out;
-	cout <<"NAME\tAverage\tOCENKI" ;
+	cout <<"NAME\tAverage\tMARKs" ;
 	for (int i=0; i<MAXU4ENICI; ++i)
 	if (u4enici[i].name == "")
 //		break;
@@ -194,10 +194,10 @@ void print()
 
 void del()
 { // Virtual DELETED only
-	cout <<"=== del\n" ;
+//	cout <<"=== del\n" ;
 	int i;
 	string myName;
-	cout <<"Name? " ; cin >>myName;
+	cout <<"Name? " ; getline(cin, myName) ;
 	for (i=0; i<MAXU4ENICI && myName != u4enici[i].name; ++i) ;
 	if (i>=MAXU4ENICI)
 		cerr <<"There is not " <<myName <<"\n";
@@ -221,16 +221,16 @@ void searchByNum()
 		++countStudents ;
 	}
 	if (countStudents>0)
-		cout <<"Class Average is " <<(uspehNaKlasa/countStudents) ;
+		cout <<"The group average grade is " <<(uspehNaKlasa/countStudents) ;
 	else
-		cout <<"The class is empty.";
+		cout <<"The group is empty.";
 	cout <<endl;
 }
 
 void searchByString()
 { // find a data about student named X
 	int i;
-	cout <<"=== searchByString\n" ;
+//	cout <<"=== searchByString\n" ;
 	string X; // X is a student name
 	cout <<"Name? " ; cin >>X;
 	for (i=0; 	i<MAXU4ENICI
@@ -276,10 +276,10 @@ void searchByMinMaxAve()
 	}
 	if (countStudents>0)
 		cout 
-	<<"\nUspeh range: [" <<minAveUspeh <<", "<<maxAveUspeh 
-	<<"]\nClass Average is " <<(uspehNaKlasa/countStudents);
+	<<"\nMarks range: [" <<minAveUspeh <<", "<<maxAveUspeh 
+	<<"]\nThe average grade is " <<(uspehNaKlasa/countStudents);
 	else
-		cout <<"The class is empty.";
+		cout <<"The group is empty.";
 	cout <<endl;
 }
 
@@ -299,9 +299,11 @@ void sortedReport()
 int main()
 {
 	char izbor ;
-	cout<<"Dimitar P. Georgiev Xb klas" ;
-	cout<<"\nApril 2016\n\n" ;
-	cout <<"Problem Name\n" ;
+	setlocale(LC_ALL, "bulgarian") ;
+	cout<<"\tКирил Иларионов\t\tKiril Ilarionov" ;
+	cout<<"\n\tМай 2016\t\tMay 2016\n\thttps://www.youtube.com/user/kilarionov\n\n" ;
+	cout <<"\tDo you know the basics of programming?\n" ;
+	cout <<"\t\tCheck yourself now.\n\t\tImplement shown functionality.\n";
 	for ( ; ; ) //  infite loop
 	{
 		izbor = getMenu() ;

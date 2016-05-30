@@ -1,3 +1,7 @@
+/*	Lecture 1, 27-May-2016
+	Home Work 1, Problem 2
+2. Make a program that demonstrates all the functions learned in lecture 1.
+*/
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -17,7 +21,7 @@ string menu[MENUSIZE] =
 	"3. Update",
 	"4. Print",
 	"5. Delete",
-	"6. To calculate group average grade",
+	"6. Calculate group average grade",
 	"7. Search by Name",
 	"8. Show MIN, MAX and AVERAGE grades",
 	"9. Report sorted by Names"
@@ -30,6 +34,15 @@ struct Student
 	double ave ; // studentAverage
 	bool isDel ;
 } ;
+
+void printMessage ()
+{
+	system ("cls") ;
+	cout<<"\tКирил Иларионов\t\tKiril Ilarionov" ;
+	cout<<"\n\tМай 2016\t\tMay 2016\n\thttps://www.youtube.com/user/kilarionov\n\n" ;
+	cout <<"\tDo you know the basics of programming?\n" ;
+	cout <<"\t\tCheck yourself now.\n\t\tImplement shown functionality.\n";
+}
 
 void goToNextLine()
 {
@@ -311,16 +324,14 @@ int main()
 {
 	char izbor ;
 	setlocale(LC_ALL, "bulgarian") ;
-	cout<<"\tКирил Иларионов\t\tKiril Ilarionov" ;
-	cout<<"\n\tМай 2016\t\tMay 2016\n\thttps://www.youtube.com/user/kilarionov\n\n" ;
-	cout <<"\tDo you know the basics of programming?\n" ;
-	cout <<"\t\tCheck yourself now.\n\t\tImplement shown functionality.\n";
+	printMessage() ;
 	for ( ; ; ) //  infite loop
 	{
 		izbor = getMenu() ;
 		switch (izbor)
 		{
 			case '0': { // terminate program
+				printMessage() ;
 				return 0 ;
 			}
 			case '1': {

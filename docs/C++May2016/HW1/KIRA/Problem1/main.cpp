@@ -24,6 +24,9 @@ private:
 public:
 	StrCounters () 
 	{
+		if (cin.peek() == '\n') {
+			cin.ignore(1, '\n');
+		}
 		getline(cin, myStr, '\n') ;
 	}
 	

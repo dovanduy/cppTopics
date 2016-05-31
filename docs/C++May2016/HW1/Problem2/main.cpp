@@ -35,6 +35,77 @@ struct Student
 	bool isDel ;
 } ;
 
+Student u4enici [MAXU4ENICI] ; // array of struct
+
+void printMessage () ;
+void goToNextLine() ;
+void printMenu () ;
+char getMenu () ;
+void dataEntry() ;
+void addData() ;
+void update() ;
+void print() ;
+void del() ;
+void searchByNum() ;
+void searchByString() ;
+void searchByMinMaxAve() ;
+bool nameSort (const Student &a, const Student &b) ;
+void sortedReport() ;
+
+int main()
+{
+	char izbor ;
+	setlocale(LC_ALL, "bulgarian") ;
+	printMessage() ;
+	for ( ; ; ) //  infite loop
+	{
+		izbor = getMenu() ;
+		switch (izbor)
+		{
+			case '0': { // terminate program
+				printMessage() ;
+				return 0 ;
+			}
+			case '1': {
+				dataEntry() ;
+				break;
+			}
+			case '2': {
+				addData() ;
+				break;
+			}
+			case '3': {
+				update() ;
+				break;
+			}
+			case '4': {
+				print() ;
+				break;
+			}
+			case '5': {
+				del() ;
+				break;
+			}
+			case '6': {
+				searchByNum() ;
+				break;
+			}
+			case '7': {
+				searchByString() ;
+				break;
+			}
+			case '8': {
+				searchByMinMaxAve() ;
+				break;
+			}
+			case '9': {
+				sortedReport() ;
+				break;
+			}	
+		} // switch
+	} // for
+}
+
 void printMessage ()
 {
 	system ("cls") ;
@@ -56,8 +127,6 @@ void printMenu ()
 	for (int i = 0; i<MENUSIZE; ++i)
 	cout <<menu[i] <<endl;
 }
-
-Student u4enici [MAXU4ENICI] ; // array of struct
 
 char getMenu ()
 {
@@ -145,7 +214,6 @@ void addData()
 				u4enici[i].ave=u4enici[i].ave/k;
 		}
 	}
-
 }
 
 void update()
@@ -318,58 +386,4 @@ void sortedReport()
 	cout <<"STUDENT\'s LIST, sorted by Name\n" ;
 	sort (u4enici, u4enici+MAXU4ENICI, nameSort) ; // Can be a &Function pointer also
 	print ();
-}
-
-int main()
-{
-	char izbor ;
-	setlocale(LC_ALL, "bulgarian") ;
-	printMessage() ;
-	for ( ; ; ) //  infite loop
-	{
-		izbor = getMenu() ;
-		switch (izbor)
-		{
-			case '0': { // terminate program
-				printMessage() ;
-				return 0 ;
-			}
-			case '1': {
-				dataEntry() ;
-				break;
-			}
-			case '2': {
-				addData() ;
-				break;
-			}
-			case '3': {
-				update() ;
-				break;
-			}
-			case '4': {
-				print() ;
-				break;
-			}
-			case '5': {
-				del() ;
-				break;
-			}
-			case '6': {
-				searchByNum() ;
-				break;
-			}
-			case '7': {
-				searchByString() ;
-				break;
-			}
-			case '8': {
-				searchByMinMaxAve() ;
-				break;
-			}
-			case '9': {
-				sortedReport() ;
-				break;
-			}	
-		} // switch
-	} // for
 }

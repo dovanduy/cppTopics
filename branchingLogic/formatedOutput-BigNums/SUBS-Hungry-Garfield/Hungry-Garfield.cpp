@@ -1,4 +1,3 @@
-// https://softuni.bg/downloads/svn/csharp-basics/Exams/2016-02-21/Problem01-Hungry-Garfield.zip
 #include <iostream>
 //#include <cmath>
 #include <cstdio>
@@ -16,8 +15,8 @@ int main ()
 //	printf ("%0.2f\n", res) ;
 // NO tests: 05 & 06
 	if (res>=0) // formated and rounded output example by cstdio
-	// long double => $%0.2Lf
+	// long double => %0.2Lf, double simply => %0.2lf
 		printf ("Garfield is well fed, John is awesome. Money left: $%0.2Lf.", res) ;
-	else // double => money by $%0.2f
+	else // float => money by %0.2f
 		printf ("Garfield is hungry. John is a badass. Money needed: $%0.2Lf.", (-res)) ;
 }

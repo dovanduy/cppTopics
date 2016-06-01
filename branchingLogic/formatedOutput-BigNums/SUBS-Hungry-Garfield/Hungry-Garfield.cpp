@@ -4,13 +4,23 @@
 using namespace std;
 int main ()
 {
-	long double money, rate, res;
+	long double money, rate, res=0;
 //	long cents, dlr, cnts;
-	long double pizzaPrice, lasagnaPrice, sandvichPrice;
-	int	pizzaQty, lasagnaQty, sandvichQty ;
+	long double pizzaPrice, lasagnaPrice, sandvichPrice,
+	s1, s2, s3;
+	long double	pizzaQty, lasagnaQty, sandvichQty ; // int => -2 tests && (long double -1 test + BEST-Time 0.000)
 	cin >>money >>rate >>pizzaPrice >>lasagnaPrice >>sandvichPrice
 	>>pizzaQty >>lasagnaQty >>sandvichQty;
-	res = money -(pizzaPrice/rate*pizzaQty + lasagnaPrice/rate*lasagnaQty + sandvichPrice/rate*sandvichQty) ;
+//	res = money -(pizzaPrice/rate*pizzaQty + lasagnaPrice/rate*lasagnaQty + sandvichPrice/rate*sandvichQty) ;
+//	res = money - (((pizzaPrice*pizzaQty) + (lasagnaPrice*lasagnaQty) + (sandvichPrice*sandvichQty))/rate) ;
+	s1 = pizzaPrice*pizzaQty;
+	s2 = lasagnaPrice*lasagnaQty ;
+	s3 = sandvichPrice*sandvichQty ;
+	res+=s1;
+	res+=s2;
+	res+=s3;
+	res/=rate;
+	res=money-res;
 //	res=3.1415 ;
 //	printf ("%0.2f\n", res) ;
 // NO tests: 05 & 06

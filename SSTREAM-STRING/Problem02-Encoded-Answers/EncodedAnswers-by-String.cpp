@@ -7,12 +7,13 @@ using namespace std;
 int main ()
 {
 	char ch ;
-	int n, ans ;
+	int n;
+	unsigned long long ans ; // It is 100/100 now.
 	string r = "";
-//	unsigned long long cnt[4]; // 80/100, tests 2, 6 fail 
-	long double cnt[4] ; // 80/100, tests 2, 6 fail
+	unsigned long long cnt[4]; // 80/100, tests 2, 6 fail if ans is int simply
+//	long double cnt[4] ; // 80/100, tests 2, 6 fail
 	for (int k=0; k<4 ; ++k)
-		cnt[k] = 0;
+		cnt[k] = 0L ;
 	cin >>n;
 	for (int k=0; k<n; ++k)
 	{

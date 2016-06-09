@@ -9,6 +9,7 @@ using namespace std;
 #include "Building.h"
 int main ()
 {
-	
+	Building b;
+	Building* b1 = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ;
 	return 0;
 }

@@ -28,11 +28,26 @@ public:
 		char ch ;
 		cout <<"Name=> "; this->name=this->readNextLine() ;
 		cout <<"Owner=> "; this->owner=this->readNextLine() ;
-		cout <<"Number of Floors=> "; this->floors ;
-		cout <<"Number of Offices=> "; this->offices ;
-		cout <<"Number of Employees=> "; this->employees ;
-		cout <<"Number of Seats=> "; this->seats ;
+		cout <<"Number of Floors=> "; cin >>floors ;
+		cout <<"Number of Offices=> "; cin >>offices ;
+		cout <<"Number of Employees=> "; cin >>employees ;
+		cout <<"Number of Seats=> "; cin>>seats ;
 		cout <<"Is there a first floor restaurant "; cin >>ch;
 		this->is1stFloorRestaurant = this->isYes(ch) ;
+	}
+		Building (string name, string owner, int floors, int offices, int employees, int seats, bool is1stFloorRestaurant=false)
+	{
+		this->name= name ;
+		this->owner = owner ;
+		this->floors = floors ;
+		this->offices = offices ;
+		this->employees = employees ;
+		this->seats = seats ;
+		this->is1stFloorRestaurant = is1stFloorRestaurant ;
+	}
+
+	~Building ()
+	{
+		cout <<"\nBldgDestuctor\n" ;
 	}
 } ;

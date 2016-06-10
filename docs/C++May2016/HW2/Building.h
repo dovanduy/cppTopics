@@ -1,3 +1,10 @@
+/*	Lecture 2, 03-June-2016
+	Home Work 2, Problem 1
+1. Write a class called “Building”. 
+Write constructors, destructor, attributes and
+functions for the class.
+*/
+#include <sstream>
 class Building
 {
 private:
@@ -12,6 +19,22 @@ private:
 	{
 		return (c=='Y' || c=='y') ;
 	}
+	inline string numToString (int number)
+	{
+		string result;// It is a function result.
+		// stream used for the conversion
+		ostringstream convert;
+		// insert the textual representation of 'num' in the characters in the stream
+		convert << number;
+		// set 'result' to the contents of the stream
+		result = convert.str();
+	}
+	string toYesNo (bool a){
+		if (a)
+			return ("Yes") ;
+		else
+			return ("No") ;
+	}
 protected:
 	inline string readNextLine ()
 	{
@@ -22,6 +45,13 @@ protected:
 		getline(cin, res, '\n') ;
 		return res ;
 	}
+	string getName () ;
+	string getOwner () ;
+	int getFloors () ;
+	int getOffices () ;
+	int getEmployess () ;
+	int getSeats () ;
+	bool getIs1stFloorRestaurant () ;
 public:
 	Building ()
 	{
@@ -35,7 +65,8 @@ public:
 		cout <<"Is there a first floor restaurant "; cin >>ch;
 		this->is1stFloorRestaurant = this->isYes(ch) ;
 	}
-		Building (string name, string owner, int floors, int offices, int employees, int seats, bool is1stFloorRestaurant=false)
+	
+	Building (string name, string owner, int floors, int offices, int employees, int seats, bool is1stFloorRestaurant=false)
 	{
 		this->name= name ;
 		this->owner = owner ;
@@ -46,8 +77,50 @@ public:
 		this->is1stFloorRestaurant = is1stFloorRestaurant ;
 	}
 
+	string getInfo () ;
 	~Building ()
 	{
-		cout <<"\nBldgDestuctor\n" ;
+		cout <<"\nBuilding Destuctor starts.\n" ;
 	}
 } ;
+
+string Building::getName () {
+	return this->name ;
+};
+
+string Building::getOwner () 
+{
+	return this->owner ;
+};
+
+int Building::getFloors () {
+	return this->floors ;
+};
+
+int Building::getOffices () {
+	return this->offices ;
+};
+
+int Building::getEmployess () {
+	return this->employees ;
+};
+
+int Building::getSeats () {
+	return this->seats ;
+};
+
+bool Building::getIs1stFloorRestaurant () {
+	return this->is1stFloorRestaurant ;
+};
+
+string Building::getInfo () {
+	string res;
+	res="Building name: "+(this->name)+
+		" Owner: "+this->owner+
+		" Floors: "+numToString(this->floors)+
+		" Offices: "+numToString(this->offices)+
+		" Employees "+numToString(this->employees)+
+		" Seats "+numToString(this->seats) +
+		" First floor RESTAURANT "+toYesNo(this->is1stFloorRestaurant) ;
+	return res;
+};

@@ -1,4 +1,4 @@
-#define COMPILE_Building
+//#define COMPILE_Building
 // Conditional compilation example
 #ifdef COMPILE_Building
 #include <iostream>
@@ -6,7 +6,7 @@
 using namespace std;
 #endif
 /*	Lecture 2, 03-June-2016
-Home Work 2, Problem 1
+	Home Work 2, Problem 1
 1. Write a class called “Building”.
 Write constructors, destructor, attributes and
 functions for the class.
@@ -90,7 +90,7 @@ public:
 
 	~Building()
 	{
-		cout << "\nBuilding Destuctor starts.\n";
+		cout << "\nBuilding " <<(this->name) <<" destryed.\n";
 	}
 };
 

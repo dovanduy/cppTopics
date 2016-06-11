@@ -11,7 +11,7 @@ using namespace std;
 int main ()
 {
 	Building b;
-//	Building* b1 = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ;
-	cout <<(b.getInfo());
+	Building* b1 = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ;
+	cout <<(b.getInfo()) <<endl<<endl <<b1->getInfo() ;
 	return 0;
 }

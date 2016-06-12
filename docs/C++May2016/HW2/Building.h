@@ -94,7 +94,7 @@ public:
 
 	~Building()
 	{
-		cout << "\nBuilding " <<(this->name) <<" destryed.\n";
+//		cout << "\nBuilding " <<(this->name) <<" destryed.\n";
 	}
 };
 

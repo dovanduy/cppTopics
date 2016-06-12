@@ -41,15 +41,24 @@ string leastPeoplePerOffice() ;
 int main()
 {
 	int i;
+	
 	Building* b = new Building("Rapid Development Crew", "", 8, 210, 822, 85, true);
 	businessPark[1] = *b ;
 	b = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ; 
 	businessPark[0] = *b ; 
 	b = new Building("XYZ industries", "XYZ industries", 6, 127, 600, 196);
 	businessPark[2] = *b ;
+	
 	cout <<endl <<"maxEmployess=> " <<mostEmpl() <<endl
-		 <<endl <<"mostFreePlaces=> " <<mostFreePlaces()
-		 <<endl ;
+		 <<endl <<"mostFreePlaces=> " <<mostFreePlaces() <<endl
+		 <<endl <<"highCoefEmplFreeSeats=> " <<highCoefEmplFreeSeats() <<endl
+		 <<endl <<"mostOfficesPerFloor=> " <<mostOfficesPerFloor() <<endl
+		 <<endl <<"leastOfficesPerFloor=> " <<leastOfficesPerFloor() <<endl
+		 <<endl <<"mostPeoplePerFloor=> " <<mostPeoplePerFloor() <<endl
+		 <<endl <<"leastPeoplePerFloor=> " <<leastPeoplePerFloor() <<endl
+		 <<endl <<"mostPeoplePerOffice=> " <<mostPeoplePerOffice() <<endl
+		 <<endl <<"leastPeoplePerOffice=> " <<leastPeoplePerOffice() <<endl
+		 ;
 	return 0; // The destructor sequence: [2] => [1] => [0]
 }
 
@@ -64,36 +73,71 @@ string mostEmpl() {
 string mostFreePlaces() {
 	int maxInd = 0, i;
 	for (i=0 ; i<PARK_SIZE; ++i )
-	if (businessPark[i].getSeats() > businessPark[maxInd].getSeats() )
+	if (businessPark[i].getSeats()>businessPark[maxInd].getSeats())
 		maxInd=i; 
 	return businessPark[maxInd].getName() ;
 };
 
 string highCoefEmplFreeSeats() {
-	return "ToDo";
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() / ((double)(businessPark[i].getEmployess()+businessPark[i].getSeats())) > 
+		businessPark[maxInd].getEmployess() / ((double)(businessPark[maxInd].getEmployess()+businessPark[maxInd].getSeats())))
+		maxInd=i; 
+	return businessPark[maxInd].getName() ;
 };
 
 string mostOfficesPerFloor() {
-	return "ToDo";
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getOffices() / ((double)businessPark[i].getFloors()) > 
+		businessPark[maxInd].getOffices() / ((double)businessPark[maxInd].getFloors()))
+		maxInd=i; 
+	return businessPark[maxInd].getName() ;
 };
 
 string leastOfficesPerFloor() {
-	return "ToDo";
+	int minInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getOffices() / ((double)businessPark[i].getFloors()) < 
+		businessPark[minInd].getOffices() / ((double)businessPark[minInd].getFloors()))
+		minInd=i; 
+	return businessPark[minInd].getName() ;
 };
 
 string mostPeoplePerFloor(){
-	return "ToDo";
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() / ((double)businessPark[i].getFloors() )> 
+		businessPark[maxInd].getEmployess() / ((double)businessPark[maxInd].getFloors()))
+		maxInd=i;
+	return businessPark[maxInd].getName() ;
 };
 
 string leastPeoplePerFloor() {
-	return "ToDo";
+	int minInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() / ((double)businessPark[i].getFloors()) < 
+		businessPark[minInd].getEmployess() / ((double)businessPark[minInd].getFloors()))
+		minInd=i; 
+	return businessPark[minInd].getName() ;
 };
 
 string mostPeoplePerOffice() {
-	return "ToDo";
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() / ((double)businessPark[i].getOffices() )> 
+		businessPark[maxInd].getEmployess() / ((double)businessPark[maxInd].getOffices()))
+		maxInd=i;
+	return businessPark[maxInd].getName() ;
 };
 
 string leastPeoplePerOffice() {
-	return "ToDo";
+	int minInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() / ((double)businessPark[i].getOffices()) < 
+		businessPark[minInd].getEmployess() / ((double)businessPark[minInd].getOffices()))
+		minInd=i; 
+	return businessPark[minInd].getName() ;
 };
 

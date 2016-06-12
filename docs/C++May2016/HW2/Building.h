@@ -1,4 +1,4 @@
-//#define COMPILE_Building
+#define COMPILE_Building
 // Conditional compilation example
 #ifdef COMPILE_Building
 #include <iostream>
@@ -53,17 +53,12 @@ protected:
 		}
 		getline(std::cin, res, '\n');
 		return res;
-	}
-	string getName();
-	string getOwner();
-	int getFloors();
-	int getOffices();
-	int getEmployess();
-	int getSeats();
+	} ;
 	bool getIs1stFloorRestaurant();
 public:
 	Building()
 	{
+		/*
 		char ch;
 		cout << "Name=> "; this->name = this->readNextLine();
 		cout << "Owner=> "; this->owner = this->readNextLine();
@@ -73,6 +68,9 @@ public:
 		cout << "Number of Seats=> "; cin >> seats;
 		cout << "Is there a first floor restaurant "; cin >> ch;
 		this->is1stFloorRestaurant = this->isYes(ch);
+		*/
+//		Building(string name, string owner, int floors, int offices, int employees, int seats, bool is1stFloorRestaurant = false)
+	;
 	}
 
 	Building(string name, string owner, int floors, int offices, int employees, int seats, bool is1stFloorRestaurant = false)
@@ -86,7 +84,13 @@ public:
 		this->is1stFloorRestaurant = is1stFloorRestaurant;
 	}
 
-	string getInfo();
+	string getName();
+	string getOwner();
+	int getFloors();
+	int getOffices();
+	int getEmployess();
+	int getSeats();
+	string getBldgInfo();
 
 	~Building()
 	{
@@ -123,9 +127,9 @@ bool Building::getIs1stFloorRestaurant() {
 	return this->is1stFloorRestaurant;
 };
 
-string Building::getInfo() {
+string Building::getBldgInfo() {
 	string res;
-	res = "Building name: " + name +
+	res = "\nBuilding name: " + name +
 		" Owner: " + owner +
 		" Floors: " + numToString(floors) +
 		"\nOffices: " + numToString(offices) +

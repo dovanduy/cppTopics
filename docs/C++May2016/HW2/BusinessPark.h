@@ -34,14 +34,13 @@ private:
 public:
 	BusinessPark()
 	{
-		Building* b;
-		businessPark = new Building[3];
-		businessPark = new Building("", "XYZ industries", 6, 127, 600, 196, false);
-		b = businessPark;
-		++b;
-		b= new Building("Rapid Development Crew", "", 8, 210, 822, 85, true);
-		++b;
-		b = new Building("SoftUni", "SoftUni", 11, 106, 200, 60, false);
+		businessPark = new Building[3] ;
+		Building* bp = businessPark;
+		bp = new Building("XYZ industries", "XYZ industries", 6, 127, 600, 196, false);
+		++bp;
+		bp = new Building("Rapid Development Crew", "", 8, 210, 822, 85, true);
+		++bp;
+		bp = new Building("SoftUni", "SoftUni", 11, 106, 200, 60, false);
 	};
 
 	string mostEmpl() ;
@@ -55,12 +54,14 @@ public:
 	string leastPeoplePerOffice() ;
 
 	~BusinessPark() {
+		cout << "\nBusiness Park Destructor";
 		delete businessPark;
 	}
 };
 
 string BusinessPark::mostEmpl() {
-	return "ToDo";
+	return businessPark[0].getBldgInfo() ;
+//	return "ToDo";
 };
 
 string BusinessPark::mostFreePlaces() {

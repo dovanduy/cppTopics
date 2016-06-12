@@ -21,19 +21,79 @@ working seats and on the first floor there is a restaurant instead of offices.
 Note: Make three different objects for the three buildings and put them in an array called “businessPark”.
 */
 #include <iostream>
+#include <string>
+#include "Building.h"
 using namespace std;
-#include "BusinessPark.h"
+
+int const PARK_SIZE=3;
+Building businessPark[PARK_SIZE];
+
+string mostEmpl() ;
+string mostFreePlaces() ;
+string highCoefEmplFreeSeats() ;
+string mostOfficesPerFloor();
+string leastOfficesPerFloor();
+string mostPeoplePerFloor() ;
+string leastPeoplePerFloor() ;
+string mostPeoplePerOffice() ;
+string leastPeoplePerOffice() ;
+
 int main()
 {
-	BusinessPark bp;
-	cout << bp.mostEmpl() << endl
-		<< bp.mostFreePlaces() << endl
-		<< bp.highCoefEmplFreeSeats() << endl
-		<< bp.mostPeoplePerFloor() << endl
-		<< bp.leastPeoplePerFloor() << endl
-		<< bp.mostOfficesPerFloor() << endl
-		<< bp.leastOfficesPerFloor() << endl
-		<< bp.mostPeoplePerFloor() << endl
-		<< bp.leastPeoplePerFloor() << endl;
-	return 0;
+	int i;
+	Building* b = new Building("Rapid Development Crew", "", 8, 210, 822, 85, true);
+	businessPark[1] = *b ;
+	b = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ; 
+	businessPark[0] = *b ; 
+	b = new Building("XYZ industries", "XYZ industries", 6, 127, 600, 196);
+	businessPark[2] = *b ;
+	cout <<endl <<"maxEmployess=> " <<mostEmpl() <<endl
+		 <<endl <<"mostFreePlaces=> " <<mostFreePlaces()
+		 <<endl ;
+	return 0; // The destructor sequence: [2] => [1] => [0]
 }
+
+string mostEmpl() {
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getEmployess() > businessPark[maxInd].getEmployess() )
+		maxInd=i; 
+	return businessPark[maxInd].getName() ;
+};
+
+string mostFreePlaces() {
+	int maxInd = 0, i;
+	for (i=0 ; i<PARK_SIZE; ++i )
+	if (businessPark[i].getSeats() > businessPark[maxInd].getSeats() )
+		maxInd=i; 
+	return businessPark[maxInd].getName() ;
+};
+
+string highCoefEmplFreeSeats() {
+	return "ToDo";
+};
+
+string mostOfficesPerFloor() {
+	return "ToDo";
+};
+
+string leastOfficesPerFloor() {
+	return "ToDo";
+};
+
+string mostPeoplePerFloor(){
+	return "ToDo";
+};
+
+string leastPeoplePerFloor() {
+	return "ToDo";
+};
+
+string mostPeoplePerOffice() {
+	return "ToDo";
+};
+
+string leastPeoplePerOffice() {
+	return "ToDo";
+};
+

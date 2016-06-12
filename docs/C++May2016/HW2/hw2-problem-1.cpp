@@ -10,8 +10,7 @@ using namespace std;
 #include "Building.h"
 int main ()
 {
-	Building b;
-	Building* b1 = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ;
-	cout <<(b.getInfo()) <<endl<<endl <<b1->getInfo() ;
+	Building* b = new Building ("SoftUni", "SoftUni", 11, 106, 200, 60) ;
+	cout <<(b->getBldgInfo()) <<endl  ;
 	return 0;
 }

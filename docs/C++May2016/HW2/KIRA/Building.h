@@ -23,10 +23,12 @@ private:
 	int employees;
 	int seats;
 	bool is1stFloorRestaurant;
+/*
 	inline bool isYes(char c)
 	{
 		return (c == 'Y' || c == 'y');
 	}
+*/
 	inline string numToString(int number)
 	{
 		string result;// It is a function result.
@@ -45,6 +47,7 @@ private:
 			return ("No");
 	}
 protected:
+/*
 	inline string readNextLine()
 	{
 		string res;
@@ -54,6 +57,7 @@ protected:
 		getline(std::cin, res, '\n');
 		return res;
 	} ;
+*/
 	bool getIs1stFloorRestaurant();
 public:
 	Building()

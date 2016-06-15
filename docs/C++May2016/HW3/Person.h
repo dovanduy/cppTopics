@@ -16,7 +16,7 @@ protected:
 	Person _person ;
 public:
 	Person getPerson(ID id) ;
-	ID setPerson () ;
+	ID setNewPerson () ;
 } ;
 
 Person Persons::getPerson(ID id)
@@ -24,7 +24,7 @@ Person Persons::getPerson(ID id)
 	return this->_person ;
 } ;
 
-ID Persons::setPerson()
+ID Persons::setNewPerson()
 {
 	return this->_person._ID ;	
 }

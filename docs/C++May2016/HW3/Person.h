@@ -15,11 +15,11 @@ class Persons
 protected:
 	Person _person ;
 public:
-	Person getPerson() ;
+	Person getPerson(ID id) ;
 	ID setPerson () ;
 } ;
 
-Person Persons::getPerson()
+Person Persons::getPerson(ID id)
 {
 	return this->_person ;
 } ;

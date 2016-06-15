@@ -8,6 +8,9 @@ main ()
 		 totalMililitri,
 		 litri, mililitri;
 	cin >>n ;
-	totalMililitri = 785*n +3000*n ;
-	cout <<totalMililitri/1000 <<' ' <<totalMililitri%1000 ;
+	// galoni => mililitri
+	totalMililitri = 785*n + 3000*n ;
+	// and there are 2 results: Litri and Mililitri
+	cout <<totalMililitri/1000 // calc Litri
+	<<' ' <<totalMililitri%1000 ; // 2nd res is miliLitri
 }

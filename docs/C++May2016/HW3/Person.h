@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std ;
 
 typedef unsigned int ID;
@@ -14,14 +15,29 @@ class Persons
 {
 protected:
 	Person _person ;
+
+	bool isFileExist(const char* fileName)
+	{	bool res;
+    	std::ifstream infile(fileName);
+    	res = infile.good() ;
+    	infile.close() ;
+    	return res;	}
+    
 public:
 	Persons ()
 	{
+		if (! isFileExist("persons.dat"))
+		{
+			// creaty an empty file and close it immediately.
+		}
+		else
+		{ // to init a map from a file
+		}
 	}
 	Person getPerson(ID id) ;
-	ID setNewPerson () ;
+	ID setNewPerson () ; // ONE Person only to be added to a map, maybe a file.dat
 	~Persons()
-	{
+	{ // to write a map into file.dat and to clos(file.dat)
 	}
 } ;
 

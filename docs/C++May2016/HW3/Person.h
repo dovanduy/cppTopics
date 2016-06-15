@@ -15,8 +15,14 @@ class Persons
 protected:
 	Person _person ;
 public:
+	Persons ()
+	{
+	}
 	Person getPerson(ID id) ;
 	ID setNewPerson () ;
+	~Persons()
+	{
+	}
 } ;
 
 Person Persons::getPerson(ID id)

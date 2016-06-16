@@ -32,8 +32,7 @@ public:
 	Persons ()
 	{
 		if (! isFileExist(FILEPERSONS))
-		{
-			// creaty an empty file and close it immediately.
+		{	// to creaty an empty file and close it immediately.
 			_lastID=0 ;
 			fstream of (FILEPERSONS, fstream::trunc | fstream::out);
 #ifdef TESTPERSONS

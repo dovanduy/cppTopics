@@ -35,12 +35,12 @@ public:
 		{
 			// creaty an empty file and close it immediately.
 			_lastID=0 ;
-			ofstream outfile (FILEPERSONS);
+			fstream of (FILEPERSONS, fstream::trunc | fstream::out | fstream::binary);
 #ifdef TESTPERSONS
 			cout <<"\n" <<FILEPERSONS <<" created\n";
 #endif
-			outfile <<_lastID ;
-			outfile.close();
+			of <<_lastID ;
+			of.close();
 		}
 		else
 		{ // to init a map from a file

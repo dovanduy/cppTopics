@@ -35,18 +35,34 @@ public:
 		{
 			// creaty an empty file and close it immediately.
 			_lastID=0 ;
-			fstream of (FILEPERSONS, fstream::trunc | fstream::out | fstream::binary);
+			fstream of (FILEPERSONS, fstream::trunc | fstream::out);
 #ifdef TESTPERSONS
-			cout <<"\n" <<FILEPERSONS <<" created\n";
+			cout <<"\n" <<FILEPERSONS <<" created\n"
+			<<(int)_lastID <<endl;
 #endif
 			of <<_lastID ;
 			of.close();
 		}
 		else
-		{ // to init a map from a file
+		{ // to INIT a MAP from a FILE
 #ifdef TESTPERSONS
 			cout <<"\n" <<FILEPERSONS <<" exists already.\n";
 #endif
+			ifstream ifil (FILEPERSONS) ;
+			ifil >>_lastID ;
+#ifdef TESTPERSONS
+			cout <<endl <<_lastID <<endl;
+#endif
+			while (!ifil.eof()) {
+    			ifil >>_person._ID ;
+				getline(ifil, _person._name) ;
+#ifdef TESTPERSONS
+			cout <<endl <<_person._ID <<'\t' 
+					<<_person._name <<endl;
+#endif
+			myPersons[_person._ID] = _person._name ;
+ 			} // while
+ 			ifil.close() ;
 		}
 	}
 	
@@ -55,14 +71,17 @@ public:
 
 	~Persons()
 	{ // to write a map into file.dat and to close(file.dat)
-	fstream of (FILEPERSONS, fstream::trunc | fstream::out | fstream::binary);
-	of <<_lastID;
+	fstream of (FILEPERSONS, fstream::trunc | fstream::out);
+	of <<_lastID <<endl;
 		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
 		{
-			of <<(*i).second // name 
-				<<(*i).first ; // ID
+			of  <<(*i).first <<' ' // ID
+				<<(*i).second <<endl ; // name 
 		};
 	of.close() ;
+#ifdef TESTPERSONS
+			cout <<endl <<"\nDestructor of Persons.h\n" <<endl;
+#endif
 	}
 } ;
 
@@ -70,7 +89,7 @@ Person Persons::getPerson(ID id)
 {
 	Person res;
 	_person._ID = id ;
-	_person._name = myPersons.at(id) ;
+	_person._name = myPersons[id] ; // at
 	return _person ;
 } ;
 

@@ -20,6 +20,6 @@ int main ()
 	cout <<p1._ID <<"\t" <<p1._name;
 	p1=p->getPerson(1) ;
 	cout <<endl <<p1._ID <<"\t" <<p1._name <<"\n===";
-
+	p->~Persons() ;
 	return 0;
 }

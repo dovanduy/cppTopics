@@ -10,15 +10,21 @@ struct CurrentCourse
 	ID _personName ;
 	ID _courseName ;
 } ;
+
 struct Teacher
 {
-	float salary ;
-	double days ;
+	float _salary ;
+	long _days ;
 } ;
 
 struct GuestTeacher
 {
-	float salary ;
+	float _salary ;
+} ;
+
+struct Student
+{
+	float _average ;
 } ;
 
 struct EduPerson
@@ -28,7 +34,8 @@ struct EduPerson
 	union {
 		Teacher _teacher ;
 		GuestTeacher _guestTeacher ;
-	} lecturer ;
+		Student _student ;
+	} infoCase ;
 } ;
 
 private:

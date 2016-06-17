@@ -3,14 +3,14 @@
 #include <fstream>
 #include <map>
 #define FILECOURSES "courses.dat"
-#define TESTCOURCES
+//#define TESTCOURCES
 using namespace std ;
 
 typedef unsigned int ID;
 
 struct CourseInfo
 {
-	char _points;
+	int _points;
 	string _name ;
 } ;
 
@@ -42,7 +42,7 @@ public:
 			_lastID=0 ;
 			fstream of (FILECOURSES, fstream::trunc | fstream::out);
 #ifdef TESTCOURCES
-			cout <<"\n" <<FILECOURSES <<" created\n"
+			cout <<"\n" <<FILECOURSES <<" created. "
 			<<(int)_lastID <<endl;
 #endif
 			of <<_lastID ;
@@ -75,6 +75,7 @@ public:
 	
 	Course getCourse(ID id) ;
 	Course setNewCourse () ; // ONE Person only to be added to a map, maybe to a file.dat
+	void printCourseList() ;
 
 	~Courses()
 	{ // to write a map into file.dat and to close(file.dat)
@@ -82,8 +83,8 @@ public:
 	of <<_lastID <<endl;
 		for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
 		{
-			of  <<(*i).first <<'\t' // ID
-				<<(int)((*i).second._points) <<'\t'
+			of  <<(*i).first <<' ' // ID
+				<<((*i).second._points) //<<' '
 				<<(*i).second._name <<endl ; // name 
 		};
 	of.close() ;
@@ -91,7 +92,7 @@ public:
 			cout <<endl <<"\nDestructor of Courses.h\n" <<endl;
 #endif
 	}
-	
+
 	void goToNextLine()
 	{
 	if (cin.peek() == '\n') {
@@ -114,7 +115,7 @@ Course Courses::setNewCourse()
 	_course._ID = _lastID ;
 	cout <<"\nCourse POINTs: " ;
 	cin >>points ;
-	_course._info._points = (char)points ;
+	_course._info._points = points ;
 	cout <<"\nCourse NAME: " ;
 	goToNextLine() ;
 	getline (cin, _course._info._name ) ;
@@ -122,3 +123,14 @@ Course Courses::setNewCourse()
 	++_lastID;
 	return _course ;	
 }
+
+void Courses::printCourseList() 
+{
+	cout <<endl ;
+	for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
+		{
+			cout  <<((int)((*i).first)) <<'\t' // ID
+				<<((*i).second._points) <<'\t'
+				<<((*i).second._name) <<endl ; // name 
+		};
+};

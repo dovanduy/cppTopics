@@ -4,11 +4,13 @@
 class EduPersons : public Courses, public Persons
 {
 enum kindOfPerson {student, teacher, guestTeacher} ;
+enum CourseStatus {open, close} ;
 
 struct CurrentCourse
 {
 	ID _personName ;
 	ID _courseName ;
+	CourseStatus _courseStatus ;
 } ;
 
 struct Teacher

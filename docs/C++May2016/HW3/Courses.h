@@ -3,9 +3,11 @@
 #include <fstream>
 #include <map>
 #define Person Course
-#define Persons Person
+#define Persons Courses
 #define FILEPERSONS "cources.dat"
-#define TESTPERSONS
+#define setNewPerson setNewCourse
+#define getPerson getCourse
+#define TESTCOURCES
 using namespace std ;
 
 typedef unsigned int ID;
@@ -37,7 +39,7 @@ public:
 		{	// to creaty an empty file and close it immediately.
 			_lastID=0 ;
 			fstream of (FILEPERSONS, fstream::trunc | fstream::out);
-#ifdef TESTPERSONS
+#ifdef TESTCOURCES
 			cout <<"\n" <<FILEPERSONS <<" created\n"
 			<<(int)_lastID <<endl;
 #endif
@@ -46,18 +48,18 @@ public:
 		}
 		else
 		{ // to INIT a MAP from a FILE
-#ifdef TESTPERSONS
+#ifdef TESTCOURCES
 			cout <<"\n" <<FILEPERSONS <<" exists already.\n";
 #endif
 			ifstream ifil (FILEPERSONS) ;
 			ifil >>_lastID ;
-#ifdef TESTPERSONS
+#ifdef TESTCOURCES
 			cout <<endl <<_lastID <<endl;
 #endif
 			while (!ifil.eof()) {
     			ifil >>_person._ID ;
 				getline(ifil, _person._name) ;
-#ifdef TESTPERSONS
+#ifdef TESTCOURCES
 			cout <<endl <<_person._ID <<'\t' 
 					<<_person._name <<endl;
 #endif
@@ -80,7 +82,7 @@ public:
 				<<(*i).second <<endl ; // name 
 		};
 	of.close() ;
-#ifdef TESTPERSONS
+#ifdef TESTCOURCES
 			cout <<endl <<"\nDestructor of Persons.h\n" <<endl;
 #endif
 	}

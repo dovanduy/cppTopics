@@ -1,5 +1,6 @@
 #include "Persons.h"
-class EduPersons : public Persons
+#include "Courses.h"
+class EduPersons : public Courses
 {
 private:
 	char personType ;

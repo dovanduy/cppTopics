@@ -4,7 +4,7 @@
 #include <map>
 #define Person Course
 #define Persons Courses
-#define FILEPERSONS "cources.dat"
+#define FILECOURSES "courses.dat"
 #define setNewPerson setNewCourse
 #define getPerson getCourse
 #define TESTCOURCES
@@ -35,12 +35,12 @@ protected:
 public:
 	Persons ()
 	{
-		if (! isFileExist(FILEPERSONS))
+		if (! isFileExist(FILECOURSES))
 		{	// to creaty an empty file and close it immediately.
 			_lastID=0 ;
-			fstream of (FILEPERSONS, fstream::trunc | fstream::out);
+			fstream of (FILECOURSES, fstream::trunc | fstream::out);
 #ifdef TESTCOURCES
-			cout <<"\n" <<FILEPERSONS <<" created\n"
+			cout <<"\n" <<FILECOURSES <<" created\n"
 			<<(int)_lastID <<endl;
 #endif
 			of <<_lastID ;
@@ -49,9 +49,9 @@ public:
 		else
 		{ // to INIT a MAP from a FILE
 #ifdef TESTCOURCES
-			cout <<"\n" <<FILEPERSONS <<" exists already.\n";
+			cout <<"\n" <<FILECOURSES <<" exists already.\n";
 #endif
-			ifstream ifil (FILEPERSONS) ;
+			ifstream ifil (FILECOURSES) ;
 			ifil >>_lastID ;
 #ifdef TESTCOURCES
 			cout <<endl <<_lastID <<endl;
@@ -74,7 +74,7 @@ public:
 
 	~Persons()
 	{ // to write a map into file.dat and to close(file.dat)
-	fstream of (FILEPERSONS, fstream::trunc | fstream::out);
+	fstream of (FILECOURSES, fstream::trunc | fstream::out);
 	of <<_lastID <<endl;
 		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
 		{
@@ -83,7 +83,7 @@ public:
 		};
 	of.close() ;
 #ifdef TESTCOURCES
-			cout <<endl <<"\nDestructor of Persons.h\n" <<endl;
+			cout <<endl <<"\nDestructor of Courses.h\n" <<endl;
 #endif
 	}
 } ;

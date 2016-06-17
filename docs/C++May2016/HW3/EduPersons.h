@@ -4,17 +4,33 @@
 class EduPersons : public Courses, public Persons
 {
 enum kindOfPerson {student, teacher, guestTeacher} ;
+
 struct CurrentCourse
 {
 	ID _personName ;
 	ID _courseName ;
 } ;
+struct Teacher
+{
+	float salary ;
+	double days ;
+} ;
+
+struct GuestTeacher
+{
+	float salary ;
+} ;
+
 struct EduPerson
 {
 	CurrentCourse crntCourse ;
 	kindOfPerson personType ;
-	
+	union {
+		Teacher _teacher ;
+		GuestTeacher _guestTeacher ;
+	} lecturer ;
 } ;
+
 private:
 	kindOfPerson personType ;
 protected:

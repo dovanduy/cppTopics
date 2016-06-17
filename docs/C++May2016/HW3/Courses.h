@@ -83,7 +83,7 @@ public:
 		for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
 		{
 			of  <<(*i).first <<'\t' // ID
-				<<(*i).second._points <<'\t'
+				<<(int)((*i).second._points) <<'\t'
 				<<(*i).second._name <<endl ; // name 
 		};
 	of.close() ;
@@ -110,9 +110,11 @@ Course Courses::getCourse(ID id)
 
 Course Courses::setNewCourse()
 {
+	int points;
 	_course._ID = _lastID ;
 	cout <<"\nCourse POINTs: " ;
-	cin >>_course._info._points ;
+	cin >>points ;
+	_course._info._points = (char)points ;
 	cout <<"\nCourse NAME: " ;
 	goToNextLine() ;
 	getline (cin, _course._info._name ) ;

@@ -1,5 +1,5 @@
 #include <iostream>
-#define BASE_INHERITANCE_TEST
+//#define BASE_INHERITANCE_TEST
 using namespace std ;
 #include "EduPersons.h"
 const int MENUSIZE = 7 ;

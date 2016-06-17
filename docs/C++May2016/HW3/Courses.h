@@ -2,22 +2,22 @@
 #include <string>
 #include <fstream>
 #include <map>
-/*
-#define Person Course
-#define Persons Courses
-#define setNewPerson setNewCourse
-#define getPerson getCourse
-*/
 #define FILECOURSES "courses.dat"
 #define TESTCOURCES
 using namespace std ;
 
 typedef unsigned int ID;
 
+struct CourseInfo
+{
+	char _points;
+	string _name ;
+} ;
+
 struct Course
 {
-	string _name ;
 	ID _ID;
+	CourseInfo _info ;
 } ;
 
 class Courses
@@ -25,7 +25,7 @@ class Courses
 protected:
 	Course _course ;
 	ID _lastID ;
-	map<ID, string> myCourses ;
+	map<ID, CourseInfo> myCourses ;
 
 	bool isFileExist(const char* fileName)
 	{	bool res;
@@ -60,12 +60,14 @@ public:
 #endif
 			while (!ifil.eof()) {
     			ifil >>_course._ID ;
-				getline(ifil, _course._name) ;
+    			ifil >>_course._info._points ;
+				getline(ifil, _course._info._name) ;
 #ifdef TESTCOURCES
 			cout <<endl <<_course._ID <<'\t' 
-					<<_course._name <<endl;
+			<<_course._info._points <<'\t'
+					<<_course._info._name <<endl;
 #endif
-			myCourses[_course._ID] = _course._name ;
+			myCourses[_course._ID] = _course._info ;
  			} // while
  			ifil.close() ;
 		}
@@ -81,27 +83,40 @@ public:
 		for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
 		{
 			of  <<(*i).first <<'\t' // ID
-				<<(*i).second <<endl ; // name 
+				<<(*i).second._points <<'\t'
+				<<(*i).second._name <<endl ; // name 
 		};
 	of.close() ;
 #ifdef TESTCOURCES
 			cout <<endl <<"\nDestructor of Courses.h\n" <<endl;
 #endif
 	}
+	
+	void goToNextLine()
+	{
+	if (cin.peek() == '\n') {
+		cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
+		} 
+	} ;
+
 } ;
 
 Course Courses::getCourse(ID id)
 {
 	_course._ID = id ;
-	_course._name = myCourses[id] ; // at
+	_course._info = myCourses[id] ; // at
 	return _course ;
 } ;
 
 Course Courses::setNewCourse()
 {
 	_course._ID = _lastID ;
-	getline (cin, _course._name) ;
-	myCourses[_course._ID] = _course._name ;
+	cout <<"\nCourse POINTs: " ;
+	cin >>_course._info._points ;
+	cout <<"\nCourse NAME: " ;
+	goToNextLine() ;
+	getline (cin, _course._info._name ) ;
+	myCourses[_course._ID] = _course._info ;
 	++_lastID;
 	return _course ;	
 }

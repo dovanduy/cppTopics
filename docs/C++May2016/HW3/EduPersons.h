@@ -4,8 +4,21 @@
 class EduPersons : public Courses, public Persons
 {
 enum kindOfPerson {student, teacher, guestTeacher} ;
+struct CurrentCourse
+{
+	ID _personName ;
+	ID _courseName ;
+} ;
+struct EduPerson
+{
+	CurrentCourse crntCourse ;
+	kindOfPerson personType ;
+	
+} ;
 private:
 	kindOfPerson personType ;
+protected:
+
 public:
 string getStudentByID () ;
 string getTeacherByID () ;

@@ -2,28 +2,30 @@
 #include <string>
 #include <fstream>
 #include <map>
+/*
 #define Person Course
 #define Persons Courses
-#define FILECOURSES "courses.dat"
 #define setNewPerson setNewCourse
 #define getPerson getCourse
+*/
+#define FILECOURSES "courses.dat"
 #define TESTCOURCES
 using namespace std ;
 
 typedef unsigned int ID;
 
-struct Person
+struct Course
 {
 	string _name ;
 	ID _ID;
 } ;
 
-class Persons
+class Courses
 {
 protected:
-	Person _person ;
+	Course _course ;
 	ID _lastID ;
-	map<ID, string> myPersons ;
+	map<ID, string> myCourses ;
 
 	bool isFileExist(const char* fileName)
 	{	bool res;
@@ -33,7 +35,7 @@ protected:
     	return res;	}
     
 public:
-	Persons ()
+	Courses ()
 	{
 		if (! isFileExist(FILECOURSES))
 		{	// to creaty an empty file and close it immediately.
@@ -57,28 +59,28 @@ public:
 			cout <<endl <<_lastID <<endl;
 #endif
 			while (!ifil.eof()) {
-    			ifil >>_person._ID ;
-				getline(ifil, _person._name) ;
+    			ifil >>_course._ID ;
+				getline(ifil, _course._name) ;
 #ifdef TESTCOURCES
-			cout <<endl <<_person._ID <<'\t' 
-					<<_person._name <<endl;
+			cout <<endl <<_course._ID <<'\t' 
+					<<_course._name <<endl;
 #endif
-			myPersons[_person._ID] = _person._name ;
+			myCourses[_course._ID] = _course._name ;
  			} // while
  			ifil.close() ;
 		}
 	}
 	
-	Person getPerson(ID id) ;
-	Person setNewPerson () ; // ONE Person only to be added to a map, maybe to a file.dat
+	Course getCourse(ID id) ;
+	Course setNewCourse () ; // ONE Person only to be added to a map, maybe to a file.dat
 
-	~Persons()
+	~Courses()
 	{ // to write a map into file.dat and to close(file.dat)
 	fstream of (FILECOURSES, fstream::trunc | fstream::out);
 	of <<_lastID <<endl;
-		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
+		for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
 		{
-			of  <<(*i).first <<' ' // ID
+			of  <<(*i).first <<'\t' // ID
 				<<(*i).second <<endl ; // name 
 		};
 	of.close() ;
@@ -88,19 +90,18 @@ public:
 	}
 } ;
 
-Person Persons::getPerson(ID id)
+Course Courses::getCourse(ID id)
 {
-	Person res;
-	_person._ID = id ;
-	_person._name = myPersons[id] ; // at
-	return _person ;
+	_course._ID = id ;
+	_course._name = myCourses[id] ; // at
+	return _course ;
 } ;
 
-Person Persons::setNewPerson()
+Course Courses::setNewCourse()
 {
-	_person._ID = _lastID ;
-	getline (cin, _person._name) ;
-	myPersons[_person._ID] = _person._name ;
+	_course._ID = _lastID ;
+	getline (cin, _course._name) ;
+	myCourses[_course._ID] = _course._name ;
 	++_lastID;
-	return _person ;	
+	return _course ;	
 }

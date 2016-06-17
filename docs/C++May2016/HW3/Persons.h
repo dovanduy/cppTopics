@@ -36,7 +36,7 @@ public:
 			_lastID=0 ;
 			fstream of (FILEPERSONS, fstream::trunc | fstream::out);
 #ifdef TESTPERSONS
-			cout <<"\n" <<FILEPERSONS <<" created\n"
+			cout <<"\n" <<FILEPERSONS <<" created.\n"
 			<<(int)_lastID <<endl;
 #endif
 			of <<_lastID ;
@@ -74,7 +74,7 @@ public:
 	of <<_lastID <<endl;
 		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
 		{
-			of  <<(*i).first <<' ' // ID
+			of  <<(*i).first <<'\t' // ID
 				<<(*i).second <<endl ; // name 
 		};
 	of.close() ;

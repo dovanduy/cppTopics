@@ -8,8 +8,8 @@ enum CourseStatus {open, close} ;
 
 struct CurrentCourse
 {
-	ID _personName ;
-	ID _courseName ;
+	ID _personID ;
+	ID _courseID ;
 	CourseStatus _courseStatus ;
 } ;
 
@@ -41,7 +41,9 @@ struct EduPerson
 } ;
 
 private:
-	kindOfPerson personType ;
+	EduPerson _eduPerson ;
+	Person _person ;
+	EduPerson addEduPerson(kindOfPerson prsnType) ;
 protected:
 
 public:
@@ -68,9 +70,32 @@ string EduPersons::getGuestTeacherByID ()
 	
 }
 
+EduPersons::EduPerson EduPersons::addEduPerson(kindOfPerson prsnType)
+{
+	Person prsn ;
+	Course crs ;
+	prsn = Persons::selectPerson() ;
+	_eduPerson.crntCourse._personID = prsn._ID ;
+	crs = Courses::selectCourse() ;
+	_eduPerson.crntCourse._courseID = crs._ID ;
+	switch (prsnType)
+	{
+		case student: {
+			break;
+		}
+		case teacher: {
+			break;
+		}
+		case guestTeacher: {
+			break;
+		}
+	}
+	return _eduPerson ;
+};
+
 void EduPersons::addNewStudent()
 {
-	
+	this->addEduPerson(student) ;
 }
 
 void EduPersons::addNewTeacher()

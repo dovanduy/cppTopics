@@ -16,9 +16,9 @@ string menu[MENUSIZE] =
 char getMenu () ;
 int main ()
 {
-	Person p1 ;
 	EduPersons* p = new EduPersons () ;
 #ifdef BASE_INHERITANCE_TEST
+	Person p1 ;
 	cout <<"\nNames =>" ;
 	p1=p->setNewPerson() ;
 	cout <<p1._ID <<"\t" <<p1._name;
@@ -55,7 +55,7 @@ for ( ; ; ) //  infite loop
 				break;
 			}
 			case '4': { // Add	data for new student
-				
+				p->addNewStudent() ;
 				break;
 			}
 			case '5': { // Add	data for new teacher

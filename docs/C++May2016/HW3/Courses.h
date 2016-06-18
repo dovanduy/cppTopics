@@ -74,8 +74,9 @@ public:
 	}
 	
 	Course getCourse(ID id) ;
-	Course setNewCourse () ; // ONE Person only to be added to a map, maybe to a file.dat
+	Course setNewCourse() ; // ONE Person only to be added to a map, maybe to a file.dat
 	void printCourseList() ;
+	Course selectCourse() ;
 
 	~Courses()
 	{ // to write a map into file.dat and to close(file.dat)
@@ -133,4 +134,13 @@ void Courses::printCourseList()
 				<<((*i).second._points) <<'\t'
 				<<((*i).second._name) <<endl ; // name 
 		};
+};
+
+Course Courses::selectCourse()
+{
+	ID id;
+	this->printCourseList() ;
+	cout <<"Select listed ID =>" ;
+	cin >>id ; this->goToNextLine() ;
+	return this->getCourse(id) ;
 };

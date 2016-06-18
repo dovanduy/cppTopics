@@ -127,6 +127,7 @@ Person Persons::selectPerson() // v 1.1
 	long izbor;
 	this->printPersonList() ;
 	cout <<endl<<NEWPERSONID <<'\t' <<"Add a NEW Person to the above list.\n";
+	cout <<"Select listed ID =>" ;
 	cin >>izbor ; this->goToNextLine() ;
 	if (izbor==NEWPERSONID)
 		return setNewPerson() ;

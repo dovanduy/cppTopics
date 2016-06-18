@@ -10,7 +10,6 @@ int main ()
 
 	p1=p->selectPerson() ;
 	cout <<"\n===\n" <<p1._ID <<"\t" <<p1._name <<"\n===\n" ;
-	
-	p->~Persons() ;
+
 	return 0;
 }

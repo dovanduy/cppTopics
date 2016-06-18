@@ -75,7 +75,7 @@ public:
 	
 	Course getCourse(ID id) ;
 	Course setNewCourse() ; // ONE Person only to be added to a map, maybe to a file.dat
-	void printCourseList() ;
+	void printCourseList() const ;
 	Course selectCourse() ;
 
 	~Courses()
@@ -125,7 +125,7 @@ Course Courses::setNewCourse()
 	return _course ;	
 }
 
-void Courses::printCourseList() 
+void Courses::printCourseList() const
 {
 	cout <<"\nID\tPoints\tCourse\n---\t---\t---\n";
 	for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)

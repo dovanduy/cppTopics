@@ -1,3 +1,4 @@
+#include <map>
 #include "Persons.h"
 #include "Courses.h"
 
@@ -8,7 +9,7 @@ enum CourseStatus {open, close} ;
 
 struct CurrentCourse
 {
-	ID _personID ;
+	ID _personID ; // can be a key pair
 	ID _courseID ;
 	CourseStatus _courseStatus ;
 } ;
@@ -29,43 +30,67 @@ struct Student
 	float _average ;
 } ;
 
-struct EduPerson
-{
-	CurrentCourse crntCourse ;
+struct EduData {
 	kindOfPerson personType ;
 	union {
 		Teacher _teacher ;
 		GuestTeacher _guestTeacher ;
 		Student _student ;
-	} ; //  infoCase 
+	} ; //  infoCase	
+};
+
+struct EduPerson
+{
+	CurrentCourse crntCourse ; // key
+ 	EduData eduData ; // map INFOs
 } ;
 
 private:
 	EduPerson _eduPerson ;
 	Person _person ;
+
+	map<ID, EduPerson> myStudents ;
+	map<ID, EduPerson> myTeachers ;
+	map<ID, EduPerson> myGuestTeachers ;
+
 	EduPerson addEduPerson(kindOfPerson prsnType) ;
 protected:
 
 public:
-string getStudentByID () ;
-string getTeacherByID () ;
-string getGuestTeacherByID () ;
+void getStudentByID () ;
+void getTeacherByID () ;
+void getGuestTeacherByID () ;
 void addNewStudent() ;
 void addNewTeacher() ;
 void addNewGuestTeacher() ;
 } ;
 
-string EduPersons::getStudentByID ()
+void EduPersons::getStudentByID ()
+{
+	ID izbor ;
+	Person p;
+	Course c;
+	Persons::printPersonList() ;
+	cout <<"Select listed ID =>" ;
+	cin >>izbor ; Courses::goToNextLine() ;
+	_eduPerson = myStudents[izbor] ;
+	p = Persons::getPerson(izbor) ;
+	c = Courses::getCourse(_eduPerson.crntCourse._courseID) ;
+	cout <<"\n\tID: " <<_eduPerson.crntCourse._personID
+		 <<"\n\tStudent: " <<p._name
+		 <<"\n\tCourse: " <<c._info._name 
+		 <<"\n\tPoints: " <<c._info._points
+		 <<"\n\tAverage evaluation mark: " <<_eduPerson.eduData._student._average
+		 <<endl ;
+	return ;	 
+}
+	
+void EduPersons::getTeacherByID ()
 {
 	
 }
 	
-string EduPersons::getTeacherByID ()
-{
-	
-}
-	
-string EduPersons::getGuestTeacherByID ()
+void EduPersons::getGuestTeacherByID ()
 {
 	
 }
@@ -81,10 +106,11 @@ EduPersons::EduPerson EduPersons::addEduPerson(kindOfPerson prsnType)
 	switch (prsnType)
 	{
 		case student: {
-			_eduPerson.personType = student ;
+			_eduPerson.eduData.personType = student ;
 			cout <<"Average evaluation mark =>" ;
-			cin >>_eduPerson._student._average ;
+			cin >>_eduPerson.eduData._student._average ;
 			Courses::goToNextLine() ;
+			myStudents[_eduPerson.crntCourse._personID]=_eduPerson ;
 			break;
 		}
 		case teacher: {
@@ -93,7 +119,7 @@ EduPersons::EduPerson EduPersons::addEduPerson(kindOfPerson prsnType)
 		case guestTeacher: {
 			break;
 		}
-	}
+	} ;
 	return _eduPerson ;
 };
 
@@ -104,7 +130,7 @@ void EduPersons::addNewStudent()
 
 void EduPersons::addNewTeacher()
 {
-	
+	this->addEduPerson(teacher) ;
 }
 
 void EduPersons::addNewGuestTeacher()

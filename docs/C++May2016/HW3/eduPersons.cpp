@@ -43,7 +43,7 @@ for ( ; ; ) //  infite loop
 				return 0 ;
 			}
 			case '1': { // Get	data for student with ID
-				
+				p->getStudentByID () ;
 				break;
 			}
 			case '2': { // Get	data for teacher with ID
@@ -59,11 +59,11 @@ for ( ; ; ) //  infite loop
 				break;
 			}
 			case '5': { // Add	data for new teacher
-				
+				p->addNewTeacher() ;
 				break;
 			}
 			case '6': { // Add	data for new guest teacher
-			
+				
 				break;
 			}
 			default:{

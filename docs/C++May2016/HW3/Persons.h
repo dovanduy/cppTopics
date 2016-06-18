@@ -75,7 +75,7 @@ public:
 	
 	Person getPerson(ID id) ;
 	Person setNewPerson () ; // ONE Person only to be added to a map, maybe to a file.dat
-	void printPersonList() ;
+	void printPersonList() const ;
 	Person selectPerson() ;
 
 	~Persons()
@@ -112,7 +112,7 @@ Person Persons::setNewPerson()
 	return _person ;	
 }
 
-void Persons::printPersonList() 
+void Persons::printPersonList() const
 {
 	cout <<"\nID\tPerson Names\n---\t---\n";
 	for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)

@@ -3,7 +3,7 @@
 #include <fstream>
 #include <map>
 #define FILEPERSONS "persons.dat"
-#define TESTPERSONS
+//#define TESTPERSONS
 using namespace std ;
 
 typedef unsigned int ID;
@@ -67,6 +67,7 @@ public:
 	
 	Person getPerson(ID id) ;
 	Person setNewPerson () ; // ONE Person only to be added to a map, maybe to a file.dat
+	void printPersonList() ;
 
 	~Persons()
 	{ // to write a map into file.dat and to close(file.dat)
@@ -74,7 +75,7 @@ public:
 	of <<_lastID <<endl;
 		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
 		{
-			of  <<(*i).first <<'\t' // ID
+			of  <<(*i).first //<<'\t' // ID
 				<<(*i).second <<endl ; // name 
 		};
 	of.close() ;
@@ -100,3 +101,13 @@ Person Persons::setNewPerson()
 	++_lastID;
 	return _person ;	
 }
+
+void Persons::printPersonList() 
+{
+	cout <<endl ;
+	for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
+		{
+			cout  <<((int)((*i).first)) <<'\t' // ID
+				<<((*i).second) <<endl ; // name 
+		};
+};

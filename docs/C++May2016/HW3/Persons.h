@@ -3,6 +3,7 @@
 #include <fstream>
 #include <map>
 #define FILEPERSONS "persons.dat"
+#define NEWPERSONID -1
 //#define TESTPERSONS
 using namespace std ;
 
@@ -20,7 +21,14 @@ protected:
 	Person _person ;
 	ID _lastID ;
 	map<ID, string> myPersons ;
-
+	
+	void goToNextLine()
+	{
+	if (cin.peek() == '\n') {
+		cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
+		} 
+	} ;
+	
 	bool isFileExist(const char* fileName)
 	{	bool res;
     	std::ifstream infile(fileName);
@@ -68,6 +76,7 @@ public:
 	Person getPerson(ID id) ;
 	Person setNewPerson () ; // ONE Person only to be added to a map, maybe to a file.dat
 	void printPersonList() ;
+	Person selectPerson() ;
 
 	~Persons()
 	{ // to write a map into file.dat and to close(file.dat)
@@ -96,6 +105,7 @@ Person Persons::getPerson(ID id)
 Person Persons::setNewPerson()
 {
 	_person._ID = _lastID ;
+	cout <<"Person NAMES =>" ;
 	getline (cin, _person._name) ;
 	myPersons[_person._ID] = _person._name ;
 	++_lastID;
@@ -110,4 +120,16 @@ void Persons::printPersonList()
 			cout  <<((int)((*i).first)) <<'\t' // ID
 				<<((*i).second) <<endl ; // name 
 		};
+};
+
+Person Persons::selectPerson() // v 1.1
+{
+	long izbor;
+	this->printPersonList() ;
+	cout <<endl<<NEWPERSONID <<'\t' <<"Add a NEW Person to the above list.\n";
+	cin >>izbor ; this->goToNextLine() ;
+	if (izbor==NEWPERSONID)
+		return setNewPerson() ;
+	else
+		return getPerson((ID)izbor) ;	
 };

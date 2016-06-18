@@ -104,7 +104,7 @@ Person Persons::setNewPerson()
 
 void Persons::printPersonList() 
 {
-	cout <<endl ;
+	cout <<"\nID\tPerson Names\n---\t---\n";
 	for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
 		{
 			cout  <<((int)((*i).first)) <<'\t' // ID

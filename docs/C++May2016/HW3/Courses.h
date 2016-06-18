@@ -126,7 +126,7 @@ Course Courses::setNewCourse()
 
 void Courses::printCourseList() 
 {
-	cout <<endl ;
+	cout <<"\nID\tPoints\tCourse\n---\t---\t---\n";
 	for (auto i=myCourses.begin(); i!=myCourses.end(); ++i)
 		{
 			cout  <<((int)((*i).first)) <<'\t' // ID

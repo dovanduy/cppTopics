@@ -37,7 +37,7 @@ struct EduPerson
 		Teacher _teacher ;
 		GuestTeacher _guestTeacher ;
 		Student _student ;
-	} infoCase ;
+	} ; //  infoCase 
 } ;
 
 private:
@@ -81,6 +81,10 @@ EduPersons::EduPerson EduPersons::addEduPerson(kindOfPerson prsnType)
 	switch (prsnType)
 	{
 		case student: {
+			_eduPerson.personType = student ;
+			cout <<"Average evaluation mark =>" ;
+			cin >>_eduPerson._student._average ;
+			Courses::goToNextLine() ;
 			break;
 		}
 		case teacher: {

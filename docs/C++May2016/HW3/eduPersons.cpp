@@ -8,7 +8,7 @@ string menu[MENUSIZE] =
 	"\n0. Exit",
 	"1. Get	data for student with ID",
 	"2. Get	data for teacher with ID",
-	"3. Get	data for guest teacher with	ID",
+	"3. Get	data for guest teacher with ID",
 	"4. Add	data for new student",
 	"5. Add	data for new teacher",
 	"6. Add	data for new guest teacher"
@@ -17,21 +17,6 @@ char getMenu () ;
 int main ()
 {
 	EduPersons* p = new EduPersons () ;
-#ifdef BASE_INHERITANCE_TEST
-	Person p1 ;
-	cout <<"\nNames =>" ;
-	p1=p->setNewPerson() ;
-	cout <<p1._ID <<"\t" <<p1._name;
-	p1=p->getPerson(0) ;
-	cout <<endl <<p1._ID <<"\t" <<p1._name <<"\n===";
-	
-	cout <<"\nNames =>" ;
-	p1=p->setNewPerson() ;
-	cout <<p1._ID <<"\t" <<p1._name;
-	p1=p->getPerson(1) ;
-	cout <<endl <<p1._ID <<"\t" <<p1._name <<"\n===";
-	return 0;
-#endif
 char izbor ;
 for ( ; ; ) //  infite loop
 	{
@@ -39,6 +24,7 @@ for ( ; ; ) //  infite loop
 		switch (izbor)
 		{
 			case '0': { // terminate program
+				p->~EduPersons() ;
 				cout <<"\nSuccessfuly closed :-)\n" ;
 				return 0 ;
 			}
@@ -47,11 +33,11 @@ for ( ; ; ) //  infite loop
 				break;
 			}
 			case '2': { // Get	data for teacher with ID
-				
+				p->getTeacherByID () ;
 				break;
 			}
 			case '3': { // Get	data for guest teacher with	ID
-				
+				p->getGuestTeacherByID () ;
 				break;
 			}
 			case '4': { // Add	data for new student
@@ -63,12 +49,13 @@ for ( ; ; ) //  infite loop
 				break;
 			}
 			case '6': { // Add	data for new guest teacher
-				
+				p->addNewGuestTeacher() ;
 				break;
 			}
 			default:{
 				cout <<"\n\nBye Bye :(\n" ;
-				return 0;
+				p->~EduPersons() ;
+				return 1;
 			}
 		} // switch
 	} // for

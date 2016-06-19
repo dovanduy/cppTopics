@@ -4,7 +4,7 @@
 #include <map>
 #define FILEPERSONS "persons.dat"
 #define NEWPERSONID -1
-//#define TESTPERSONS
+#define TESTPERSONS
 using namespace std ;
 
 typedef unsigned int ID;
@@ -17,17 +17,18 @@ struct Person
 
 class Persons
 {
-protected:
-	Person _person ;
-	ID _lastID ;
-	map<ID, string> myPersons ;
-	
-	void goToNextLine()
+private:
+void goToNextLine()
 	{
 	if (cin.peek() == '\n') {
 		cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
 		} 
 	} ;
+	
+protected:
+	Person _person ;
+	ID _lastID ;
+	map<ID, string> myPersons ;
 	
 	bool isFileExist(const char* fileName)
 	{	bool res;
@@ -55,6 +56,7 @@ public:
 #ifdef TESTPERSONS
 			cout <<"\n" <<FILEPERSONS <<" exists already.\n";
 #endif
+			// to READ a file into MAP
 			ifstream ifil (FILEPERSONS) ;
 			ifil >>_lastID ;
 #ifdef TESTPERSONS
@@ -63,15 +65,32 @@ public:
 			while (!ifil.eof()) {
     			ifil >>_person._ID ;
 				getline(ifil, _person._name) ;
+				myPersons[_person._ID] = _person._name ;
 #ifdef TESTPERSONS
 			cout <<endl <<_person._ID <<'\t' 
 					<<_person._name <<endl;
 #endif
-			myPersons[_person._ID] = _person._name ;
  			} // while
  			ifil.close() ;
 		}
 	}
+	
+	void writeToDB()
+	{ // autoSave 15 min.
+	// to write a map into file.dat and to close(file.dat)
+	fstream of (FILEPERSONS, fstream::trunc | fstream::out);
+	of <<_lastID <<endl;
+		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
+		{
+			of  <<(*i).first //<<'\t' // ID
+				<<(*i).second <<endl ; // name
+#ifdef TESTPERSONS
+			cout <<(*i).first //<<'\t' // ID
+				<<(*i).second <<endl ; // name
+#endif
+		};
+	of.close() ;
+	} ;
 	
 	Person getPerson(ID id) ;
 	Person setNewPerson () ; // ONE Person only to be added to a map, maybe to a file.dat
@@ -79,15 +98,8 @@ public:
 	Person selectPerson() ;
 
 	~Persons()
-	{ // to write a map into file.dat and to close(file.dat)
-	fstream of (FILEPERSONS, fstream::trunc | fstream::out);
-	of <<_lastID <<endl;
-		for (auto i=myPersons.begin(); i!=myPersons.end(); ++i)
-		{
-			of  <<(*i).first //<<'\t' // ID
-				<<(*i).second <<endl ; // name 
-		};
-	of.close() ;
+	{ 
+		writeToDB() ; 
 #ifdef TESTPERSONS
 			cout <<endl <<"\nDestructor of Persons.h\n" <<endl;
 #endif

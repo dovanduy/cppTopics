@@ -4,7 +4,7 @@
 #include <map>
 #define FILEPERSONS "persons.dat"
 #define NEWPERSONID -1
-#define TESTPERSONS
+//#define TESTPERSONS
 using namespace std ;
 
 typedef unsigned int ID;
@@ -29,13 +29,6 @@ protected:
 	Person _person ;
 	ID _lastID ;
 	map<ID, string> myPersons ;
-	
-	bool isFileExist(const char* fileName)
-	{	bool res;
-    	std::ifstream infile(fileName);
-    	res = infile.good() ;
-    	infile.close() ;
-    	return res;	}
     
 public:
 	Persons ()
@@ -67,13 +60,20 @@ public:
 				getline(ifil, _person._name) ;
 				myPersons[_person._ID] = _person._name ;
 #ifdef TESTPERSONS
-			cout <<endl <<_person._ID <<'\t' 
+				cout <<endl <<_person._ID <<'\t' 
 					<<_person._name <<endl;
 #endif
  			} // while
  			ifil.close() ;
 		}
 	}
+
+	bool isFileExist(const char* fileName)
+	{	bool res;
+    	std::ifstream infile(fileName);
+    	res = infile.good() ;
+    	infile.close() ;
+    	return res;	}
 	
 	void writeToDB()
 	{ // autoSave 15 min.

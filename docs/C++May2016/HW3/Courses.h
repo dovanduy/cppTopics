@@ -26,15 +26,15 @@ protected:
 	Course _course ;
 	ID _lastID ;
 	map<ID, CourseInfo> myCourses ;
-
+    
+public:
 	bool isFileExist(const char* fileName)
 	{	bool res;
     	std::ifstream infile(fileName);
     	res = infile.good() ;
     	infile.close() ;
     	return res;	}
-    
-public:
+    	
 	Courses ()
 	{
 		if (! isFileExist(FILECOURSES))

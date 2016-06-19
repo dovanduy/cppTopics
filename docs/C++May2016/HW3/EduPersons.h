@@ -2,6 +2,10 @@
 #include "Persons.h"
 #include "Courses.h"
 
+#define FILESTUDENTS "students.dat"
+#define FILETEACHERS "teachers.dat"
+#define FILEGUESTTEACHERS "guestTeachers.dat"
+
 class EduPersons : public Courses, public Persons
 {
 enum kindOfPerson {student, teacher, guestTeacher} ;
@@ -11,7 +15,7 @@ struct CurrentCourse
 {
 	ID _personID ; // can be a key pair
 	ID _courseID ;
-	CourseStatus _courseStatus ;
+//	CourseStatus _courseStatus ;
 } ;
 
 struct Teacher
@@ -54,20 +58,31 @@ private:
 	map<ID, EduPerson> myGuestTeachers ;
 
 	EduPerson addEduPerson(kindOfPerson prsnType) ;
+	void openDB () ;
+	void openStudents() ;
+	void openTeachers() ;
+	void openGuestTeachers() ;
+	void closeDB () ;
+	void closeStudents() ;
+	void closeTeachers() ;
+	void closeGuestTeachers() ;
 protected:
 	void printStudentList () ;
 	void printTeacherList () ;
 	void printGuestTeacherList () ;
 public:
-void getStudentByID () ;
-void getTeacherByID () ;
-void getGuestTeacherByID () ;
-void addNewStudent() ;
-void addNewTeacher() ;
-void addNewGuestTeacher() ;
+	EduPersons(){
+		openDB();
+	}
 
-~EduPersons() {
-//	Persons::writeToDB() ;
+	void getStudentByID () ;
+	void getTeacherByID () ;
+	void getGuestTeacherByID () ;
+	void addNewStudent() ;
+	void addNewTeacher() ;
+	void addNewGuestTeacher() ;
+	~EduPersons() {
+		closeDB() ;
 } ;
 
 } ;
@@ -122,11 +137,11 @@ void EduPersons::getStudentByID ()
 	_eduPerson = myStudents[izbor] ;
 	p = Persons::getPerson(izbor) ;
 	c = Courses::getCourse(_eduPerson.crntCourse._courseID) ;
-	cout <<"\n\tID:\t" <<_eduPerson.crntCourse._personID
+	cout <<"\n\tID:\t\t" <<_eduPerson.crntCourse._personID
 		 <<"\n\tStudent:\t" <<p._name
-		 <<"\n\tCourse:\t" <<c._info._name 
-		 <<"\n\tPoints:\t" <<c._info._points
-		 <<"\n\tAverage evaluation mark: " <<_eduPerson.eduData._student._average
+		 <<"\n\tCourse:\t\t" <<c._info._name 
+		 <<"\n\tPoints:\t\t" <<c._info._points
+		 <<"\n\tAverage mark:\t" <<_eduPerson.eduData._student._average
 		 <<endl ;
 	return ;	 
 }
@@ -225,3 +240,122 @@ void EduPersons::addNewGuestTeacher()
 {
 	this->addEduPerson(guestTeacher) ;
 }
+
+void EduPersons::openDB () {
+	openStudents() ;
+	openTeachers() ;
+	openGuestTeachers() ;
+} ;
+
+void EduPersons::openStudents() {
+	if (! Courses::isFileExist(FILESTUDENTS))
+	{	// to creaty an empty file and close it immediately.
+		fstream of (FILESTUDENTS, fstream::trunc | fstream::out);
+		of.close();
+	}
+	else
+	{ // to INIT a myStudents map from a FILESTUDENTS
+		ifstream ifil (FILESTUDENTS) ;
+		while (!ifil.eof()) {
+    		ifil >>_eduPerson.crntCourse._personID ;
+			ifil >>_eduPerson.crntCourse._courseID ;
+			_eduPerson.eduData.personType = student ;
+			ifil >>_eduPerson.eduData._student._average ;
+			myStudents[_eduPerson.crntCourse._personID] = _eduPerson ;
+ 		} // while
+ 		ifil.close() ;
+	} // else
+} ;
+
+void EduPersons::openTeachers() {
+	if (! Courses::isFileExist(FILETEACHERS))
+	{	// to creaty an empty file and close it immediately.
+		fstream of (FILETEACHERS, fstream::trunc | fstream::out);
+		of.close();
+	}
+	else
+	{ // to INIT a myStudents map from a FILETEACHERS
+		ifstream ifil (FILETEACHERS) ;
+		while (!ifil.eof()) {
+    		ifil >>_eduPerson.crntCourse._personID ;
+			ifil >>_eduPerson.crntCourse._courseID ;
+			_eduPerson.eduData.personType = teacher ;
+			ifil >>_eduPerson.eduData._teacher._salary ;
+			ifil >>_eduPerson.eduData._teacher._days ;
+			myTeachers[_eduPerson.crntCourse._personID] = _eduPerson ;
+ 		} // while
+ 		ifil.close() ;
+	} // else	
+} ;
+
+void EduPersons::openGuestTeachers() {
+	if (! Courses::isFileExist(FILEGUESTTEACHERS))
+	{	// to creaty an empty file and close it immediately.
+		fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out);
+		of.close();
+	}
+	else
+	{ // to INIT a myStudents map from a FILETEACHERS
+		ifstream ifil (FILEGUESTTEACHERS) ;
+		while (!ifil.eof()) {
+    		ifil >>_eduPerson.crntCourse._personID ;
+			ifil >>_eduPerson.crntCourse._courseID ;
+			_eduPerson.eduData.personType = guestTeacher ;
+			ifil >>_eduPerson.eduData._teacher._salary ;
+			myGuestTeachers[_eduPerson.crntCourse._personID] = _eduPerson ;
+		} // while
+ 		ifil.close() ;
+	} // else
+} ;
+
+void EduPersons::closeDB () {
+	closeStudents() ;
+	closeTeachers() ;
+	closeGuestTeachers() ;	
+} ;
+
+void EduPersons::closeStudents() {
+	ID id;
+	fstream of (FILESTUDENTS, fstream::trunc | fstream::out);
+		for (auto i=myStudents.begin(); i!=myStudents.end(); ++i)
+		{
+			id = (*i).first ;
+			_eduPerson = myStudents[id] ;
+			of  <<id <<' ' // ID
+				<<_eduPerson.crntCourse._courseID <<' '
+				<<_eduPerson.eduData._student._average
+				<<endl ;
+		};
+	of.close() ;
+} ;
+
+void EduPersons::closeTeachers() {
+	ID id;
+	fstream of (FILETEACHERS, fstream::trunc | fstream::out);
+		for (auto i=myTeachers.begin(); i!=myTeachers.end(); ++i)
+		{
+			id = (*i).first ;
+			_eduPerson = myTeachers[id] ;
+			of  <<id <<' ' // ID
+				<<_eduPerson.crntCourse._courseID <<' '
+				<<_eduPerson.eduData._teacher._salary <<' '
+				<<_eduPerson.eduData._teacher._days <<' '
+				<<endl ;
+		};
+	of.close() ;	
+} ;
+
+void EduPersons::closeGuestTeachers() {
+	ID id;
+	fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out);
+		for (auto i=myGuestTeachers.begin(); i!=myGuestTeachers.end(); ++i)
+		{
+			id = (*i).first ;
+			_eduPerson = myGuestTeachers[id] ;
+			of  <<id <<' ' // ID
+				<<_eduPerson.crntCourse._courseID <<' '
+				<<_eduPerson.eduData._teacher._salary <<' '
+				<<endl ;
+		};
+	of.close() ;
+};

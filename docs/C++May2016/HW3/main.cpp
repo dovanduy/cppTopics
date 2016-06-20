@@ -16,15 +16,20 @@ string menu[MENUSIZE] =
 char getMenu () ;
 int main ()
 {
-	EduPersons* p = new EduPersons () ;
 char izbor ;
+EduPersons* p = new EduPersons () ;
+if (p==NULL)
+{
+	cout <<"\nNot enough RAM.\n";
+	return 0;
+}
 for ( ; ; ) //  infite loop
 	{
 		izbor = getMenu() ;
 		switch (izbor)
 		{
 			case '0': { // terminate program
-				p->~EduPersons() ;
+				delete p ;
 				cout <<"\nSuccessfuly closed :-)\n" ;
 				return 0 ;
 			}
@@ -54,7 +59,7 @@ for ( ; ; ) //  infite loop
 			}
 			default:{
 				cout <<"\n\nBye Bye :(\n" ;
-				p->~EduPersons() ;
+				delete p ;
 				return 1;
 			}
 		} // switch

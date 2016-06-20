@@ -27,6 +27,6 @@ int main ()
 	<<'\t'<<((int)(p1._info._points))
 	<<'\t' <<p1._info._name <<"\n===\n";
 	
-	p->~Courses() ;
+	delete p ;
 	return 0;
 }

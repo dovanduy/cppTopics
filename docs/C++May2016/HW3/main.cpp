@@ -20,7 +20,7 @@ char izbor ;
 EduPersons* p = new EduPersons () ;
 if (p==NULL)
 {
-	cout <<"\nNot enough RAM.\n";
+	cerr <<"\nNot enough RAM.\n";
 	return 0;
 }
 for ( ; ; ) //  infite loop

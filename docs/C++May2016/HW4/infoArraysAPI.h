@@ -1,8 +1,8 @@
 #include <string>
 
 template <class key>
-class infoArrayAPI
-{ // DEFs placed into an abstract class
+class infoArraysAPI
+{ // DEFs placed into an abstract class infoArraysAPI
 public:
 	struct infoRecord
 	{	key _id ; // unique

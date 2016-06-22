@@ -50,15 +50,13 @@ public:
 	txtFilesDB (string f) : _myFile(f) {
 		initDB (f) ;
 	} ;
-	txtFilesDB () {
+	~txtFilesDB () {
 		writeToDB () ;
 	} ;
 	infoArrays::infoRecord getRecord(key id) {
 		//cout <<"1";
 	} ;
-	infoArrays::infoRecord setRecord(key id) {
-		//cout <<"2";
-	};
+	infoArrays::infoRecord setRecord(key id) ;
 	void printList() const { //cout <<"3" ;
 	};
 	infoArrays::infoRecord selectPerson() {
@@ -70,11 +68,11 @@ public:
 template <class T>
 infoArrays::infoRecord txtFilesDB<T>::getRecord(T id) {
 };
-
+*/
 template <class T>
 infoArrays::infoRecord txtFilesDB<T>::setRecord(T id) {
 };
-
+/*
 template <class T>
 void txtFilesDB<T>::printList() const {
 };

@@ -21,7 +21,7 @@ EduPersons* p = new EduPersons () ;
 if (p==NULL)
 {
 	cout <<"\nNot enough RAM.\n";
-	return 0;
+	return 2;
 }
 for ( ; ; ) //  infite loop
 	{

@@ -32,9 +32,26 @@ private:
  		ifil.close() ;
 	}
 } ;
+
+void writeToDB()
+	{ // autoSave 15 min.
+	// to write a map into file.dat and to close(file.dat)
+	fstream of (_myFile.c_str(), fstream::trunc | fstream::out);
+	of <<_lastID <<endl;
+		for (auto i=myInfoRecords.begin(); i!=myInfoRecords.end(); ++i)
+		{
+			of  <<(*i).first //<<'\t' // ID
+				<<(*i).second <<endl ; // name
+		};
+	of.close() ;
+	} ;
+
 public:
 	txtFilesDB (string f) : _myFile(f) {
 		initDB (f) ;
+	} ;
+	txtFilesDB () {
+		writeToDB () ;
 	} ;
 	infoArrays::infoRecord getRecord(key id) {
 		//cout <<"1";

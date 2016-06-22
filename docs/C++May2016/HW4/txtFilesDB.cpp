@@ -9,12 +9,14 @@ int main ()
 	infoArrays::infoRecord p1 ;
 //	txtFilesDB<infoArrays::ID> r() ;
 	txtFilesDB<infoArrays::ID> * p = 
-		new txtFilesDB<infoArrays::ID> ("data1.dat") ;
+		new txtFilesDB<infoArrays::ID> ("Names: ", "data1.dat") ;
 	if (p==NULL)
 	{
 		cerr <<"Not enough memory." ;
 		return 1 ;
 	}
+	p->setNewRecord() ;
+	delete p ;
 return 0 ;
 /*
 	p1=p->selectPerson() ;

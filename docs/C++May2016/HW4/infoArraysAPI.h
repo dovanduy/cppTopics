@@ -22,7 +22,7 @@ class infoArraysAPI // abstract class
 { // DEFs placed into an infoArraysAPI
 public:
 	virtual infoArrays::infoRecord getRecord(key id) = 0  ;
-	virtual infoArrays::infoRecord setRecord(key id) = 0 ;
+	virtual infoArrays::infoRecord setNewRecord() = 0 ;
 	virtual void printList() // ?? ptr in txtFilesDB
 	{
 	};

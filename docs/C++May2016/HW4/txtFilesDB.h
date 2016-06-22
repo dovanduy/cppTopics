@@ -9,8 +9,8 @@ class txtFilesDB : public infoArraysAPI<key>
 private:
 	infoArrays::infoRecord _myInf ;
 	key _lastID ;
-	string _myFile ;
-	std::map <key, infoArrays::infoRecord> myInfoRecords ;
+	string _myFile, _infoHints ;
+	std::map <key, string> myInfoRecords ;
 	void initDB (string str=MYFILE){
 	if (! infoArrays::isFileExist(str.c_str() ))
 	{	// to creaty an empty file and close it immediately.
@@ -27,7 +27,7 @@ private:
 		while (!ifil.eof()) {
     		ifil >>_myInf._id ;
 			getline(ifil, _myInf._description ) ;
-			myInfoRecords[_myInf._id] = _myInf ;
+			myInfoRecords[_myInf._id] = _myInf._description ;
  		} // while
  		ifil.close() ;
 	}
@@ -46,8 +46,16 @@ void writeToDB()
 	of.close() ;
 	} ;
 
+protected:
+void goToNextLine()
+	{
+	if (std::cin.peek() == '\n') {
+		std::cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
+		} 
+	} ;
+
 public:
-	txtFilesDB (string f) : _myFile(f) {
+	txtFilesDB (string infoHints, string f=MYFILE) : _infoHints(infoHints), _myFile(f) {
 		initDB (f) ;
 	} ;
 	~txtFilesDB () {
@@ -56,9 +64,18 @@ public:
 	infoArrays::infoRecord getRecord(key id) {
 		//cout <<"1";
 	} ;
-	infoArrays::infoRecord setRecord(key id) ;
-	void printList() const { //cout <<"3" ;
-	};
+	
+infoArrays::infoRecord setNewRecord() { 
+	int points;
+	_myInf._id = _lastID ;
+	cout <<_infoHints ;
+	goToNextLine() ;
+	getline (cin, _myInf._description ) ;
+	myInfoRecords[_myInf._id] = _myInf._description ;
+	++_lastID;
+	return _myInf ;	
+};
+	
 	infoArrays::infoRecord selectPerson() {
 		//cout <<"4" ;
 	};
@@ -69,9 +86,7 @@ template <class T>
 infoArrays::infoRecord txtFilesDB<T>::getRecord(T id) {
 };
 */
-template <class T>
-infoArrays::infoRecord txtFilesDB<T>::setRecord(T id) {
-};
+
 /*
 template <class T>
 void txtFilesDB<T>::printList() const {

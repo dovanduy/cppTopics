@@ -61,9 +61,12 @@ public:
 	~txtFilesDB () {
 		writeToDB () ;
 	} ;
+	
 	infoArrays::infoRecord getRecord(key id) {
-		//cout <<"1";
-	} ;
+		_myInf._id = id ;
+		_myInf._description = myInfoRecords[id] ; // at
+		return _myInf ;	
+	};
 	
 infoArrays::infoRecord setNewRecord() { 
 	int points;
@@ -75,17 +78,17 @@ infoArrays::infoRecord setNewRecord() {
 	++_lastID;
 	return _myInf ;	
 };
+
+
 	
-	infoArrays::infoRecord selectPerson() {
+infoArrays::infoRecord selectRecord() {
 		//cout <<"4" ;
 	};
 } ;
 
-/*
-template <class T>
-infoArrays::infoRecord txtFilesDB<T>::getRecord(T id) {
-};
-*/
+//*
+
+//*/
 
 /*
 template <class T>

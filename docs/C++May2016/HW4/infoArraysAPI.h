@@ -17,14 +17,14 @@ struct infoRecord
   } ;
 } ;
 
-template <class key>
+template <class K>
 class infoArraysAPI // abstract class
 { // DEFs placed into an infoArraysAPI
 public:
-	virtual infoArrays::infoRecord getRecord(key id) = 0  ;
+	virtual infoArrays::infoRecord getRecord(K id) = 0  ;
 	virtual infoArrays::infoRecord setNewRecord() = 0 ;
 	virtual void printList() // ?? ptr in txtFilesDB
 	{
 	};
-	virtual infoArrays::infoRecord selectPerson() = 0 ;
+//	virtual infoArrays::infoRecord selectPerson() = 0 ;
 } ;

@@ -23,8 +23,6 @@ class infoArraysAPI // abstract class
 public:
 	virtual infoArrays::infoRecord getRecord(K id) = 0  ;
 	virtual infoArrays::infoRecord setNewRecord() = 0 ;
-	virtual void printList() // ?? ptr in txtFilesDB
-	{
-	};
-//	virtual infoArrays::infoRecord selectPerson() = 0 ;
+	virtual void printList() = 0 ; 
+	virtual infoArrays::infoRecord selectRecord() = 0 ;
 } ;

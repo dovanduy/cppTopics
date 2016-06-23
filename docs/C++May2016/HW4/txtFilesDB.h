@@ -2,6 +2,7 @@
 #include <map>
 #include <fstream>
 #define MYFILE "data.dat"
+#define NEWPERSONID -1
 using namespace std;
 template <class key>
 class txtFilesDB : public infoArraysAPI<key>
@@ -67,9 +68,8 @@ public:
 		_myInf._description = myInfoRecords[id] ; // at
 		return _myInf ;	
 	};
-	
+
 infoArrays::infoRecord setNewRecord() { 
-	int points;
 	_myInf._id = _lastID ;
 	cout <<_infoHints ;
 	goToNextLine() ;
@@ -79,10 +79,25 @@ infoArrays::infoRecord setNewRecord() {
 	return _myInf ;	
 };
 
-
+void printList() {
+		cout <<"\nID\t"<<_infoHints <<"\n---\t---\n";
+	for (auto i=myInfoRecords.begin(); i != myInfoRecords.end(); ++i)
+		{
+			cout  <<((int)((*i).first)) <<'\t' // ID
+				<<((*i).second) <<endl ; // description 
+		};
+};
 	
 infoArrays::infoRecord selectRecord() {
-		//cout <<"4" ;
+	key izbor;
+	printList() ;
+	cout <<endl<<NEWPERSONID <<'\t' <<"Add a NEW Person to the above list.\n";
+	cout <<"Select listed ID =>" ;
+	cin >>izbor ; goToNextLine() ;
+	if (izbor==NEWPERSONID)
+		return setNewRecord() ;
+	else
+		return getRecord(izbor) ;
 	};
 } ;
 

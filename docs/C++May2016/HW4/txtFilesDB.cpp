@@ -8,7 +8,7 @@ int main ()
 {
 	infoArrays::infoRecord p1 ;
 	txtFilesDB<infoArrays::ID> * p = 
-		new txtFilesDB<infoArrays::ID> ("Names: ", "data1.dat") ;
+		new txtFilesDB<infoArrays::ID> ("Ware Names: ", wares.dat) ;
 	if (p==NULL)
 	{
 		cerr <<"Not enough memory." ;

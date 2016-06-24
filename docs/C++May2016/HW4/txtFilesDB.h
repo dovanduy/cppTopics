@@ -59,15 +59,25 @@ public:
 	txtFilesDB (string infoHints, string f=MYFILE) : _infoHints(infoHints), _myFile(f) {
 		initDB (f) ;
 	} ;
+	
 	~txtFilesDB () {
 		writeToDB () ;
 	} ;
 	
-	infoArrays::infoRecord getRecord(key id) {
-		_myInf._id = id ;
-		_myInf._description = myInfoRecords[id] ; // at
-		return _myInf ;	
-	};
+	bool isKeyHere (key id)
+	{
+		if ( myInfoRecords.find(id) == myInfoRecords.end() ) {
+  		return false ; // not found
+	} else {
+  		return true ; // found
+	}	
+	} ;
+
+infoArrays::infoRecord getRecord(key id) {
+	_myInf._id = id ;
+	_myInf._description = myInfoRecords[id] ; // at
+	return _myInf ;	
+};
 
 infoArrays::infoRecord setNewRecord() { 
 	_myInf._id = _lastID ;

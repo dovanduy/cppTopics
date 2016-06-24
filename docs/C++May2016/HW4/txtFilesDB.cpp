@@ -6,18 +6,32 @@ using namespace std ;
 #include "txtFilesDB.h"
 int main ()
 {
-	infoArrays::infoRecord p1 ;
-	txtFilesDB<infoArrays::ID> * p = 
-		new txtFilesDB<infoArrays::ID> ("Ware Names: ", wares.dat) ;
-	if (p==NULL)
+	infoArrays::infoRecord p1, p2 ;
+	txtFilesDB<infoArrays::ID> * pWare = 
+		new txtFilesDB<infoArrays::ID> ("Ware Names: ", "wares.dat") ;
+	if (pWare == NULL)
 	{
-		cerr <<"Not enough memory." ;
+		cerr <<"Not enough memory, pWare." ;
 		return 1 ;
-	}
-
-	p1=p->selectRecord() ;
+	} ;
+	
+	txtFilesDB<infoArrays::ID> * pWarePrice = 
+		new txtFilesDB<infoArrays::ID> ("How much money? ", "prices.dat") ;
+	if (pWarePrice == NULL)
+	{
+		cerr <<"Not enough memory, pPrice." ;
+		return 1 ;
+	} ;
+	
+// Въвежда се Инфо (Стока, Цена)
+	p1 = pWare -> setNewRecord() ;
 	cout <<"\n===\n" <<p1._id <<"\t" <<p1._description <<"\n===\n" ;
-	delete p ;
+	p2 = pWarePrice-> setNewRecord() ;
+	cout <<"\n===\n" <<p2._id <<"\t" <<p2._description <<"\n===\n" ;
+	pWare->printList();
+	pWarePrice -> printList();
+	delete pWare ;
+	delete pWarePrice ;
 	
 	return 0;
 }

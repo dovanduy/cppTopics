@@ -1,17 +1,19 @@
 #include "infoArraysAPI.h"
 #include <map>
 #include <fstream>
+#include <iostream>
 #define MYFILE "data.dat"
-#define NEWPERSONID -1
+#define NEWID -1
 using namespace std;
 template <class key>
 class txtFilesDB : public infoArraysAPI<key>
 {
 private:
 	infoArrays::infoRecord _myInf ;
-	key _lastID ;
+	key _lastID, _currentKey ;
 	string _myFile, _infoHints ;
 	std::map <key, string> myInfoRecords ;
+	
 	void initDB (string str=MYFILE){
 	if (! infoArrays::isFileExist(str.c_str() ))
 	{	// to creaty an empty file and close it immediately.
@@ -72,7 +74,36 @@ public:
   		return true ; // found
 	}	
 	} ;
+	
+	key begin()
+	{ // Goes to the BEGINNING and returs -1 or key as a number >=0
+		auto i = myInfoRecords.begin() ;
+		_currentKey = (key)(*i).first ;
+		if (i != myInfoRecords.end())
+			return (_currentKey) ;
+		else return ((key)(-1)) ;
+	} ;
 
+	key getNextKey()
+	{ // Goes to the BEGINNING and returs -1 or key as a number >=0
+		auto i = myInfoRecords.find(_currentKey) ;
+		if (i == myInfoRecords.end())
+			return ((key)(-1)) ;
+		else
+		{
+			++i ;
+			if (i == myInfoRecords.end())
+				return ((key)(-1)) ;
+			else 
+				return ((key)(*i).first) ;
+		}
+	} ;
+	
+	key getCurrentKey()
+	{
+		return _currentKey ;
+	}
+	
 infoArrays::infoRecord getRecord(key id) {
 	_myInf._id = id ;
 	_myInf._description = myInfoRecords[id] ; // at
@@ -93,7 +124,7 @@ void printList() {
 		cout <<"\nID\t"<<_infoHints <<"\n---\t---\n";
 	for (auto i=myInfoRecords.begin(); i != myInfoRecords.end(); ++i)
 		{
-			cout  <<((int)((*i).first)) <<'\t' // ID
+			cout  <<((key)((*i).first)) <<'\t' // ID
 				<<((*i).second) <<endl ; // description 
 		};
 };
@@ -101,26 +132,13 @@ void printList() {
 infoArrays::infoRecord selectRecord() {
 	key izbor;
 	printList() ;
-	cout <<endl<<NEWPERSONID <<'\t' <<"Add a NEW Person to the above list.\n";
+	cout <<endl<<NEWID <<'\t' <<"Add a NEW Row to the above list.\n";
 	cout <<"Select listed ID =>" ;
-	cin >>izbor ; goToNextLine() ;
-	if (izbor==NEWPERSONID)
+	cin >>izbor ;
+	if (izbor==NEWID)
 		return setNewRecord() ;
 	else
 		return getRecord(izbor) ;
 	};
 } ;
 
-//*
-
-//*/
-
-/*
-template <class T>
-void txtFilesDB<T>::printList() const {
-};
-
-template <class T>
-infoArrays::infoRecord txtFilesDB<T>::selectPerson() {
-};
-*/

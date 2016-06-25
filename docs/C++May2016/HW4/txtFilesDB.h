@@ -4,9 +4,10 @@
 #include <iostream>
 #define MYFILE "data.dat"
 #define NEWID -1
+const char DELIMITER = ',' ;
 using namespace std;
 template <class key>
-class txtFilesDB : public infoArraysAPI<key>
+class TxtFilesDB : public infoArraysAPI<key>
 {
 private:
 	infoArrays::infoRecord _myInf ;
@@ -25,10 +26,12 @@ private:
 	else
 	{ // to INIT a MAP from a FILE
 	// to READ a file into MAP
+		char skipDelimiter ;
 		ifstream ifil (str.c_str()) ;
 		ifil >>_lastID ;
 		while (!ifil.eof()) {
     		ifil >>_myInf._id ;
+    		ifil >>skipDelimiter ;
 			getline(ifil, _myInf._description ) ;
 			myInfoRecords[_myInf._id] = _myInf._description ;
  		} // while
@@ -44,6 +47,7 @@ void writeToDB()
 		for (auto i=myInfoRecords.begin(); i!=myInfoRecords.end(); ++i)
 		{
 			of  <<(*i).first //<<'\t' // ID
+				<<DELIMITER
 				<<(*i).second <<endl ; // name
 		};
 	of.close() ;
@@ -58,11 +62,11 @@ void goToNextLine()
 	} ;
 
 public:
-	txtFilesDB (string infoHints, string f=MYFILE) : _infoHints(infoHints), _myFile(f) {
+	TxtFilesDB (string infoHints, string f=MYFILE) : _infoHints(infoHints), _myFile(f) {
 		initDB (f) ;
 	} ;
 	
-	~txtFilesDB () {
+	~TxtFilesDB () {
 		writeToDB () ;
 	} ;
 	
@@ -81,19 +85,19 @@ public:
 		_currentKey = (key)(*i).first ;
 		if (i != myInfoRecords.end())
 			return (_currentKey) ;
-		else return ((key)(-1)) ;
+		else return this->end() ;
 	} ;
 
 	key getNextKey()
 	{ // Goes to the BEGINNING and returs -1 or key as a number >=0
 		auto i = myInfoRecords.find(_currentKey) ;
 		if (i == myInfoRecords.end())
-			return ((key)(-1)) ;
+			return this->end() ;
 		else
 		{
 			++i ;
 			if (i == myInfoRecords.end())
-				return ((key)(-1)) ;
+				return this->end() ;
 			else 
 				return ((key)(*i).first) ;
 		}
@@ -102,6 +106,11 @@ public:
 	key getCurrentKey()
 	{
 		return _currentKey ;
+	}
+	
+	key end()
+	{
+		return (key)(-1) ; // -1 is not a valid key, ? return NULL
 	}
 	
 infoArrays::infoRecord getRecord(key id) {

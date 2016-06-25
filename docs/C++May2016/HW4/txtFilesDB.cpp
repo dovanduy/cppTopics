@@ -6,30 +6,27 @@ using namespace std ;
 #include "txtFilesDB.h"
 int main ()
 {
-	infoArrays::infoRecord p1, p2 ;
-	txtFilesDB<infoArrays::ID> * pWare = 
-		new txtFilesDB<infoArrays::ID> ("Ware Names: ", "wares.dat") ;
+	infoArrays::infoRecord p1 ;
+	TxtFilesDB<infoArrays::ID> * pWare = 
+		new TxtFilesDB<infoArrays::ID> ("Ware Names: ", "csv-wares.dat") ;
 	if (pWare == NULL)
 	{
 		cerr <<"Not enough memory, pWare." ;
 		return 1 ;
 	} ;
 	
-	txtFilesDB<infoArrays::ID> * pWarePrice = 
-		new txtFilesDB<infoArrays::ID> ("How much money? ", "prices.dat") ;
+	TxtFilesDB<infoArrays::ID> * pWarePrice = 
+		new TxtFilesDB<infoArrays::ID> ("How much money? ", "csv-prices.dat") ;
 	if (pWarePrice == NULL)
 	{
 		cerr <<"Not enough memory, pPrice." ;
 		return 1 ;
 	} ;
-	
+
 // Въвежда се Инфо (Стока, Цена)
-	p1 = pWare -> setNewRecord() ;
-	cout <<"\n===\n" <<p1._id <<"\t" <<p1._description <<"\n===\n" ;
-	p2 = pWarePrice-> setNewRecord() ;
-	cout <<"\n===\n" <<p2._id <<"\t" <<p2._description <<"\n===\n" ;
-	pWare->printList();
-	pWarePrice -> printList();
+	p1 = pWare -> selectRecord() ;
+	p1 = pWarePrice-> selectRecord() ;
+
 	delete pWare ;
 	delete pWarePrice ;
 	

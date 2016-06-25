@@ -13,4 +13,11 @@ public:
       //here asInt is an lon long int type now
 	return asInt ;
 	}
+	
+	bool isFileExist(const char* fileName)
+	{	bool res;
+    std::ifstream infile (fileName);
+    res = infile.good() ;
+    infile.close() ;
+    return res;	}
 } ;

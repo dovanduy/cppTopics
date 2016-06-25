@@ -126,6 +126,10 @@ infoArrays::infoRecord getRecord(key id) {
 	return _myInf ;	
 };
 
+string* getDescription(key id) {
+	return &myInfoRecords[id] ; // at	
+};
+
 infoArrays::infoRecord setNewRecord() { 
 	_myInf._id = _lastID ;
 	cout <<_infoHints ;

@@ -7,7 +7,7 @@ template <class key>
 class Wares : public MyStrings // клас Стоки
 {
 private:
-	TxtFilesDB<infoArrays::ID> * pWare, * pPrice ;	
+	TxtFilesDB<key> * pWare, * pPrice ;	
 //	TxtFilesDB<key> Price ("How much money? ", "csv-prices.dat") ;
 //	TxtFilesDB<key> Ware ("Ware Names: ", "csv-wares.dat") ;
 	multimap <key, key> itemsForSale ;  // It is a price-list particularly
@@ -19,13 +19,18 @@ public:
 	
 		
 	void printList ()
-	{ cout <<"\n=== printList\n" <<(*itemsForSale.begin()).first <<'\t' <<(*itemsForSale.begin()).second <<endl;
+	{ cout <<"\n=== printList\n" <<(*itemsForSale.begin()).first <<'\t' <<(*itemsForSale.begin()).second <<'\t'
+		 <<endl;
 	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i)
 		{
-			cout  <<endl <<((key)(*i).first) ;// ID-STOKa
-			cout	<<'-' <<((key)(*i).second) ;// ID-Price
-			cout	<<'\t' <<(pPrice->getRecord((*i).second)._description) ; // Price
-			cout	<<'\t' <<(pWare->getRecord((*i).first)._description) // STOKA spec
+			string* str;
+			cout  <<endl <<((key)(*i).first) <<endl;// ID-STOKa
+			cout	<<'-' <<((key)(*i).second) <<endl;// ID-Price
+			infoArrays::infoRecord r ;
+			str=pPrice->getDescription((*i).second) ;
+			cout	<<'\t' <<(*str) <<endl; // Price
+			r=pWare->getRecord((*i).first) ;
+			cout	<<'\t' <<r._description // STOKA spec
 				<<endl ; 
 		};
 	} ;

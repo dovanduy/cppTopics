@@ -2,7 +2,7 @@
 #include <fstream>
 
 namespace infoArrays {
-typedef unsigned int ID;
+typedef long long ID;
 
 bool isFileExist(const char* fileName)
 {	bool res;

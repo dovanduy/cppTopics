@@ -99,7 +99,14 @@ public:
 			if (i == myInfoRecords.end())
 				return this->end() ;
 			else 
+			{
+				_currentKey = (key)(*i).first ;
+				cout <<"\t"<<_currentKey<<'\t';
+				++_currentKey ;
+				cout <<_currentKey<<endl;
 				return ((key)(*i).first) ;
+			}
+			
 		}
 	} ;
 	

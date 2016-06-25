@@ -3,10 +3,10 @@
 class MyStrings : public string
 {
 public:
-	long long fromStringToLongLong (intAsSring) {
+	long long fromStringToLongLong (string intAsSring) {
 	long long asInt = 0;
       stringstream ss;
-      ss<<intAsString;
+      ss<<intAsSring;
       ss>>asInt; //convert string into int and store it in "asInt"
       ss.str(""); //clear the stringstream
       ss.clear(); //clear error flags

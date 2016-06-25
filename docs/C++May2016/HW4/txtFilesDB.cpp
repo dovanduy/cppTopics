@@ -20,7 +20,7 @@ int main ()
 	if (pWarePrice == NULL)
 	{
 		cerr <<"Not enough memory, pPrice." ;
-		return 1 ;
+		return 2 ;
 	} ;
 
 // Въвежда се Инфо (Стока, Цена)

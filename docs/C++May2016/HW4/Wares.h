@@ -24,6 +24,7 @@ public:
 	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i)
 		{
 			cout	<<((key)(*i).first) // ID-STOKa
+					<<'-'
 					<<((key)(*i).second) // ID-Price
 					<<"\t\t" <<((key)(*i).first)
 					<<"\t\t" <<pPrice->getDescription((key)(*i).second)  // Price
@@ -33,11 +34,11 @@ public:
 	} ;
 	
 	void setSpecialPriceForItem(key idWare)
-	{ // to be set a NEW price for a CHOSEN trade item
+	{ // To be set a NEW price for a CHOSEN trade item.
 		itemsForSale.insert(pair<key, key>(idWare, pPrice->setNewRecord()._id));
 	}
 	
-	void selectOffer ()
+/*	void selectOffer ()
 	{
 		string izbor ;
 		key idStoka ;
@@ -54,8 +55,8 @@ public:
 		}
 		else {
 		}
-	}
-	
+	} */
+		
 	Wares ()
 	{
 		pWare = 

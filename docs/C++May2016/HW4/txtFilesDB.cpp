@@ -23,6 +23,7 @@ int main ()
 		return 2 ;
 	} ;
 
+//	cout <<(pWare->getRecord(0)._description) <<endl;
 // Въвежда се Инфо (Стока, Цена)
 	p1 = pWare -> selectRecord() ;
 	p1 = pWarePrice-> selectRecord() ;

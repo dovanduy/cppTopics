@@ -36,7 +36,8 @@ private:
 			myInfoRecords[_myInf._id] = _myInf._description ;
  		} // while
  		ifil.close() ;
-	}
+	} ;
+	_currentKey = (*myInfoRecords.begin()).first ;
 } ;
 
 void writeToDB()
@@ -95,14 +96,13 @@ public:
 			return this->end() ;
 		else
 		{
-			++i ;
+			++i ; // goToNextRecordPointer
 			if (i == myInfoRecords.end())
 				return this->end() ;
 			else 
 			{
 				_currentKey = (key)(*i).first ;
-				cout <<"\t"<<_currentKey<<'\t';
-				++_currentKey ;
+				cout <<"\tgetNexKey\t"<<_currentKey<<'\t';
 				cout <<_currentKey<<endl;
 				return ((key)(*i).first) ;
 			}
@@ -121,13 +121,19 @@ public:
 	}
 	
 infoArrays::infoRecord getRecord(key id) {
+//string getRecord(key id) {
 	_myInf._id = id ;
 	_myInf._description = myInfoRecords[id] ; // at
+//	return _myInf._description ;
 	return _myInf ;	
 };
 
-string* getDescription(key id) {
-	return &myInfoRecords[id] ; // at	
+std::string getDescription(key id) {
+	if (myInfoRecords.empty())
+		cout <<"EMPTY\n";
+	else
+//		cout <<myInfoRecords[id] <<endl ;
+		return myInfoRecords[id] ;	
 };
 
 infoArrays::infoRecord setNewRecord() { 

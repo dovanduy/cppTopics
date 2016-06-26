@@ -7,73 +7,75 @@ template <class key>
 class Wares : public MyStrings // клас Стоки
 {
 private:
-	TxtFilesDB<key> * pWare, * pPrice ;	
+
 //	TxtFilesDB<key> Price ("How much money? ", "csv-prices.dat") ;
 //	TxtFilesDB<key> Ware ("Ware Names: ", "csv-wares.dat") ;
 	multimap <key, key> itemsForSale ;  // It is a price-list particularly
 	key _temp, _prKey ;
 public:
+	TxtFilesDB<key> * pWare, * pPrice ;	
 	bool isWare (string intAsSring) {
 		return pWare->isKeyHere(MyStrings::fromStringToLongLong(_temp)) ;
 	};
 	
 		
 	void printList ()
-	{ cout <<"\n=== printList\n" <<(*itemsForSale.begin()).first <<'\t' <<(*itemsForSale.begin()).second <<'\t'
-		 <<endl;
+	{ cout <<"\n=== printList\n";
+	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i) {
+		cout <<(*i).first <<' ' <<(*i).second <<endl;
+	}
+	cout <<"\n=== printList\n" ;
 	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i)
 		{
-			string* str;
-			cout  <<endl <<((key)(*i).first) <<endl;// ID-STOKa
-			cout	<<'-' <<((key)(*i).second) <<endl;// ID-Price
-			infoArrays::infoRecord r ;
-			str=pPrice->getDescription((*i).second) ;
-			cout	<<'\t' <<(*str) <<endl; // Price
-			r=pWare->getRecord((*i).first) ;
-			cout	<<'\t' <<r._description // STOKA spec
+			cout	<<endl <<((key)(*i).first) // ID-STOKa
+					<<'-' <<((key)(*i).second) // ID-Price
+					<<'\t' <<pPrice->getDescription((key)(*i).second)  // Price
+					<<'\t' <<(pWare->getRecord((*i).first))._description // STOKA spec
 				<<endl ; 
 		};
 	} ;
 	
 	Wares ()
 	{
-		clog <<"1\n" ;
-		TxtFilesDB<key> * pWare = 
-		new TxtFilesDB<key> ("Ware Names: ", "csv-wares.dat") ;
+		pWare = 
+			new TxtFilesDB<key> ("Ware Names: ", "csv-wares.dat") ;
 		if (pWare == NULL)
 		{
 			cerr <<"Not enough memory, pWare." ;
 //			exit 1 ;
 		} ;
-		clog <<"2\n" ;
-		TxtFilesDB<key> * pPrice = 
+		pPrice = 
 			new TxtFilesDB<key> ("How much money? ", "csv-prices.dat") ;
 		if (pPrice == NULL)
 		{
 			cerr <<"Not enough memory, pPrice." ;
 //			return 2 ;
 		} ;
-		clog <<"3\n" ;
 		if (! MyStrings::isFileExist(FILEITEMS))
 		{ // To follow STOKI info keys and to set-up a 1st Price Lis
 		  // to init csv-*.dat you can use txtFilesDB.cpp
-		  clog <<"4\n" ;
 			for (_temp=pWare->begin(); _temp != pWare->end(); _temp=pWare->getNextKey())
 			{ // we asume that the same id is for both Ware and Price
 				cout <<endl <<_temp <<'\t' <<(pPrice->getRecord(_temp)._id) <<endl;
 				itemsForSale.insert(pair<key, key>(_temp, pPrice->getRecord(_temp)._id));
 			} ;
-		clog <<"\n4-end" ;
 		}
 		else
 		{ // to read from file to priceList, multiMap
 			char skipDelimiter ;
 			clog<<"5\n";
 			ifstream ifil (FILEITEMS) ;
-			while (! ifil.eof()) {
-    			ifil >>_temp	>>skipDelimiter	>>_prKey ;
+			while ( ifil >>_temp	>>skipDelimiter	>>_prKey )
+			{ // READS ifil until eof !!!
 				itemsForSale.insert(pair<key, key>(_temp, _prKey)); // (idStoka, idPrice)
- 			} // while
+			} ;
+			/*
+			while (true) {
+    			ifil >>_temp	>>skipDelimiter	>>_prKey ;
+    			if (ifil.eof()) break ;
+				itemsForSale.insert(pair<key, key>(_temp, _prKey)); // (idStoka, idPrice)
+ 			} ; // while
+ 			*/
  			ifil.close() ;
 		}	
 	} ;

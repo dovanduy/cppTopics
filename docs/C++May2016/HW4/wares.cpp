@@ -1,3 +1,4 @@
+// Нулев тестов пример за клас Wares
 #include <iostream>
 #include "Wares.h"
 using namespace std;

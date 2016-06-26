@@ -32,15 +32,25 @@ public:
 		};
 	} ;
 	
+	void setSpecialPriceForItem(key idWare)
+	{ // to be set a NEW price for a CHOSEN trade item
+		itemsForSale.insert(pair<key, key>(idWare, pPrice->setNewRecord()._id));
+	}
+	
 	void selectOffer ()
 	{
 		string izbor ;
-		printOfferList () ;
-		cout <<endl<<NEWID <<'\t' <<"Add a NEW Offer to the above list.\n";
-		cout <<"Select listed OFFER ID =>" ;
-		cin >>izbor ;
+		key idStoka ;
+		printOfferList () ;  
+		// Add a NEW Offer to the above list.
+		cout <<endl<<NEWID <<'\t' <<"To change the price of an item, by inputting it's code.\n";
+		cout <<"Select listed OFFER ID => " ;
+		cin >>izbor ; MyStrings<key>::goToNextLine() ;
 		if (MyStrings<key>::fromStringToNums(izbor) == -1)
 		{
+			cout <<"Enter Ware ID => ";
+			cin >>idStoka ; MyStrings<key>::goToNextLine() ;
+			setSpecialPriceForItem(idStoka) ;
 		}
 		else {
 		}
@@ -67,7 +77,6 @@ public:
 		  // to init csv-*.dat you can use txtFilesDB.cpp
 			for (_temp=pWare->begin(); _temp != pWare->end(); _temp=pWare->getNextKey())
 			{ // we asume that the same id is for both Ware and Price
-				cout <<endl <<_temp <<'\t' <<(pPrice->getRecord(_temp)._id) <<endl;
 				itemsForSale.insert(pair<key, key>(_temp, pPrice->getRecord(_temp)._id));
 			} ;
 		}

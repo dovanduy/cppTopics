@@ -21,4 +21,11 @@ public:
     res = infile.good() ;
     infile.close() ;
     return res;	}
+    
+    void goToNextLine()
+	{
+	if (std::cin.peek() == '\n') {
+		std::cin.ignore(1 /*numeric_limits<streamsize>::max()*/, '\n');
+		} 
+	} ;
 } ;

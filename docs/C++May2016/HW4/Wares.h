@@ -2,9 +2,9 @@
 #include "TxtFilesDB.h"
 #include "MyStrings.h"
 #define FILEITEMS "cvs-priceListView.dat"
-//const char DELIMITER = ',' ;
+
 template <class key>
-class Wares : public MyStrings // клас Стоки
+class Wares : public MyStrings<key> // клас Стоки
 {
 private:
 
@@ -15,25 +15,36 @@ private:
 public:
 	TxtFilesDB<key> * pWare, * pPrice ;	
 	bool isWare (string intAsSring) {
-		return pWare->isKeyHere(MyStrings::fromStringToLongLong(_temp)) ;
+		return pWare->isKeyHere(MyStrings<key>::fromStringToNums(_temp)) ;
 	};
 	
 		
-	void printList ()
-	{ cout <<"\n=== printList\n";
-	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i) {
-		cout <<(*i).first <<' ' <<(*i).second <<endl;
-	}
-	cout <<"\n=== printList\n" ;
+	void printOfferList () {
+	cout <<"\nOFFER ID\tWare ID\t\tPRICE\tWARE\n" ;
 	for (auto i = itemsForSale.begin(); i != itemsForSale.end(); ++i)
 		{
-			cout	<<endl <<((key)(*i).first) // ID-STOKa
-					<<'-' <<((key)(*i).second) // ID-Price
-					<<'\t' <<pPrice->getDescription((key)(*i).second)  // Price
+			cout	<<((key)(*i).first) // ID-STOKa
+					<<((key)(*i).second) // ID-Price
+					<<"\t\t" <<((key)(*i).first)
+					<<"\t\t" <<pPrice->getDescription((key)(*i).second)  // Price
 					<<'\t' <<(pWare->getRecord((*i).first))._description // STOKA spec
 				<<endl ; 
 		};
 	} ;
+	
+	void selectOffer ()
+	{
+		string izbor ;
+		printOfferList () ;
+		cout <<endl<<NEWID <<'\t' <<"Add a NEW Offer to the above list.\n";
+		cout <<"Select listed OFFER ID =>" ;
+		cin >>izbor ;
+		if (MyStrings<key>::fromStringToNums(izbor) == -1)
+		{
+		}
+		else {
+		}
+	}
 	
 	Wares ()
 	{
@@ -51,7 +62,7 @@ public:
 			cerr <<"Not enough memory, pPrice." ;
 //			return 2 ;
 		} ;
-		if (! MyStrings::isFileExist(FILEITEMS))
+		if (! MyStrings<key>::isFileExist(FILEITEMS))
 		{ // To follow STOKI info keys and to set-up a 1st Price Lis
 		  // to init csv-*.dat you can use txtFilesDB.cpp
 			for (_temp=pWare->begin(); _temp != pWare->end(); _temp=pWare->getNextKey())
@@ -63,7 +74,6 @@ public:
 		else
 		{ // to read from file to priceList, multiMap
 			char skipDelimiter ;
-			clog<<"5\n";
 			ifstream ifil (FILEITEMS) ;
 			while ( ifil >>_temp	>>skipDelimiter	>>_prKey )
 			{ // READS ifil until eof !!!

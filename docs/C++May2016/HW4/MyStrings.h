@@ -1,10 +1,11 @@
 #include <string>
 #include <sstream>
+template <class Type>
 class MyStrings : public string
 {
 public:
-	long long fromStringToLongLong (string intAsSring) {
-	long long asInt = 0;
+	Type fromStringToNums (string intAsSring) {
+	Type asInt = 0;
       stringstream ss;
       ss<<intAsSring;
       ss>>asInt; //convert string into int and store it in "asInt"

@@ -15,6 +15,13 @@ struct infoRecord
   {	ID _id ; // unique
 	std::string _description ;
   } ;
+
+template <class key>
+struct quotation
+{	key _idStoka ; // the pair is an offer key
+	key _idPrice ;
+} ;
+
 } ;
 
 template <class K>

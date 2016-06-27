@@ -7,17 +7,11 @@ template <class key>
 class Wares : public MyStrings<key> // клас Стоки
 {
 private:
-
-//	TxtFilesDB<key> Price ("How much money? ", "csv-prices.dat") ;
-//	TxtFilesDB<key> Ware ("Ware Names: ", "csv-wares.dat") ;
-	multimap <key, key> itemsForSale ;  // It is a price-list particularly
-	key _temp, _prKey ;
+	static multimap <key, key> itemsForSale ;  // It is a price-list particularly
+	key _currentStokaID, _currentPriceID, _temp, _prKey /* priceKey */ ;
+	auto static _currentQuotation = itemsForSale.begin() ;
 public:
 	TxtFilesDB<key> * pWare, * pPrice ;	
-	bool isWare (string intAsSring) {
-		return pWare->isKeyHere(MyStrings<key>::fromStringToNums(_temp)) ;
-	};
-	
 		
 	void printOfferList () {
 	cout <<"\nOFFER ID\tWare ID\t\tPRICE\tWARE\n" ;
@@ -32,6 +26,21 @@ public:
 				<<endl ; 
 		};
 	} ;
+	
+	infoArrays::quotation<key> getNextQuotation()
+	{
+		infoArrays::quotation<key> result ;
+		if (_currentQuotation != NULL)
+		{	result._idStoka = _currentQuotation->first ;
+			result._idPrice = _currentQuotation->second ;
+			++_currentQuotation ;
+		}
+		else
+		{	result._idStoka = -1 ;
+			result._idPrice = -1 ;
+		} ;
+		return result ; 
+	}
 	
 	void setSpecialPriceForItem(key idWare)
 	{ // To be set a NEW price for a CHOSEN trade item.
@@ -64,14 +73,12 @@ public:
 		if (pWare == NULL)
 		{
 			cerr <<"Not enough memory, pWare." ;
-//			exit 1 ;
 		} ;
 		pPrice = 
 			new TxtFilesDB<key> ("How much money? ", "csv-prices.dat") ;
 		if (pPrice == NULL)
 		{
 			cerr <<"Not enough memory, pPrice." ;
-//			return 2 ;
 		} ;
 		if (! MyStrings<key>::isFileExist(FILEITEMS))
 		{ // To follow STOKI info keys and to set-up a 1st Price Lis
@@ -97,7 +104,8 @@ public:
  			} ; // while
  			*/
  			ifil.close() ;
-		}	
+		} ;
+		_currentQuotation = itemsForSale.begin() ;
 	} ;
 	
 	~Wares ()

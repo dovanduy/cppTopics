@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>timer Example - 2</title>
+	<style>
+		#timer, #controls {
+			margin: 15px auto;
+			width: 500px;
+			text-align: center;
+		}
+
+		#timer {
+			font-size: 56px;
+			border: 1px solid black;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+<script type="text/javascript">
+<!--
+var startTime = new Date() ;
+var startTimeGetTime = startTime.getTime() ;
+var currentTime = new Date() ;
+var myTimer = 0 ;
+var elapsedMM = 0;
+var elapsedHH = 0;
+var color = 'white';
+var separator = ' | ' ;
+var fbGrpNoAdmin =['https://news.bg/', 'http://www.dir.bg/', 'http://mail.bg/'];
+var basePack =['https://gmail.com/', 'https://facebook.com/', 'https://www.pinterest.com/kilarionov/',
+				'https://youtube.com/', 'https://kilarionov.github.io/', 'https://www.instagram.com/kirililarionov/',
+               'https://mail.yahoo.com/', 'https://www.sgeb.bg/', 'https://www.cj.com/',
+			   'https://www.paypal.com/', 'https://www.paysera.bg/index_bul.html', 
+			   'https://www.skrill.com/en/', 'http://squishycash.com/homepage?ref=flacaeric', 'https://www.epay.bg/'] ;
+
+function OpenInNewTab(url) {
+  var win = window.open(url, "", "");
+}
+
+function writeTimer()
+{
+	window.setTimeout('writeTimer()',100000); // infinite loop, 100 sec. delay
+	// OK, myTimer will increment by 100 sec.
+	currentTime = new Date() ;
+	myTimer = ((currentTime.getTime()-startTimeGetTime)/1000) ;
+	myTimer=parseInt(myTimer) ;
+	elapsedMM=myTimer/60; // calcs. Min.
+	elapsedMM=Math.floor(elapsedMM)%60 ;
+	elapsedMM=(elapsedMM<10) ? '0' + elapsedMM : elapsedMM ;
+	elapsedHH=myTimer/3600 ;
+	elapsedHH=Math.floor(elapsedHH) ;
+	document.getElementById('timer').innerHTML = elapsedHH + ' : ' + elapsedMM ;
+	if (25<elapsedMM && elapsedMM < 40)
+		color = 'lightgreen';
+	else if (40<=elapsedMM && (elapsedHH == 0))
+		color = 'yellow' ;
+	else if (0 < elapsedHH)
+		color = 'red' ;
+
+	if (0<elapsedHH)
+		document.body.style.backgroundColor = color ;
+	else
+		document.getElementById('timer').style.backgroundColor = color ;
+}
+
+function makeLink(url)
+{
+	return ('<a href="'+url+'" target="_blank">'+url+'</a>') ;
+}
+
+function makeSeqLinkList(arr)
+{
+	var resStr = separator;
+	for (var index in arr)
+	{
+		resStr += makeLink(arr[index]) + separator ;
+	}
+	return resStr ;
+}
+
+function openNoAdminGroups()
+{
+	var res ='<h2>Immediately POSTING</h2>' ;
+   for (var item in fbGrpNoAdmin)
+   {
+	 res += '<p>'+makeLink(fbGrpNoAdmin[item])+'</p>' ;
+   } ;
+   document.getElementById('noAdmin').innerHTML = res;
+} ;
+
+function initMe()
+{
+	document.open("text/html", "append") ;
+	document.write('<header>'+makeSeqLinkList(basePack)+'</header>') ;
+	document.write('<section>' + '<div id="timer"></div>' +
+	  '<div id="myButtons"><button onclick="openNoAdminGroups()">noAdmin</button>'+
+	  '</div></section>') ;
+	document.write('<section>' +
+	  '<div id="noAdmin"></div></section>' +
+	  '<div id="admin"></div></section>') ;
+	writeTimer() ;
+}
+//-->
+</script>
+</head>
+
+<body onload="initMe()">
+</body>
+</html>

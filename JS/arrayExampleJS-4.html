@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>an array Example 3</title>
+<script type="text/javascript">
+<!--
+var separator = ' | ' ;
+var fbGrpNoAdmin =['https://news.bg/', 'http://www.dir.bg/', 'http://mail.bg/'];
+var basePack =['https://gmail.com/', 'https://facebook.com/', 'https://www.pinterest.com/kilarionov/',
+				'https://youtube.com/', 'https://kilarionov.github.io/', 'https://www.instagram.com/kirililarionov/',
+               'https://mail.yahoo.com/', 'https://www.sgeb.bg/', 'https://www.cj.com/',
+			   'https://www.paypal.com/', 'https://www.paysera.bg/index_bul.html', 
+			   'https://www.skrill.com/en/', 'http://squishycash.com/homepage?ref=flacaeric', 'https://www.epay.bg/'] ;
+function OpenInNewTab(url) {
+  var win = window.open(url, "", "");
+//  win.document.write("<html><head><title>OpenInNewTab</title></head><body><h1>It is a new tab</h1></body>");
+//  win.status="Hi folks";
+}
+
+function makeLink(url)
+{
+	return ('<a href="'+url+'" target="_blank">'+url+'</a>') ;
+}
+
+function makeSeqLinkList(arr)
+{
+	var resStr = separator;
+	for (var index in arr)
+	{
+		resStr += makeLink(arr[index]) + separator ;
+	}
+	return resStr ;
+}
+
+function openNoAdminGroups()
+{
+//	fbGrpNoAdmin.forEach(function (itm) {OpenInNewTab(itm)});
+   for (var item in fbGrpNoAdmin)
+   {
+//     document.open("text/html", "append") ;
+	 document.write('<p>'+makeLink(fbGrpNoAdmin[item])+'</p>');
+   }
+//   document.close() ;
+} ;
+
+function initMe()
+{
+	document.open("text/html", "append") ;
+	document.write('<header>'+makeSeqLinkList(basePack)+'</header>') ;
+	document.write('<section>'+
+	  '<button onclick="openNoAdminGroups()">NoAdmin</button>'+
+	  '</section>') ;
+}
+//-->
+</script>
+</head>
+
+<body onload="initMe()">
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>an array Example</title>
+<script type="text/javascript">
+<!--
+fbGrpNoAdmin =['https://news.bg/', 'http://www.dir.bg/', 'http://mail.bg/'];
+
+function OpenInNewTab(url) {
+  var win = window.open(url, "_blank", "");
+//  win.document.write("<html><head><title>OpenInNewTab</title></head><body><h1>It is a new tab</h1></body>");
+//  win.status="Hi folks";
+}
+
+noAdmin=function grpNoAdmin(el)
+{
+	win.document.write('<p><a href="'+el+'" target="_blank">'+el+'</a></p>') ; //OK
+} ;
+
+function openNoAdminGroups()
+{
+	win = window.open("", "_blank", ""); // win is global var
+	win.document.write('<html><head><title>List of my Links</title></head><body><header><h1>Clickable links LISTed Example only</h1></header><section><h2>into NEW blank Window</h2>');
+    fbGrpNoAdmin.forEach(noAdmin) ;
+	document.write('</section></body>');
+} ;
+//-->
+</script>
+</head>
+
+<body>
+<header>
+<h1>JS Array Example</h1>
+</header>
+
+<section>
+<a href="#" onclick="openNoAdminGroups()">Open NoAdmin Groups</a>
+</section>
+
+</body>
+</html>

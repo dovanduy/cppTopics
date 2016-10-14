@@ -1,0 +1,11 @@
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\bin\Debug\OtgatniChisloto.exe.config
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.Form1.resources
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.Resources.resources
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.vbproj.GenerateResource.Cache
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.xml
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\bin\Debug\OtgatniChisloto.exe
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\bin\Debug\OtgatniChisloto.pdb
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\bin\Debug\OtgatniChisloto.xml
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.exe
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.pdb
+D:\rkk\Documents\gitHub\cppTopics\docs\C++May2016\VS2015\OtgatniChisloto\OtgatniChisloto\obj\Debug\OtgatniChisloto.vbprojResolveAssemblyReference.cache

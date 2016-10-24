@@ -30,6 +30,7 @@ http://kilarionov.github.io/jewelry/necklaces/
 Braclets saved search, best selling, on stock, min 4.5 rating
 https://www.tripleclicks.com/17108238/tcsearch/load_type:/search:/type:/rating_operator:%3E%3D/rating:4.5/sort:sales_desc/category:419/in_stock:1/local_pickup_range:50/price_range:/sale:/recently_added:/mrp_operator:%3E%3D/vp_operator:%3E%3D/cv_operator:%3E%3D/condition:/vendor:/ships_to:/ships_from:/pg:1/deal_type:/
 http://kilarionov.github.io/jewelry/braclets/braclets-store.html
+Google srch: bracelet jewelry ezine
 
 
 ~*~

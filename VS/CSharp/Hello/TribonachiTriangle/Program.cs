@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TribonachiTriangle
 {
     class Program
-    {
+    { // http://bgcoder.com/Contests/Practice/Index/41#1
         static long t1, t2, t3;
         static int n;
         static long tribNum(int seqNum)

@@ -38,14 +38,6 @@ namespace Sheets
         {
             int cnt = 10; // The code size is smaller than Ver1
             n = int.Parse(Console.ReadLine());
-            if (0 == n)
-            {
-                for (int i = 0; i <= cnt; ++i)
-                {
-                    Console.WriteLine("A{0}", i);
-                }
-            }
-            else
             {
                 while ((cnt >= 0))
                 {

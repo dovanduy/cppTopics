@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\obj\Debug\Hello.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\bin\Debug\Hello.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\bin\Debug\Hello.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\bin\Debug\Hello.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\obj\Debug\Hello.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Hello\obj\Debug\Hello.pdb

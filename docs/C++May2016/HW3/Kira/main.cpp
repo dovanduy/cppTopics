@@ -1,7 +1,9 @@
+// ISO C++11
 #include <iostream>
 //#define BASE_INHERITANCE_TEST
 using namespace std ;
 #include "EduPersons.h"
+
 const int MENUSIZE = 7 ;
 string menu[MENUSIZE] = 
 {
@@ -13,7 +15,9 @@ string menu[MENUSIZE] =
 	"5. Add	data for new teacher",
 	"6. Add	data for new guest teacher"
 } ;
+
 char getMenu () ;
+
 int main ()
 {
 char izbor ;

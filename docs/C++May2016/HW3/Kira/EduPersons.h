@@ -1,3 +1,4 @@
+// ISO C++11
 #include <map>
 #include "Persons.h"
 #include "Courses.h"
@@ -5,9 +6,13 @@
 #define FILESTUDENTS "students.dat"
 #define FILETEACHERS "teachers.dat"
 #define FILEGUESTTEACHERS "guestTeachers.dat"
+#define ApplData EducatuionInfo
+#define applData eduInfo
+
+typedef float decPoint ;
 
 class EduPersons : public Courses, public Persons
-{
+{ // to MANIPulate a SET of Persons
 enum kindOfPerson {student, teacher, guestTeacher} ;
 enum CourseStatus {open, close} ;
 
@@ -20,21 +25,21 @@ struct CurrentCourse
 
 struct Teacher
 {
-	float _salary ;
+	decPoint _salary ;
 	long _days ;
 } ;
 
 struct GuestTeacher
 {
-	float _salary ;
+	decPoint _salary ;
 } ;
 
 struct Student
 {
-	float _average ;
+	decPoint _average ;
 } ;
 
-struct EduData {
+struct ApplData { // Application details about a person
 	kindOfPerson personType ;
 	union {
 		Teacher _teacher ;
@@ -46,7 +51,7 @@ struct EduData {
 struct EduPerson
 {
 	CurrentCourse crntCourse ; // key
- 	EduData eduData ; // map INFOs
+ 	ApplData applData ; // map INFOs
 } ;
 
 private:
@@ -66,10 +71,12 @@ private:
 	void closeStudents() ;
 	void closeTeachers() ;
 	void closeGuestTeachers() ;
+	
 protected:
 	void printStudentList () ;
 	void printTeacherList () ;
 	void printGuestTeacherList () ;
+	
 public:
 	EduPersons(){
 		openDB();
@@ -141,7 +148,7 @@ void EduPersons::getStudentByID ()
 		 <<"\n\tStudent:\t" <<p._name
 		 <<"\n\tCourse:\t\t" <<c._info._name 
 		 <<"\n\tPoints:\t\t" <<c._info._points
-		 <<"\n\tAverage mark:\t" <<_eduPerson.eduData._student._average
+		 <<"\n\tAverage mark:\t" <<_eduPerson.applData._student._average
 		 <<endl ;
 	return ;	 
 }
@@ -160,8 +167,8 @@ void EduPersons::getTeacherByID ()
 	cout <<"\n\tID:\t\t" <<_eduPerson.crntCourse._personID
 		 <<"\n\tTeacher:\t" <<p._name
 		 <<"\n\tCourse:\t\t" <<c._info._name 
-		 <<"\n\tMonthly salary: " <<_eduPerson.eduData._teacher._salary
-		 <<"\n\tDays:\t\t" <<_eduPerson.eduData._teacher._days
+		 <<"\n\tMonthly salary: " <<_eduPerson.applData._teacher._salary
+		 <<"\n\tDays:\t\t" <<_eduPerson.applData._teacher._days
 		 <<endl ;
 	return ;
 }
@@ -180,7 +187,7 @@ void EduPersons::getGuestTeacherByID ()
 	cout <<"\n\tID:\t\t" <<_eduPerson.crntCourse._personID
 		 <<"\n\tTeacher:\t" <<p._name
 		 <<"\n\tCourse:\t\t" <<c._info._name 
-		 <<"\n\tCourse Fee:\t" <<_eduPerson.eduData._teacher._salary // FEE only
+		 <<"\n\tCourse Fee:\t" <<_eduPerson.applData._teacher._salary // FEE only
 		 <<endl ;
 	return ;	
 }
@@ -196,28 +203,28 @@ EduPersons::EduPerson EduPersons::addEduPerson(kindOfPerson prsnType)
 	switch (prsnType)
 	{
 		case student: {
-			_eduPerson.eduData.personType = student ;
+			_eduPerson.applData.personType = student ;
 			cout <<"Average evaluation mark =>" ;
-			cin >>_eduPerson.eduData._student._average ;
+			cin >>_eduPerson.applData._student._average ;
 			Courses::goToNextLine() ;
 			myStudents[_eduPerson.crntCourse._personID]=_eduPerson ;
 			break;
 		}
 		case teacher: {
-			_eduPerson.eduData.personType = teacher ;
+			_eduPerson.applData.personType = teacher ;
 			cout <<"Salary =>" ;
-			cin >>_eduPerson.eduData._teacher._salary ;
+			cin >>_eduPerson.applData._teacher._salary ;
 			Courses::goToNextLine() ;
 			cout <<"Days =>" ;
-			cin >>_eduPerson.eduData._teacher._days ;
+			cin >>_eduPerson.applData._teacher._days ;
 			Courses::goToNextLine() ;
 			myTeachers[_eduPerson.crntCourse._personID]=_eduPerson ;
 			break;
 		}
 		case guestTeacher: {
-			_eduPerson.eduData.personType = guestTeacher ;
+			_eduPerson.applData.personType = guestTeacher ;
 			cout <<"Course fee =>" ;
-			cin >>_eduPerson.eduData._teacher._salary ;  // Fee only
+			cin >>_eduPerson.applData._teacher._salary ;  // Fee only
 			Courses::goToNextLine() ;
 			myGuestTeachers[_eduPerson.crntCourse._personID]=_eduPerson ;
 			break;
@@ -259,8 +266,8 @@ void EduPersons::openStudents() {
 		while (!ifil.eof()) {
     		ifil >>_eduPerson.crntCourse._personID ;
 			ifil >>_eduPerson.crntCourse._courseID ;
-			_eduPerson.eduData.personType = student ;
-			ifil >>_eduPerson.eduData._student._average ;
+			_eduPerson.applData.personType = student ;
+			ifil >>_eduPerson.applData._student._average ;
 			myStudents[_eduPerson.crntCourse._personID] = _eduPerson ;
  		} // while
  		ifil.close() ;
@@ -276,12 +283,12 @@ void EduPersons::openTeachers() {
 	else
 	{ // to INIT a myStudents map from a FILETEACHERS
 		ifstream ifil (FILETEACHERS) ;
-		while (!ifil.eof()) {
+		while (!ifil.eof()) { // ifil == inputFile
     		ifil >>_eduPerson.crntCourse._personID ;
 			ifil >>_eduPerson.crntCourse._courseID ;
-			_eduPerson.eduData.personType = teacher ;
-			ifil >>_eduPerson.eduData._teacher._salary ;
-			ifil >>_eduPerson.eduData._teacher._days ;
+			_eduPerson.applData.personType = teacher ;
+			ifil >>_eduPerson.applData._teacher._salary ;
+			ifil >>_eduPerson.applData._teacher._days ;
 			myTeachers[_eduPerson.crntCourse._personID] = _eduPerson ;
  		} // while
  		ifil.close() ;
@@ -291,17 +298,17 @@ void EduPersons::openTeachers() {
 void EduPersons::openGuestTeachers() {
 	if (! Courses::isFileExist(FILEGUESTTEACHERS))
 	{	// to creaty an empty file and close it immediately.
-		fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out);
+		fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out); // of == outputFile
 		of.close();
 	}
 	else
 	{ // to INIT a myStudents map from a FILETEACHERS
-		ifstream ifil (FILEGUESTTEACHERS) ;
-		while (!ifil.eof()) {
+		ifstream ifil (FILEGUESTTEACHERS) ; 
+		while (!ifil.eof()) { // ifil == inputFile
     		ifil >>_eduPerson.crntCourse._personID ;
 			ifil >>_eduPerson.crntCourse._courseID ;
-			_eduPerson.eduData.personType = guestTeacher ;
-			ifil >>_eduPerson.eduData._teacher._salary ;
+			_eduPerson.applData.personType = guestTeacher ;
+			ifil >>_eduPerson.applData._teacher._salary ;
 			myGuestTeachers[_eduPerson.crntCourse._personID] = _eduPerson ;
 		} // while
  		ifil.close() ;
@@ -316,14 +323,14 @@ void EduPersons::closeDB () {
 
 void EduPersons::closeStudents() {
 	ID id;
-	fstream of (FILESTUDENTS, fstream::trunc | fstream::out);
-		for (auto i=myStudents.begin(); i!=myStudents.end(); ++i)
+	fstream of (FILESTUDENTS, fstream::trunc | fstream::out); // of == outputFile
+		for (auto i=myStudents.begin(); i != myStudents.end(); ++i)
 		{
 			id = (*i).first ;
 			_eduPerson = myStudents[id] ;
 			of  <<id <<' ' // ID
 				<<_eduPerson.crntCourse._courseID <<' '
-				<<_eduPerson.eduData._student._average
+				<<_eduPerson.applData._student._average
 				<<endl ;
 		};
 	of.close() ;
@@ -331,15 +338,15 @@ void EduPersons::closeStudents() {
 
 void EduPersons::closeTeachers() {
 	ID id;
-	fstream of (FILETEACHERS, fstream::trunc | fstream::out);
-		for (auto i=myTeachers.begin(); i!=myTeachers.end(); ++i)
+	fstream of (FILETEACHERS, fstream::trunc | fstream::out); // of == outputFile
+		for (auto i=myTeachers.begin(); i != myTeachers.end(); ++i)
 		{
 			id = (*i).first ;
 			_eduPerson = myTeachers[id] ;
 			of  <<id <<' ' // ID
 				<<_eduPerson.crntCourse._courseID <<' '
-				<<_eduPerson.eduData._teacher._salary <<' '
-				<<_eduPerson.eduData._teacher._days <<' '
+				<<_eduPerson.applData._teacher._salary <<' '
+				<<_eduPerson.applData._teacher._days <<' '
 				<<endl ;
 		};
 	of.close() ;	
@@ -347,14 +354,14 @@ void EduPersons::closeTeachers() {
 
 void EduPersons::closeGuestTeachers() {
 	ID id;
-	fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out);
-		for (auto i=myGuestTeachers.begin(); i!=myGuestTeachers.end(); ++i)
+	fstream of (FILEGUESTTEACHERS, fstream::trunc | fstream::out); // of == outputFile
+		for (auto i=myGuestTeachers.begin(); i != myGuestTeachers.end(); ++i)
 		{
 			id = (*i).first ;
 			_eduPerson = myGuestTeachers[id] ;
 			of  <<id <<' ' // ID
 				<<_eduPerson.crntCourse._courseID <<' '
-				<<_eduPerson.eduData._teacher._salary <<' '
+				<<_eduPerson.applData._teacher._salary <<' '
 				<<endl ;
 		};
 	of.close() ;

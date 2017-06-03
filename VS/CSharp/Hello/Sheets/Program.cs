@@ -9,7 +9,7 @@ namespace Sheets
     class Program
     { // http://bgcoder.com/Contests/Practice/Index/41#2
         static int n;
-        static void Main(string[] args)
+        static void MainVer1(string[] args)
         {
             int cnt = 10;
             n = int.Parse(Console.ReadLine());
@@ -30,6 +30,31 @@ namespace Sheets
                     } 
                     --cnt;
                     n = n / 2;
+                }
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            int cnt = 10; // The code size is smaller than Ver1
+            n = int.Parse(Console.ReadLine());
+            if (0 == n)
+            {
+                for (int i = 0; i <= cnt; ++i)
+                {
+                    Console.WriteLine("A{0}", i);
+                }
+            }
+            else
+            {
+                while ((cnt >= 0))
+                {
+                    if ((1 & n) != 1)
+                    {
+                        Console.WriteLine("A{0}", cnt);
+                    }
+                    --cnt;
+                    n = n >> 1;// n = n / 2;
                 }
             }
         }

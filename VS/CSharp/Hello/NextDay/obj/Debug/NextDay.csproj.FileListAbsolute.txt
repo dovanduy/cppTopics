@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\bin\Debug\NextDay.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\bin\Debug\NextDay.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\bin\Debug\NextDay.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\obj\Debug\NextDay.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\obj\Debug\NextDay.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\NextDay\obj\Debug\NextDay.pdb

@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\obj\Debug\TribonachiTriangle.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\bin\Debug\TribonachiTriangle.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\bin\Debug\TribonachiTriangle.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\bin\Debug\TribonachiTriangle.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\obj\Debug\TribonachiTriangle.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\TribonachiTriangle\obj\Debug\TribonachiTriangle.pdb

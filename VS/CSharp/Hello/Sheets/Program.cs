@@ -41,7 +41,7 @@ namespace Sheets
             {
                 while ((cnt >= 0))
                 {
-                    if ((1 & n) != 1)
+                    if ((1 & n) == 0) // (n%2 == 0)
                     {
                         Console.WriteLine("A{0}", cnt);
                     }

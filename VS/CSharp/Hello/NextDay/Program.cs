@@ -18,7 +18,7 @@ namespace NextDay
             int d = int.Parse(Console.ReadLine());
             int m = int.Parse(Console.ReadLine());
             int y = int.Parse(Console.ReadLine());
-            DateTime mdate = new DateTime(y, m, d);
+            DateTime mdate = new DateTime(y, m, d); // yy mm dd
             mdate=mdate.AddDays(1);
             Console.WriteLine(mdate.Day+"."+mdate.Month +"."+mdate.Year);
         }

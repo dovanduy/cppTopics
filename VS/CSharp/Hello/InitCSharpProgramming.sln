@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sheets", "Sheets\Sheets.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpets", "Carpets\Carpets.csproj", "{B2993F3E-6041-486A-BF87-B79DFB253685}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaBit1", "FormulaBit1\FormulaBit1.csproj", "{9011C2F6-B252-4244-9AEF-60B2932EDAB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{B2993F3E-6041-486A-BF87-B79DFB253685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2993F3E-6041-486A-BF87-B79DFB253685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2993F3E-6041-486A-BF87-B79DFB253685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9011C2F6-B252-4244-9AEF-60B2932EDAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9011C2F6-B252-4244-9AEF-60B2932EDAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9011C2F6-B252-4244-9AEF-60B2932EDAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9011C2F6-B252-4244-9AEF-60B2932EDAB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

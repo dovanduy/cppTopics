@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sheets
 {
-    class Program
+    class Sheets
     { // http://bgcoder.com/Contests/Practice/Index/41#2
         static int n;
         static void MainVer1(string[] args)

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NextDay
 {
-    class Program
+    class NextDay
     {
         static void Main(string[] args)
         {

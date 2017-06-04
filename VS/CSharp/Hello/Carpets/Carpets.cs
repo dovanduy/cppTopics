@@ -67,10 +67,10 @@ namespace Carpets
                 if (isEvenN2)
                 for (r1="", col=0; col<n/2; ++col)
                 {
-                    if (col + row <= n/2 && (col + row) % 2 == 1)
-                        r1 = r1 + template2;
-                    else if (col + row <= n/2)
-                        r1 = r1 + space;
+                        if (col + row <= n / 2 && (col + row) % 2 == 1)
+                            r1 = r1 + template2;
+                        else if (col + row <= n / 2)
+                            r1 = r1 + space;
                 }
                 else
                     for (r1="", col=0; col<n/2; ++col)
@@ -78,7 +78,7 @@ namespace Carpets
                         if (col + row <= n / 2 && (col + row) % 2 == 0)
                             r1 = r1 + template2;
                         else if (col + row <= n / 2)
-                            r1 = r1 + space;
+                             r1 = r1 + space;
                     }
                 r1 = r1.TrimEnd(space);
                 r1 = r1.PadRight(n / 2, '.');

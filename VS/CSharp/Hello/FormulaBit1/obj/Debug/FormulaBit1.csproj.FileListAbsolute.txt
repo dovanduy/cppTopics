@@ -4,3 +4,8 @@ H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.pdb
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\obj\Debug\FormulaBit1.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\obj\Debug\FormulaBit1.pdb
+D:\rkk\Documents\gitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.exe.config
+D:\rkk\Documents\gitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.exe
+D:\rkk\Documents\gitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.pdb
+D:\rkk\Documents\gitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\obj\Debug\FormulaBit1.exe
+D:\rkk\Documents\gitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\obj\Debug\FormulaBit1.pdb

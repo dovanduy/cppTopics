@@ -102,16 +102,18 @@ namespace FormulaBit1
                 {
                     if (isSouth())
                     { ++curRow; ++road; } //moves DOWN
+                    // from SOUTH to WEST only
                     else if (isWest())
                     { --curCol; ++road; ++turnsCnt; current = dir.west; ++westCnt; } // LEFT, WEST turn
-                    else if (isNord())
-                    { --curRow; ++road; ++turnsCnt; current = dir.nord; } // UP, NORD turn
+                    //else if (isNord())
+                    //{ --curRow; ++road; ++turnsCnt; current = dir.nord; } // UP, NORD turn
                     else break;
                 }
                 else if (current == dir.west)
                 {
                     if (isWest())
                     { --curCol; ++road; }
+                    // from WEST to both NORTH or SOUTH
                     else if (isNord() && (westCnt%2==1))
                     { --curRow; ++road; ++turnsCnt; current = dir.nord; } // UP, NORD turn
                     else if (isSouth() &&westCnt%2==0)
@@ -122,10 +124,11 @@ namespace FormulaBit1
                 {
                     if (isNord())
                     { --curRow; ++road; }
+                    // from NORD to WEST only
                     else if (isWest())
                     { --curCol; ++road; ++turnsCnt; current = dir.west; ++westCnt; } // LEFT, WEST turn
-                    else if (isSouth())
-                    { ++curRow; ++road; ++turnsCnt; current = dir.south; } // DOWN, SOUTH turn
+                    //else if (isSouth())
+                    //{ ++curRow; ++road; ++turnsCnt; current = dir.south; } // DOWN, SOUTH turn
                     else break;
                 }
                 else break;

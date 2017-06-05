@@ -9,12 +9,12 @@ namespace FormulaBit1
     class FormulaBit1
     {
         static byte myNum; // ushort
-        const int gridSize = 3;
+        const int gridSize = 8;  // default == 8, sizeOf(byte)
         const int arrSize = gridSize + 2; // array BORDER
         static byte[,] grid ;
         const int startRow = 1;
         const int startCol = gridSize;
-        static int curRow = 1, curCol = gridSize, road = 0, turnsCnt = 0;
+        static int curRow = 1, curCol = gridSize, road = 0, turnsCnt = 0, westCnt = 0;
 
         enum dir {south, west, nord};
         static dir current = dir.south;
@@ -61,7 +61,7 @@ namespace FormulaBit1
                     grid[row, col] = (byte)(myNum % 2);
                 }
             }
-         printMe();
+         //printMe();
         }
 
         static void init ()
@@ -75,67 +75,61 @@ namespace FormulaBit1
             {
                 grid[row, 0] = grid[row, arrSize-1] = 1;
             };
-            curRow = 1; curCol = gridSize;
-            Console.WriteLine("*** {0} {1}", curRow, curCol);
             readMe();
         }
 
         static bool isFinish()
         {
-            return (curRow == arrSize && curCol == 1);
+            return (curRow == gridSize && curCol == 1);
         }
 
         static void Main(string[] args)
         {
             init();
-            Console.WriteLine("X0={0} Y0={1}", curRow, curCol);
-            if (1==grid[curRow, curCol])
+            if (1 == grid[curRow, curCol])
             {
                 Console.WriteLine("No {0}", road);
                 return;
             }
+            else ++road;
             // FormulaBit1 starts now
             bool isMove = isSouth() || isWest() || isNord();
-            Console.WriteLine(isMove && (!isFinish()));
             for ( ; 
                  isMove && (! isFinish()); 
                  isMove = isSouth() || isWest() || isNord())
             { // The loop body moves a car HERE
-                Console.WriteLine("FOR");
                 if (current == dir.south)
                 {
-                    Console.WriteLine("currentSOUTH");
                     if (isSouth())
                     { ++curRow; ++road; } //moves DOWN
                     else if (isWest())
-                    { --curCol; ++road; ++turnsCnt; current = dir.west; } // LEFT, WEST turn
+                    { --curCol; ++road; ++turnsCnt; current = dir.west; ++westCnt; } // LEFT, WEST turn
                     else if (isNord())
                     { --curRow; ++road; ++turnsCnt; current = dir.nord; } // UP, NORD turn
                     else break;
                 }
                 else if (current == dir.west)
                 {
-                    Console.WriteLine("currentWEST");
                     if (isWest())
                     { --curCol; ++road; }
-                    else if (isNord())
+                    else if (isNord() && (westCnt%2==1))
                     { --curRow; ++road; ++turnsCnt; current = dir.nord; } // UP, NORD turn
-                    else if (isSouth())
+                    else if (isSouth() &&westCnt%2==0)
                     { ++curRow; ++road; ++turnsCnt; current = dir.south; } // DOWN, SOUTH turn
+                    else break;
                 }
                 else if (current == dir.nord)
                 {
-                    Console.WriteLine("currentNORD");
                     if (isNord())
                     { --curRow; ++road; }
                     else if (isWest())
-                    { --curCol; ++road; ++turnsCnt; current = dir.west; } // LEFT, WEST turn
+                    { --curCol; ++road; ++turnsCnt; current = dir.west; ++westCnt; } // LEFT, WEST turn
                     else if (isSouth())
                     { ++curRow; ++road; ++turnsCnt; current = dir.south; } // DOWN, SOUTH turn
+                    else break;
                 }
                 else break;
             };
-            Console.WriteLine("XN={0} YN={1}", curRow, curCol);
             if (isFinish())
                 Console.WriteLine("{0} {1}", road, turnsCnt);
             else

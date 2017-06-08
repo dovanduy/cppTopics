@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\bin\Debug\01.02NumericExpression.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\bin\Debug\01.02NumericExpression.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\bin\Debug\01.02NumericExpression.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\obj\Debug\01.02NumericExpression.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\obj\Debug\01.02NumericExpression.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\01.02NumericExpression\01.02NumericExpression\obj\Debug\01.02NumericExpression.pdb

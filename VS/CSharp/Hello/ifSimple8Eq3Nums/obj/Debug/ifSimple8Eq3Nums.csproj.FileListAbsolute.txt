@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple8Eq3Nums\bin\Debug\ifSimple8Eq3Nums.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple8Eq3Nums\bin\Debug\ifSimple8Eq3Nums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple8Eq3Nums\bin\Debug\ifSimple8Eq3Nums.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple8Eq3Nums\obj\Debug\ifSimple8Eq3Nums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple8Eq3Nums\obj\Debug\ifSimple8Eq3Nums.pdb

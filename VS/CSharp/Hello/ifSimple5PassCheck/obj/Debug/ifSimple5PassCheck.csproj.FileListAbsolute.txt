@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple5PassCheck\bin\Debug\ifSimple5PassCheck.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple5PassCheck\bin\Debug\ifSimple5PassCheck.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple5PassCheck\bin\Debug\ifSimple5PassCheck.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple5PassCheck\obj\Debug\ifSimple5PassCheck.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple5PassCheck\obj\Debug\ifSimple5PassCheck.pdb

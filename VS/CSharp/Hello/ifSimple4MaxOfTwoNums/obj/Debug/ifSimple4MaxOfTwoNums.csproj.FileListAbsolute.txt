@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple4MaxOfTwoNums\bin\Debug\ifSimple4MaxOfTwoNums.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple4MaxOfTwoNums\bin\Debug\ifSimple4MaxOfTwoNums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple4MaxOfTwoNums\bin\Debug\ifSimple4MaxOfTwoNums.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple4MaxOfTwoNums\obj\Debug\ifSimple4MaxOfTwoNums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple4MaxOfTwoNums\obj\Debug\ifSimple4MaxOfTwoNums.pdb

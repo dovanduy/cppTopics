@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple3OddOrNot\bin\Debug\ifSimple3OddOrNot.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple3OddOrNot\bin\Debug\ifSimple3OddOrNot.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple3OddOrNot\bin\Debug\ifSimple3OddOrNot.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple3OddOrNot\obj\Debug\ifSimple3OddOrNot.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple3OddOrNot\obj\Debug\ifSimple3OddOrNot.pdb

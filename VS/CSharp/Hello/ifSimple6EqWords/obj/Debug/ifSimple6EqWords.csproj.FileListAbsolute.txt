@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple6EqWords\bin\Debug\ifSimple6EqWords.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple6EqWords\bin\Debug\ifSimple6EqWords.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple6EqWords\bin\Debug\ifSimple6EqWords.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple6EqWords\obj\Debug\ifSimple6EqWords.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple6EqWords\obj\Debug\ifSimple6EqWords.pdb

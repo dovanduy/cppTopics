@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\bin\Debug\ifSimpleExcellentOrNot.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\bin\Debug\ifSimpleExcellentOrNot.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\bin\Debug\ifSimpleExcellentOrNot.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\obj\Debug\ifSimple2ExcellentOrNot.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\obj\Debug\ifSimpleExcellentOrNot.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimpleExcellentOrNot\obj\Debug\ifSimpleExcellentOrNot.pdb

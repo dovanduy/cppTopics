@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple7After15Mins\bin\Debug\ifSimple7After15Mins.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple7After15Mins\bin\Debug\ifSimple7After15Mins.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple7After15Mins\bin\Debug\ifSimple7After15Mins.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple7After15Mins\obj\Debug\ifSimple7After15Mins.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple7After15Mins\obj\Debug\ifSimple7After15Mins.pdb

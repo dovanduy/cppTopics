@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\obj\Debug\ifNested7FigAreas.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\bin\Debug\ifNested6FigAreas.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\bin\Debug\ifNested6FigAreas.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\bin\Debug\ifNested6FigAreas.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\obj\Debug\ifNested6FigAreas.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6FigAreas\obj\Debug\ifNested6FigAreas.pdb

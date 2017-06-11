@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\obj\Debug\ifNested1NumToWords.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\bin\Debug\ifNested1NumToWords.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\bin\Debug\ifNested1NumToWords.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\bin\Debug\ifNested1NumToWords.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\obj\Debug\ifNested1NumToWords.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested1NumToWords\obj\Debug\ifNested1NumToWords.pdb

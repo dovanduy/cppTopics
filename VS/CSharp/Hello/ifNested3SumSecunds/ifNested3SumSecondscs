@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+ * Трима спортни състезатели финишират за някакъв брой секунди (между 1 и 50). 
+ * Да се напише програма, която чете времената на състезателите, въведени от потребителя, 
+ * и пресмята сумарното им време във формат "минути:секунди". 
+ * Секундите да се изведат с водеща нула (2 -> "02", 7 -> "07", 35 -> "35").
+ * https://judge.softuni.bg/Contests/Practice/Index/614#2
+ * */
+namespace ifNested3SumSecunds
+{
+    class ifNested4Merki
+    {
+        static void Main(string[] args)
+        {
+            int sum = int.Parse(Console.ReadLine());
+            sum+= int.Parse(Console.ReadLine());
+            sum+=int.Parse(Console.ReadLine());
+            Console.WriteLine("{0}:{1}", (sum/60), (sum%60).ToString().PadLeft(2, '0'));
+        }
+    }
+}

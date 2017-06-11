@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\bin\Debug\ifNested3SumSecunds.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\bin\Debug\ifNested3SumSecunds.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\bin\Debug\ifNested3SumSecunds.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\obj\Debug\ifNested3SumSecunds.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\obj\Debug\ifNested3SumSecunds.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested3SumSecunds\obj\Debug\ifNested3SumSecunds.pdb

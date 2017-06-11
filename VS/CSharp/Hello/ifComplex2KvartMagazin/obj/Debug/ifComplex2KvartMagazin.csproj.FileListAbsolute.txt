@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\obj\Debug\ifComplex2KvartMagazin.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\bin\Debug\ifComplex2KvartMagazin.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\bin\Debug\ifComplex2KvartMagazin.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\bin\Debug\ifComplex2KvartMagazin.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\obj\Debug\ifComplex2KvartMagazin.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex2KvartMagazin\obj\Debug\ifComplex2KvartMagazin.pdb

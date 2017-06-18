@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\bin\Debug\ifComplex5NumValidation.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\bin\Debug\ifComplex5NumValidation.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\bin\Debug\ifComplex5NumValidation.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\obj\Debug\ifComplex5NumValidation.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\obj\Debug\ifComplex5NumValidation.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex5NumValidation\obj\Debug\ifComplex5NumValidation.pdb

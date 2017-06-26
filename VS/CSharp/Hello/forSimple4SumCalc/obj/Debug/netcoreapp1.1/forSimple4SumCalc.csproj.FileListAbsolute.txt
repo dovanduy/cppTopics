@@ -1,0 +1,9 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\bin\Debug\netcoreapp1.1\forSimple4SumCalc.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\bin\Debug\netcoreapp1.1\forSimple4SumCalc.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\bin\Debug\netcoreapp1.1\forSimple4SumCalc.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\bin\Debug\netcoreapp1.1\forSimple4SumCalc.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\bin\Debug\netcoreapp1.1\forSimple4SumCalc.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\obj\Debug\netcoreapp1.1\forSimple4SumCalc.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\obj\Debug\netcoreapp1.1\forSimple4SumCalc.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\obj\Debug\netcoreapp1.1\forSimple4SumCalc.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple4SumCalc\obj\Debug\netcoreapp1.1\forSimple4SumCalc.pdb

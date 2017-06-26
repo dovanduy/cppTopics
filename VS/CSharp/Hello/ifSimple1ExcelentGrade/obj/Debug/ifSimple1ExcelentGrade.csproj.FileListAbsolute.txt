@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple1ExcelentGrade\bin\Debug\ifSimple1ExcelentGrade.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple1ExcelentGrade\bin\Debug\ifSimple1ExcelentGrade.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple1ExcelentGrade\bin\Debug\ifSimple1ExcelentGrade.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple1ExcelentGrade\obj\Debug\ifSimple1ExcelentGrade.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifSimple1ExcelentGrade\obj\Debug\ifSimple1ExcelentGrade.pdb

@@ -1,4 +1,3 @@
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested2Bonus\obj\Debug\ifNested2Bonus.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested2Bonus\bin\Debug\ifNested2Bonus.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested2Bonus\bin\Debug\ifNested2Bonus.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested2Bonus\bin\Debug\ifNested2Bonus.pdb

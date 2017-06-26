@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple10MaxEqSum\bin\Debug\netcoreapp1.1\forSimple10MaxEqSum.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple10MaxEqSum\bin\Debug\netcoreapp1.1\forSimple10MaxEqSum.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple10MaxEqSum\bin\Debug\netcoreapp1.1\forSimple10MaxEqSum.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple10MaxEqSum\obj\Debug\netcoreapp1.1\forSimple10MaxEqSum.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple10MaxEqSum\obj\Debug\netcoreapp1.1\forSimple10MaxEqSum.AssemblyInfo.cs

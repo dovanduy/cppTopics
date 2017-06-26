@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\bin\Debug\forSimple1SeqNums.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\bin\Debug\forSimple1SeqNums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\bin\Debug\forSimple1SeqNums.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\obj\Debug\forSimple1SeqNums.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\obj\Debug\forSimple1SeqNums.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple1SeqNums\obj\Debug\forSimple1SeqNums.pdb

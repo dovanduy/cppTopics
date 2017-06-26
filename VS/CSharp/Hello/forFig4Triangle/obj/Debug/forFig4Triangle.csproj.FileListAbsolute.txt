@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\bin\Debug\forFig4Triangle.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\bin\Debug\forFig4Triangle.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\bin\Debug\forFig4Triangle.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\obj\Debug\forFig4Triangle.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\obj\Debug\forFig4Triangle.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig4Triangle\obj\Debug\forFig4Triangle.pdb

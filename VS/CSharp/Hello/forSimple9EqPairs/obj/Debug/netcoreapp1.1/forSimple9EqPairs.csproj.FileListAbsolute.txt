@@ -1,0 +1,8 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\bin\Debug\netcoreapp1.1\forSimple9EqPairs.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\bin\Debug\netcoreapp1.1\forSimple9EqPairs.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\bin\Debug\netcoreapp1.1\forSimple9EqPairs.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\bin\Debug\netcoreapp1.1\forSimple9EqPairs.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\bin\Debug\netcoreapp1.1\forSimple9EqPairs.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\obj\Debug\netcoreapp1.1\forSimple9EqPairs.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\obj\Debug\netcoreapp1.1\forSimple9EqPairs.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple9EqPairs\obj\Debug\netcoreapp1.1\forSimple9EqPairs.pdb

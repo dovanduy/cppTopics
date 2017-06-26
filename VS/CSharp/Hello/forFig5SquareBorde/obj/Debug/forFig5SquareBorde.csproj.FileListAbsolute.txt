@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\bin\Debug\forFig5SquareBorde.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\bin\Debug\forFig5SquareBorde.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\bin\Debug\forFig5SquareBorde.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\obj\Debug\forFig5SquareBorde.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\obj\Debug\forFig5SquareBorde.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig5SquareBorde\obj\Debug\forFig5SquareBorde.pdb

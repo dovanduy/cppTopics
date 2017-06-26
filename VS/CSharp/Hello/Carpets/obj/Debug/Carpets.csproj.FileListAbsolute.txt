@@ -1,6 +1,5 @@
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\bin\Debug\Carpets.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\bin\Debug\Carpets.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\bin\Debug\Carpets.pdb
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\obj\Debug\Carpets.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\obj\Debug\Carpets.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Carpets\obj\Debug\Carpets.pdb

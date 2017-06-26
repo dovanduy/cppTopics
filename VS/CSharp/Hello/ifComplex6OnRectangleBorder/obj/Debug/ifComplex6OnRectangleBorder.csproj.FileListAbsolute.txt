@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex6OnRectangleBorder\bin\Debug\ifComplex6OnRectangleBorder.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex6OnRectangleBorder\bin\Debug\ifComplex6OnRectangleBorder.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex6OnRectangleBorder\bin\Debug\ifComplex6OnRectangleBorder.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex6OnRectangleBorder\obj\Debug\ifComplex6OnRectangleBorder.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex6OnRectangleBorder\obj\Debug\ifComplex6OnRectangleBorder.pdb

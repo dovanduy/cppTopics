@@ -1,0 +1,8 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\bin\Debug\netcoreapp1.1\forSimple5MaxNum.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\bin\Debug\netcoreapp1.1\forSimple5MaxNum.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\bin\Debug\netcoreapp1.1\forSimple5MaxNum.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\bin\Debug\netcoreapp1.1\forSimple5MaxNum.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\bin\Debug\netcoreapp1.1\forSimple5MaxNum.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\obj\Debug\netcoreapp1.1\forSimple5MaxNum.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\obj\Debug\netcoreapp1.1\forSimple5MaxNum.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple5MaxNum\obj\Debug\netcoreapp1.1\forSimple5MaxNum.pdb

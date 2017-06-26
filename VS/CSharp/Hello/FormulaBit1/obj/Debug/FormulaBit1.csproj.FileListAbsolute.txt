@@ -1,4 +1,3 @@
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\obj\Debug\FormulaBit1.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\FormulaBit1\bin\Debug\FormulaBit1.pdb

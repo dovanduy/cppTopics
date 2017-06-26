@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\bin\Debug\forFig1Square10.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\bin\Debug\forFig1Square10.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\bin\Debug\forFig1Square10.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\obj\Debug\forFig1Square10.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\obj\Debug\forFig1Square10.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forFig1Square10\obj\Debug\forFig1Square10.pdb

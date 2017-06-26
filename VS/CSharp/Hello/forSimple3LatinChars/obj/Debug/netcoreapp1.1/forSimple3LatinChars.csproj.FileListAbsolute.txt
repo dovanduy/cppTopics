@@ -1,0 +1,9 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\bin\Debug\netcoreapp1.1\forSimple3LatinChars.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\bin\Debug\netcoreapp1.1\forSimple3LatinChars.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\bin\Debug\netcoreapp1.1\forSimple3LatinChars.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\bin\Debug\netcoreapp1.1\forSimple3LatinChars.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\bin\Debug\netcoreapp1.1\forSimple3LatinChars.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\obj\Debug\netcoreapp1.1\forSimple3LatinChars.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\obj\Debug\netcoreapp1.1\forSimple3LatinChars.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\obj\Debug\netcoreapp1.1\forSimple3LatinChars.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple3LatinChars\obj\Debug\netcoreapp1.1\forSimple3LatinChars.pdb

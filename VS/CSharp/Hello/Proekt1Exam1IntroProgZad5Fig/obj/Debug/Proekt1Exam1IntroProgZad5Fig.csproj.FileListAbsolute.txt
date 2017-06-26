@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\bin\Debug\Proekt1Exam1IntroProgZad5Fig.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\bin\Debug\Proekt1Exam1IntroProgZad5Fig.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\bin\Debug\Proekt1Exam1IntroProgZad5Fig.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\obj\Debug\Proekt1Exam1IntroProgZad5Fig.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\obj\Debug\Proekt1Exam1IntroProgZad5Fig.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad5Fig\obj\Debug\Proekt1Exam1IntroProgZad5Fig.pdb

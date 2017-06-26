@@ -1,0 +1,8 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\bin\Debug\netcoreapp1.1\forSimple6MinNum.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\bin\Debug\netcoreapp1.1\forSimple6MinNum.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\bin\Debug\netcoreapp1.1\forSimple6MinNum.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\bin\Debug\netcoreapp1.1\forSimple6MinNum.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\bin\Debug\netcoreapp1.1\forSimple6MinNum.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\obj\Debug\netcoreapp1.1\forSimple6MinNum.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\obj\Debug\netcoreapp1.1\forSimple6MinNum.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple6MinNum\obj\Debug\netcoreapp1.1\forSimple6MinNum.pdb

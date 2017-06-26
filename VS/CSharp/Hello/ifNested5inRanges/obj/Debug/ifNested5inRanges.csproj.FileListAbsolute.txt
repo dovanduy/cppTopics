@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested5inRanges\bin\Debug\ifNested5inRanges.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested5inRanges\bin\Debug\ifNested5inRanges.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested5inRanges\bin\Debug\ifNested5inRanges.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested5inRanges\obj\Debug\ifNested5inRanges.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested5inRanges\obj\Debug\ifNested5inRanges.pdb

@@ -1,4 +1,3 @@
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested4Merki\obj\Debug\ifNested4Merki.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested4Merki\bin\Debug\ifNested4Merki.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested4Merki\bin\Debug\ifNested4Merki.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested4Merki\bin\Debug\ifNested4Merki.pdb

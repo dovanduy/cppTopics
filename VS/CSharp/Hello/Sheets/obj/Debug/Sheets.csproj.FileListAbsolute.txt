@@ -1,4 +1,3 @@
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Sheets\obj\Debug\Sheets.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Sheets\bin\Debug\Sheets.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Sheets\bin\Debug\Sheets.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Sheets\bin\Debug\Sheets.pdb

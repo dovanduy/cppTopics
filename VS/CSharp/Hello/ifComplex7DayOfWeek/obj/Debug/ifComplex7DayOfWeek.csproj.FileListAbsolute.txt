@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex7DayOfWeek\bin\Debug\ifComplex7DayOfWeek.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex7DayOfWeek\bin\Debug\ifComplex7DayOfWeek.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex7DayOfWeek\bin\Debug\ifComplex7DayOfWeek.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex7DayOfWeek\obj\Debug\ifComplex7DayOfWeek.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex7DayOfWeek\obj\Debug\ifComplex7DayOfWeek.pdb

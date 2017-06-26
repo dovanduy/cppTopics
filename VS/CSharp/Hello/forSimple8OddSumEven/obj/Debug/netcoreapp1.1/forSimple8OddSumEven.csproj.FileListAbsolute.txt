@@ -1,0 +1,8 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\bin\Debug\netcoreapp1.1\forSimple8OddSumEven.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\bin\Debug\netcoreapp1.1\forSimple8OddSumEven.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\bin\Debug\netcoreapp1.1\forSimple8OddSumEven.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\bin\Debug\netcoreapp1.1\forSimple8OddSumEven.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\bin\Debug\netcoreapp1.1\forSimple8OddSumEven.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\obj\Debug\netcoreapp1.1\forSimple8OddSumEven.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\obj\Debug\netcoreapp1.1\forSimple8OddSumEven.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple8OddSumEven\obj\Debug\netcoreapp1.1\forSimple8OddSumEven.pdb

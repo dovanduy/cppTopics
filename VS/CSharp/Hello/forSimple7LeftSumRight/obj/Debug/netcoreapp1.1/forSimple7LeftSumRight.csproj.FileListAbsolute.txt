@@ -1,0 +1,8 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\bin\Debug\netcoreapp1.1\forSimple7LeftSumRight.deps.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\bin\Debug\netcoreapp1.1\forSimple7LeftSumRight.runtimeconfig.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\bin\Debug\netcoreapp1.1\forSimple7LeftSumRight.runtimeconfig.dev.json
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\bin\Debug\netcoreapp1.1\forSimple7LeftSumRight.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\bin\Debug\netcoreapp1.1\forSimple7LeftSumRight.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\obj\Debug\netcoreapp1.1\forSimple7LeftSumRight.AssemblyInfo.cs
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\obj\Debug\netcoreapp1.1\forSimple7LeftSumRight.dll
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\forSimple7LeftSumRight\obj\Debug\netcoreapp1.1\forSimple7LeftSumRight.pdb

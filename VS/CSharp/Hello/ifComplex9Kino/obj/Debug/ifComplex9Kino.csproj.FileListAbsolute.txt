@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex9Kino\bin\Debug\ifComplex9Kino.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex9Kino\bin\Debug\ifComplex9Kino.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex9Kino\bin\Debug\ifComplex9Kino.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex9Kino\obj\Debug\ifComplex9Kino.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex9Kino\obj\Debug\ifComplex9Kino.pdb

@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6Skorost\bin\Debug\ifNested6Skorost.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6Skorost\bin\Debug\ifNested6Skorost.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6Skorost\bin\Debug\ifNested6Skorost.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6Skorost\obj\Debug\ifNested6Skorost.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifNested6Skorost\obj\Debug\ifNested6Skorost.pdb

@@ -1,0 +1,5 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex8Animaltype\bin\Debug\ifComplex8Animaltype.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex8Animaltype\bin\Debug\ifComplex8Animaltype.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex8Animaltype\bin\Debug\ifComplex8Animaltype.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex8Animaltype\obj\Debug\ifComplex8Animaltype.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex8Animaltype\obj\Debug\ifComplex8Animaltype.pdb

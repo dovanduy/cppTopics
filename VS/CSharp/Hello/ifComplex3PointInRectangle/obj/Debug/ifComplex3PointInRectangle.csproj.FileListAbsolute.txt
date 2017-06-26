@@ -1,6 +1,5 @@
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\bin\Debug\ifComplex3PointInRectangle.exe.config
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\bin\Debug\ifComplex3PointInRectangle.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\bin\Debug\ifComplex3PointInRectangle.pdb
-H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\obj\Debug\ifComplex3PointInRectangle.csprojResolveAssemblyReference.cache
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\obj\Debug\ifComplex3PointInRectangle.exe
 H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\ifComplex3PointInRectangle\obj\Debug\ifComplex3PointInRectangle.pdb

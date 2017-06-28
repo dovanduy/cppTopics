@@ -1,0 +1,6 @@
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\bin\Debug\Proekt1Exam1IntroProgZad6DeviceA93.exe.config
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\bin\Debug\Proekt1Exam1IntroProgZad6DeviceA93.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\bin\Debug\Proekt1Exam1IntroProgZad6DeviceA93.pdb
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\obj\Debug\Proekt1Exam1IntroProgZad6DeviceA93.csprojResolveAssemblyReference.cache
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\obj\Debug\Proekt1Exam1IntroProgZad6DeviceA93.exe
+H:\Users\krasi\Documents\GitHub\cppTopics\VS\CSharp\Hello\Proekt1Exam1IntroProgZad6DeviceA93\obj\Debug\Proekt1Exam1IntroProgZad6DeviceA93.pdb

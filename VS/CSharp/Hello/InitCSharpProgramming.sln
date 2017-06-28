@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forFig5SquareBorde", "forFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proekt1Exam1IntroProgZad5Fig", "Proekt1Exam1IntroProgZad5Fig\Proekt1Exam1IntroProgZad5Fig.csproj", "{DE97C73B-BFE7-4F5C-85E2-57B57BB89277}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proekt1Exam1IntroProgZad6DeviceA93", "Proekt1Exam1IntroProgZad6DeviceA93\Proekt1Exam1IntroProgZad6DeviceA93.csproj", "{11D19F2C-CEEF-4C60-9FB5-5EA29BC2D853}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -310,6 +312,10 @@ Global
 		{DE97C73B-BFE7-4F5C-85E2-57B57BB89277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE97C73B-BFE7-4F5C-85E2-57B57BB89277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE97C73B-BFE7-4F5C-85E2-57B57BB89277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D19F2C-CEEF-4C60-9FB5-5EA29BC2D853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D19F2C-CEEF-4C60-9FB5-5EA29BC2D853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D19F2C-CEEF-4C60-9FB5-5EA29BC2D853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D19F2C-CEEF-4C60-9FB5-5EA29BC2D853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
